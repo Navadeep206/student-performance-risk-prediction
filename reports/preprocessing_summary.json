@@ -1,0 +1,124 @@
+{
+  "execution_time_seconds": 37.38,
+  "processed_files": {
+    "enrollments_clean.csv": {
+      "path": "data/processed/enrollments_clean.csv",
+      "rows": 32593,
+      "columns": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "gender",
+        "region",
+        "highest_education",
+        "imd_band",
+        "age_band",
+        "num_of_prev_attempts",
+        "studied_credits",
+        "disability",
+        "final_result",
+        "date_registration",
+        "date_unregistration",
+        "has_unregistered",
+        "module_presentation_length"
+      ]
+    },
+    "assessments_clean.csv": {
+      "path": "data/processed/assessments_clean.csv",
+      "rows": 206,
+      "columns": [
+        "code_module",
+        "code_presentation",
+        "id_assessment",
+        "assessment_type",
+        "date",
+        "weight",
+        "has_submissions"
+      ]
+    },
+    "assessment_submissions_clean.csv": {
+      "path": "data/processed/assessment_submissions_clean.csv",
+      "rows": 173912,
+      "columns": [
+        "id_assessment",
+        "id_student",
+        "date_submitted",
+        "is_banked",
+        "score",
+        "score_is_missing",
+        "code_module",
+        "code_presentation",
+        "assessment_type",
+        "scheduled_date",
+        "weight",
+        "submission_lateness_days"
+      ]
+    },
+    "vle_interactions_clean.csv": {
+      "path": "data/processed/vle_interactions_clean.csv",
+      "rows": 10655280,
+      "columns": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "id_site",
+        "date",
+        "sum_click",
+        "activity_type"
+      ]
+    },
+    "enrollment_base.csv": {
+      "path": "data/processed/enrollment_base.csv",
+      "rows": 32593,
+      "columns_count": 39,
+      "columns": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "gender",
+        "region",
+        "highest_education",
+        "imd_band",
+        "age_band",
+        "num_of_prev_attempts",
+        "studied_credits",
+        "disability",
+        "final_result",
+        "date_registration",
+        "date_unregistration",
+        "has_unregistered",
+        "module_presentation_length",
+        "total_assessments_submitted",
+        "total_scored_assessments",
+        "missing_score_assessments_count",
+        "avg_assessment_score",
+        "min_assessment_score",
+        "max_assessment_score",
+        "std_assessment_score",
+        "failing_assessments_count",
+        "at_risk_assessments_count",
+        "passed_assessments_count",
+        "banked_assessments_count",
+        "avg_submission_lateness_days",
+        "has_zero_submissions",
+        "total_vle_clicks",
+        "first_vle_interaction_day",
+        "last_vle_interaction_day",
+        "vle_pre_course_clicks",
+        "vle_core_content_clicks",
+        "vle_forum_clicks",
+        "vle_quiz_clicks",
+        "vle_active_days_count",
+        "vle_distinct_materials_accessed",
+        "is_vle_dormant"
+      ]
+    }
+  },
+  "validation_results": {
+    "enrollment_preservation_count": 32593,
+    "is_enrollment_count_exact_32593": true,
+    "zero_submission_students_count": 6750,
+    "zero_vle_students_count": 3365,
+    "enrollment_key_unique": true
+  }
+}
