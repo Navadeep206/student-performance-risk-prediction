@@ -1,0 +1,161 @@
+{
+  "enrollment_keys": {
+    "key_columns": [
+      "code_module",
+      "code_presentation",
+      "id_student"
+    ],
+    "student_info_total_rows": 32593,
+    "student_info_unique_keys": 32593,
+    "student_info_key_duplicates": 0,
+    "student_registration_total_rows": 32593,
+    "student_registration_unique_keys": 32593,
+    "student_registration_key_duplicates": 0,
+    "in_student_info_not_registration": 0,
+    "in_registration_not_student_info": 0,
+    "is_symmetric_one_to_one": true
+  },
+  "assessment_relationships": {
+    "assessments_total": 206,
+    "assessments_id_duplicates": 0,
+    "assessments_mapping_to_multiple_presentations": 0,
+    "student_assessment_total": 173912,
+    "student_assessment_composite_key_duplicates": 0,
+    "sa_unmatched_id_assessment": 0,
+    "assessments_with_zero_submissions": 18,
+    "zero_submission_assessment_types": {
+      "Exam": 18
+    },
+    "sa_unmatched_student_enrollments": 0,
+    "students_with_zero_submissions": 6750,
+    "students_with_zero_submissions_pct": 20.71
+  },
+  "course_relationships": {
+    "total_courses_presentations": 22,
+    "student_info_unmatched_presentations": 0,
+    "student_registration_unmatched_presentations": 0,
+    "assessments_unmatched_presentations": 0,
+    "vle_unmatched_presentations": 0,
+    "courses_without_students": 0,
+    "courses_without_assessments": 0,
+    "courses_without_vle_resources": 0,
+    "referential_integrity_valid": true
+  },
+  "vle_relationships": {
+    "vle_resources_total": 6364,
+    "vle_site_id_duplicates": 0,
+    "student_vle_total_rows": 10655280,
+    "student_vle_unmatched_id_site": 0,
+    "student_vle_mismatched_module_presentation": 0,
+    "student_vle_unmatched_student_enrollments": 0,
+    "students_with_zero_vle_interactions": 3365,
+    "students_with_zero_vle_interactions_pct": 10.32
+  },
+  "join_simulations": [
+    {
+      "join_name": "studentInfo \u27d5 studentRegistration",
+      "join_keys": [
+        "code_module",
+        "code_presentation",
+        "id_student"
+      ],
+      "left_table": "studentInfo",
+      "left_rows": 32593,
+      "right_table": "studentRegistration",
+      "right_rows": 32593,
+      "result_rows": 32593,
+      "unmatched_records": 0,
+      "expansion_ratio": 1.0,
+      "expected_cardinality": "1:1",
+      "is_safe": true,
+      "notes": "Safe symmetric 1-to-1 join. Enriches student enrollment with timeline dates."
+    },
+    {
+      "join_name": "studentInfo \u27d5 courses",
+      "join_keys": [
+        "code_module",
+        "code_presentation"
+      ],
+      "left_table": "studentInfo",
+      "left_rows": 32593,
+      "right_table": "courses",
+      "right_rows": 22,
+      "result_rows": 32593,
+      "unmatched_records": 0,
+      "expansion_ratio": 1.0,
+      "expected_cardinality": "N:1",
+      "is_safe": true,
+      "notes": "Safe N-to-1 lookup join. Adds course presentation duration."
+    },
+    {
+      "join_name": "studentAssessment \u27d5 assessments",
+      "join_keys": [
+        "id_assessment"
+      ],
+      "left_table": "studentAssessment",
+      "left_rows": 173912,
+      "right_table": "assessments",
+      "right_rows": 206,
+      "result_rows": 173912,
+      "unmatched_records": 0,
+      "expansion_ratio": 1.0,
+      "expected_cardinality": "N:1",
+      "is_safe": true,
+      "notes": "Safe N-to-1 lookup join. Enriches submissions with weights, assessment types, and scheduled dates."
+    },
+    {
+      "join_name": "studentInfo \u27d5 studentAssessment (Row-Level)",
+      "join_keys": [
+        "code_module",
+        "code_presentation",
+        "id_student"
+      ],
+      "left_table": "studentInfo",
+      "left_rows": 32593,
+      "right_table": "studentAssessment",
+      "right_rows": 173912,
+      "result_rows": 180662,
+      "unmatched_records": 6750,
+      "expansion_ratio": 5.543,
+      "expected_cardinality": "1:N",
+      "is_safe": false,
+      "notes": "UNSAFE without aggregation. Expands student rows from 32,593 to 180,662 rows. Must aggregate to student grain first."
+    },
+    {
+      "join_name": "studentInfo \u27d5 studentVle (Row-Level)",
+      "join_keys": [
+        "code_module",
+        "code_presentation",
+        "id_student"
+      ],
+      "left_table": "studentInfo",
+      "left_rows": 32593,
+      "right_table": "studentVle",
+      "right_rows": 10655280,
+      "result_rows": 10658645,
+      "unmatched_records": 3365,
+      "expansion_ratio": 327.0,
+      "expected_cardinality": "1:N",
+      "is_safe": false,
+      "notes": "CRITICALLY UNSAFE row-level join. Expands 32,593 students to 10.65M rows (~327x). Aggregation is strictly mandatory."
+    },
+    {
+      "join_name": "studentAssessment \u22c8 studentVle (Cross Grain)",
+      "join_keys": [
+        "code_module",
+        "code_presentation",
+        "id_student"
+      ],
+      "left_table": "studentAssessment",
+      "left_rows": 173912,
+      "right_table": "studentVle",
+      "right_rows": 10655280,
+      "result_rows": -1,
+      "unmatched_records": -1,
+      "expansion_ratio": -1,
+      "expected_cardinality": "N:M",
+      "is_safe": false,
+      "notes": "PROHIBITED N-to-M Cartesian cross-product. Assessment events must never be joined directly to clickstream events."
+    }
+  ]
+}

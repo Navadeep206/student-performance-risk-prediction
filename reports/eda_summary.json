@@ -1,0 +1,399 @@
+{
+  "student_distributions": {
+    "total_enrollments": 32593,
+    "module_counts": {
+      "BBB": 7909,
+      "FFF": 7762,
+      "DDD": 6272,
+      "CCC": 4434,
+      "EEE": 2934,
+      "GGG": 2534,
+      "AAA": 748
+    },
+    "presentation_counts": {
+      "2014J": 11260,
+      "2013J": 8845,
+      "2014B": 7804,
+      "2013B": 4684
+    },
+    "cohort_counts": {
+      "AAA_2013J": 383,
+      "AAA_2014J": 365,
+      "BBB_2013B": 1767,
+      "BBB_2013J": 2237,
+      "BBB_2014B": 1613,
+      "BBB_2014J": 2292,
+      "CCC_2014B": 1936,
+      "CCC_2014J": 2498,
+      "DDD_2013B": 1303,
+      "DDD_2013J": 1938,
+      "DDD_2014B": 1228,
+      "DDD_2014J": 1803,
+      "EEE_2013J": 1052,
+      "EEE_2014B": 694,
+      "EEE_2014J": 1188,
+      "FFF_2013B": 1614,
+      "FFF_2013J": 2283,
+      "FFF_2014B": 1500,
+      "FFF_2014J": 2365,
+      "GGG_2013J": 952,
+      "GGG_2014B": 833,
+      "GGG_2014J": 749
+    },
+    "prev_attempts_dist": {
+      "0": 28421,
+      "1": 3299,
+      "2": 675,
+      "3": 142,
+      "4": 39,
+      "5": 13,
+      "6": 4
+    },
+    "studied_credits_stats": {
+      "mean": 79.76,
+      "std": 41.07,
+      "median": 60.0,
+      "iqr": 60.0,
+      "min": 30,
+      "max": 655,
+      "q25": 60.0,
+      "q75": 120.0
+    },
+    "registration_stats": {
+      "missing_count": 45,
+      "mean": -69.41,
+      "std": 49.26,
+      "median": -57.0,
+      "min": -322.0,
+      "max": 167.0
+    }
+  },
+  "assessment_performance": {
+    "overall": {
+      "total_submissions": 173912,
+      "valid_submissions": 173739,
+      "missing_score_count": 173,
+      "missing_score_by_type": {
+        "TMA": 173
+      },
+      "mean": 75.8,
+      "std": 18.8,
+      "median": 80.0,
+      "iqr": 25.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q25": 65.0,
+      "q75": 90.0
+    },
+    "by_type": {
+      "CMA": {
+        "count": 70527,
+        "mean": 81.03,
+        "std": 17.84,
+        "median": 82.0,
+        "q25": 72.0,
+        "q75": 98.0
+      },
+      "Exam": {
+        "count": 4959,
+        "mean": 65.57,
+        "std": 20.58,
+        "median": 67.0,
+        "q25": 51.0,
+        "q75": 82.0
+      },
+      "TMA": {
+        "count": 98253,
+        "mean": 72.56,
+        "std": 18.43,
+        "median": 76.0,
+        "q25": 63.0,
+        "q75": 86.0
+      }
+    },
+    "by_module": {
+      "AAA": {
+        "count": 3146,
+        "mean": 69.03,
+        "std": 12.96,
+        "median": 71.0
+      },
+      "BBB": {
+        "count": 42979,
+        "mean": 76.71,
+        "std": 20.16,
+        "median": 80.0
+      },
+      "CCC": {
+        "count": 18929,
+        "mean": 73.26,
+        "std": 22.56,
+        "median": 78.0
+      },
+      "DDD": {
+        "count": 30815,
+        "mean": 70.09,
+        "std": 20.08,
+        "median": 74.0
+      },
+      "EEE": {
+        "count": 7886,
+        "mean": 81.18,
+        "std": 15.0,
+        "median": 85.0
+      },
+      "FFF": {
+        "count": 54769,
+        "mean": 77.71,
+        "std": 14.79,
+        "median": 80.0
+      },
+      "GGG": {
+        "count": 15215,
+        "mean": 79.7,
+        "std": 19.23,
+        "median": 80.0
+      }
+    },
+    "by_presentation": {
+      "2013B": {
+        "count": 33776,
+        "mean": 75.81,
+        "std": 18.22,
+        "median": 80.0
+      },
+      "2013J": {
+        "count": 48982,
+        "mean": 76.77,
+        "std": 17.43,
+        "median": 80.0
+      },
+      "2014B": {
+        "count": 38849,
+        "mean": 75.8,
+        "std": 19.08,
+        "median": 80.0
+      },
+      "2014J": {
+        "count": 52132,
+        "mean": 74.88,
+        "std": 20.1,
+        "median": 79.0
+      }
+    },
+    "weights": {
+      "TMA_mean": 17.08,
+      "TMA_max": 35.0,
+      "CMA_mean": 1.18,
+      "CMA_max": 8.0,
+      "Exam_all_100": true
+    }
+  },
+  "academic_outcomes": {
+    "overall_counts": {
+      "Pass": 12361,
+      "Withdrawn": 10156,
+      "Fail": 7052,
+      "Distinction": 3024
+    },
+    "overall_percentages": {
+      "Pass": 37.93,
+      "Withdrawn": 31.16,
+      "Fail": 21.64,
+      "Distinction": 9.28
+    },
+    "module_outcomes": {
+      "AAA": {
+        "counts": {
+          "Distinction": 44,
+          "Fail": 91,
+          "Pass": 487,
+          "Withdrawn": 126
+        },
+        "percentages": {
+          "Distinction": 5.88,
+          "Fail": 12.17,
+          "Pass": 65.11,
+          "Withdrawn": 16.84
+        }
+      },
+      "BBB": {
+        "counts": {
+          "Distinction": 677,
+          "Fail": 1767,
+          "Pass": 3077,
+          "Withdrawn": 2388
+        },
+        "percentages": {
+          "Distinction": 8.56,
+          "Fail": 22.34,
+          "Pass": 38.91,
+          "Withdrawn": 30.19
+        }
+      },
+      "CCC": {
+        "counts": {
+          "Distinction": 498,
+          "Fail": 781,
+          "Pass": 1180,
+          "Withdrawn": 1975
+        },
+        "percentages": {
+          "Distinction": 11.23,
+          "Fail": 17.61,
+          "Pass": 26.61,
+          "Withdrawn": 44.54
+        }
+      },
+      "DDD": {
+        "counts": {
+          "Distinction": 383,
+          "Fail": 1412,
+          "Pass": 2227,
+          "Withdrawn": 2250
+        },
+        "percentages": {
+          "Distinction": 6.11,
+          "Fail": 22.51,
+          "Pass": 35.51,
+          "Withdrawn": 35.87
+        }
+      },
+      "EEE": {
+        "counts": {
+          "Distinction": 356,
+          "Fail": 562,
+          "Pass": 1294,
+          "Withdrawn": 722
+        },
+        "percentages": {
+          "Distinction": 12.13,
+          "Fail": 19.15,
+          "Pass": 44.1,
+          "Withdrawn": 24.61
+        }
+      },
+      "FFF": {
+        "counts": {
+          "Distinction": 670,
+          "Fail": 1711,
+          "Pass": 2978,
+          "Withdrawn": 2403
+        },
+        "percentages": {
+          "Distinction": 8.63,
+          "Fail": 22.04,
+          "Pass": 38.37,
+          "Withdrawn": 30.96
+        }
+      },
+      "GGG": {
+        "counts": {
+          "Distinction": 396,
+          "Fail": 728,
+          "Pass": 1118,
+          "Withdrawn": 292
+        },
+        "percentages": {
+          "Distinction": 15.63,
+          "Fail": 28.73,
+          "Pass": 44.12,
+          "Withdrawn": 11.52
+        }
+      }
+    }
+  },
+  "registration_withdrawal": {
+    "withdrawal_date_stats": {
+      "count": 10072,
+      "mean": 49.76,
+      "std": 82.46,
+      "median": 27.0,
+      "q25": -2.0,
+      "q75": 109.0,
+      "min": -365.0,
+      "max": 444.0
+    },
+    "module_withdrawal_rates": {
+      "AAA": {
+        "total": 748,
+        "withdrawn_recorded": 126,
+        "withdrawal_rate_pct": 16.84
+      },
+      "BBB": {
+        "total": 7909,
+        "withdrawn_recorded": 2377,
+        "withdrawal_rate_pct": 30.05
+      },
+      "CCC": {
+        "total": 4434,
+        "withdrawn_recorded": 1947,
+        "withdrawal_rate_pct": 43.91
+      },
+      "DDD": {
+        "total": 6272,
+        "withdrawn_recorded": 2235,
+        "withdrawal_rate_pct": 35.63
+      },
+      "EEE": {
+        "total": 2934,
+        "withdrawn_recorded": 718,
+        "withdrawal_rate_pct": 24.47
+      },
+      "FFF": {
+        "total": 7762,
+        "withdrawn_recorded": 2380,
+        "withdrawal_rate_pct": 30.66
+      },
+      "GGG": {
+        "total": 2534,
+        "withdrawn_recorded": 289,
+        "withdrawal_rate_pct": 11.4
+      }
+    },
+    "registration_timing_outcomes": {
+      "Early (>30d before start)": {
+        "Distinction": 9.01,
+        "Fail": 20.22,
+        "Pass": 37.53,
+        "Withdrawn": 33.24
+      },
+      "Late (After start)": {
+        "Distinction": 6.84,
+        "Fail": 28.63,
+        "Pass": 43.59,
+        "Withdrawn": 20.94
+      },
+      "Standard (0-30d before start)": {
+        "Distinction": 10.12,
+        "Fail": 25.3,
+        "Pass": 39.02,
+        "Withdrawn": 25.57
+      }
+    }
+  },
+  "vle_engagement": {
+    "total_log_entries": 10655280,
+    "total_clicks": 39605099,
+    "module_clicks": {
+      "AAA": 1246652,
+      "BBB": 5234176,
+      "CCC": 4682149,
+      "DDD": 5530089,
+      "EEE": 3984227,
+      "FFF": 17593922,
+      "GGG": 1333884
+    },
+    "presentation_clicks": {
+      "2013B": 6955433,
+      "2013J": 10945847,
+      "2014J": 13800298,
+      "2014B": 7903521
+    },
+    "daily_clicks_summary": {
+      "active_days_count": 295,
+      "peak_day": 18,
+      "peak_day_clicks": 427217
+    }
+  }
+}

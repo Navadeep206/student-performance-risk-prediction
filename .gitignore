@@ -70,6 +70,10 @@ data/processed/*
 !data/processed/.gitkeep
 data/external/*
 !data/external/.gitkeep
+open+university+learning+analytics+dataset*
+*.zip
+*.tar.gz
+*.tgz
 
 # Trained Model Binaries and Large Artifacts
 models/*

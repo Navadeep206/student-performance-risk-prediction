@@ -1,0 +1,233 @@
+{
+  "courses": {
+    "total_rows": 22,
+    "exact_duplicate_rows": 0,
+    "key_duplicates": 0,
+    "missing_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "module_presentation_length": 0
+    },
+    "sentinel_q_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "module_presentation_length": 0
+    },
+    "value_anomalies": {
+      "length_below_or_equal_zero": 0,
+      "length_min": 234,
+      "length_max": 269
+    }
+  },
+  "assessments": {
+    "total_rows": 206,
+    "exact_duplicate_rows": 0,
+    "key_duplicates": 0,
+    "missing_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_assessment": 0,
+      "assessment_type": 0,
+      "date": 0,
+      "weight": 0
+    },
+    "sentinel_q_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_assessment": 0,
+      "assessment_type": 0,
+      "date": 11,
+      "weight": 0
+    },
+    "value_anomalies": {
+      "weight_min": 0.0,
+      "weight_max": 100.0,
+      "weight_negative": 0,
+      "missing_date_types": {
+        "Exam": 11
+      },
+      "coursework_weight_sums": {
+        "AAA_2013J": 100.0,
+        "AAA_2014J": 100.0,
+        "BBB_2013B": 100.0,
+        "BBB_2013J": 100.0,
+        "BBB_2014B": 100.0,
+        "BBB_2014J": 100.0,
+        "CCC_2014B": 100.0,
+        "CCC_2014J": 100.0,
+        "DDD_2013B": 100.0,
+        "DDD_2013J": 100.0,
+        "DDD_2014B": 100.0,
+        "DDD_2014J": 100.0,
+        "EEE_2013J": 100.0,
+        "EEE_2014B": 100.0,
+        "EEE_2014J": 100.0,
+        "FFF_2013B": 100.0,
+        "FFF_2013J": 100.0,
+        "FFF_2014B": 100.0,
+        "FFF_2014J": 100.0,
+        "GGG_2013J": 0.0,
+        "GGG_2014B": 0.0,
+        "GGG_2014J": 0.0
+      }
+    }
+  },
+  "vle": {
+    "total_rows": 6364,
+    "exact_duplicate_rows": 0,
+    "key_duplicates": 0,
+    "missing_values": {
+      "id_site": 0,
+      "code_module": 0,
+      "code_presentation": 0,
+      "activity_type": 0,
+      "week_from": 0,
+      "week_to": 0
+    },
+    "sentinel_q_values": {
+      "id_site": 0,
+      "code_module": 0,
+      "code_presentation": 0,
+      "activity_type": 0,
+      "week_from": 5243,
+      "week_to": 5243
+    },
+    "value_anomalies": {
+      "week_to_before_week_from": 0,
+      "week_from_negative": 0,
+      "activity_types_count": 20
+    }
+  },
+  "student_info": {
+    "total_rows": 32593,
+    "exact_duplicate_rows": 0,
+    "id_student_duplicates": 3808,
+    "composite_key_duplicates": 0,
+    "missing_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "gender": 0,
+      "region": 0,
+      "highest_education": 0,
+      "imd_band": 0,
+      "age_band": 0,
+      "num_of_prev_attempts": 0,
+      "studied_credits": 0,
+      "disability": 0,
+      "final_result": 0
+    },
+    "sentinel_q_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "gender": 0,
+      "region": 0,
+      "highest_education": 0,
+      "imd_band": 1111,
+      "age_band": 0,
+      "num_of_prev_attempts": 0,
+      "studied_credits": 0,
+      "disability": 0,
+      "final_result": 0
+    },
+    "value_anomalies": {
+      "prev_attempts_negative": 0,
+      "studied_credits_non_positive": 0,
+      "studied_credits_min": 30,
+      "studied_credits_max": 655,
+      "missing_imd_by_region": {
+        "North Region": 731,
+        "Ireland": 266,
+        "South Region": 48,
+        "West Midlands Region": 39,
+        "Scotland": 12,
+        "South West Region": 5,
+        "North Western Region": 5,
+        "Yorkshire Region": 5
+      }
+    }
+  },
+  "student_registration": {
+    "total_rows": 32593,
+    "exact_duplicate_rows": 0,
+    "composite_key_duplicates": 0,
+    "missing_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "date_registration": 0,
+      "date_unregistration": 0
+    },
+    "sentinel_q_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "date_registration": 45,
+      "date_unregistration": 22521
+    },
+    "value_anomalies": {
+      "unregistered_before_registered": 0
+    }
+  },
+  "student_assessment": {
+    "total_rows": 173912,
+    "exact_duplicate_rows": 0,
+    "composite_key_duplicates": 0,
+    "missing_values": {
+      "id_assessment": 0,
+      "id_student": 0,
+      "date_submitted": 0,
+      "is_banked": 0,
+      "score": 0
+    },
+    "sentinel_q_values": {
+      "id_assessment": 0,
+      "id_student": 0,
+      "date_submitted": 0,
+      "is_banked": 0,
+      "score": 173
+    },
+    "value_anomalies": {
+      "score_min": 0.0,
+      "score_max": 100.0,
+      "scores_out_of_range": 0,
+      "negative_date_submitted_total": 2057,
+      "negative_date_banked": 1909,
+      "negative_date_early_submission": 148
+    }
+  },
+  "student_vle": {
+    "total_rows": 10655280,
+    "exact_duplicate_rows": 787170,
+    "repeated_key_combinations": 2195949,
+    "missing_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "id_site": 0,
+      "date": 0,
+      "sum_click": 0
+    },
+    "sentinel_q_values": {
+      "code_module": 0,
+      "code_presentation": 0,
+      "id_student": 0,
+      "id_site": 0,
+      "date": 0,
+      "sum_click": 0
+    },
+    "value_anomalies": {
+      "negative_clicks": 0,
+      "zero_clicks": 0,
+      "click_range": [
+        1.0,
+        6977.0
+      ],
+      "date_range": [
+        -25.0,
+        269.0
+      ]
+    }
+  }
+}

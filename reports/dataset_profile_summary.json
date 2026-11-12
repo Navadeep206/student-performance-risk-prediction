@@ -1,0 +1,125 @@
+{
+  "project": "Student Performance & At-Risk Prediction System",
+  "dataset": {
+    "name": "Open University Learning Analytics Dataset (OULAD)",
+    "source": "The Open University (UK)",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "citation": "Kuzilek, J., Hlosta, M., & Zdrahal, Z. (2017). Open University Learning Analytics dataset. Scientific Data, 4, 170171.",
+    "url": "https://analyse.kmi.open.ac.uk/open_dataset",
+    "file_count": 7,
+    "total_records": 10900977
+  },
+  "macro_metrics": {
+    "unique_students": 28785,
+    "total_enrollments": 32593,
+    "modules_count": 7,
+    "presentations_count": 22,
+    "scheduled_assessments": 206,
+    "student_assessment_records": 173912,
+    "vle_resources": 6364,
+    "vle_clickstream_records": 10655280,
+    "total_clicks": 39605099
+  },
+  "data_quality_summary": {
+    "standard_null_count": 0,
+    "sentinel_values": {
+      "studentRegistration_date_unregistration": 22521,
+      "vle_week_from": 5243,
+      "vle_week_to": 5243,
+      "studentInfo_imd_band": 1111,
+      "studentAssessment_score": 173,
+      "studentRegistration_date_registration": 45,
+      "assessments_date": 11
+    },
+    "exact_duplicates": {
+      "courses": 0,
+      "assessments": 0,
+      "vle": 0,
+      "student_info": 0,
+      "student_registration": 0,
+      "student_assessment": 0,
+      "student_vle": 787170
+    },
+    "value_bounds_valid": true,
+    "scores_out_of_bounds": 0,
+    "negative_clicks": 0,
+    "unregistered_before_registered": 0
+  },
+  "referential_integrity": {
+    "enrollment_key": [
+      "code_module",
+      "code_presentation",
+      "id_student"
+    ],
+    "student_info_vs_registration_1_to_1": true,
+    "unmatched_course_presentations": 0,
+    "unmatched_assessment_ids": 0,
+    "unmatched_vle_sites": 0,
+    "unmatched_student_enrollments": 0,
+    "assessments_zero_submissions": 18,
+    "students_zero_submissions": 6750,
+    "students_zero_vle_interactions": 3365,
+    "students_completely_inactive": 3315
+  },
+  "academic_performance": {
+    "assessment_scores": {
+      "mean": 75.8,
+      "median": 80.0,
+      "std": 18.8,
+      "min": 0.0,
+      "max": 100.0,
+      "iqr": 25.0,
+      "q25": 65.0,
+      "q75": 90.0,
+      "scores_below_50_count": 15308,
+      "scores_below_50_pct": 8.81,
+      "scores_below_40_count": 7578,
+      "scores_below_40_pct": 4.36
+    },
+    "modality_scores": {
+      "CMA": {
+        "count": 70527,
+        "mean": 81.03,
+        "std": 17.84,
+        "median": 82.0,
+        "q25": 72.0,
+        "q75": 98.0
+      },
+      "Exam": {
+        "count": 4959,
+        "mean": 65.57,
+        "std": 20.58,
+        "median": 67.0,
+        "q25": 51.0,
+        "q75": 82.0
+      },
+      "TMA": {
+        "count": 98253,
+        "mean": 72.56,
+        "std": 18.43,
+        "median": 76.0,
+        "q25": 63.0,
+        "q75": 86.0
+      }
+    },
+    "academic_outcomes": {
+      "Pass": 37.93,
+      "Withdrawn": 31.16,
+      "Fail": 21.64,
+      "Distinction": 9.28
+    },
+    "combined_at_risk_rate": 52.8
+  },
+  "prediction_problem_formulation": {
+    "task_name": "Next-Assessment Performance & Risk Prediction",
+    "objective": "Predict whether a student's next scheduled assessment score will fall below 50 (at_risk = 1) or remain at/above 50 (at_risk = 0).",
+    "target_definition": "at_risk = 1 if next_score < 50 else 0",
+    "prediction_time_constraint": "Features must strictly precede the next assessment scheduled deadline or prediction cutoff date.",
+    "prohibited_features": [
+      "final_result",
+      "date_unregistration",
+      "future_assessment_scores",
+      "future_vle_clicks"
+    ]
+  }
+}
