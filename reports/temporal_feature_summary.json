@@ -1,0 +1,122 @@
+{
+  "execution_time_seconds": 63.21,
+  "baseline_14day_delay": {
+    "grading_delay_days": 14,
+    "total_theoretical_opportunities": 304597,
+    "total_eligible_opportunities": 170874,
+    "total_excluded_no_score": 133723,
+    "exclusion_rate_pct": 43.9,
+    "total_prediction_snapshots": 341748,
+    "unique_students": 23351,
+    "class_distribution": {
+      "at_risk_0": 312502,
+      "at_risk_1": 29246,
+      "at_risk_pct": 8.56
+    },
+    "by_cutoff_scenario": {
+      "1_day_before": {
+        "count": 170874,
+        "at_risk_count": 14623,
+        "at_risk_pct": 8.56
+      },
+      "7_day_before": {
+        "count": 170874,
+        "at_risk_count": 14623,
+        "at_risk_pct": 8.56
+      }
+    },
+    "by_assessment_type": {
+      "CMA": {
+        "count": 141054,
+        "at_risk_count": 7996,
+        "at_risk_pct": 5.67
+      },
+      "Exam": {
+        "count": 4188,
+        "at_risk_count": 1046,
+        "at_risk_pct": 24.98
+      },
+      "TMA": {
+        "count": 196506,
+        "at_risk_count": 20204,
+        "at_risk_pct": 10.28
+      }
+    }
+  },
+  "alternative_7day_delay": {
+    "grading_delay_days": 7,
+    "total_theoretical_opportunities": 304597,
+    "total_eligible_opportunities": 170874,
+    "total_excluded_no_score": 133723,
+    "exclusion_rate_pct": 43.9,
+    "total_prediction_snapshots": 341748,
+    "unique_students": 23351,
+    "class_distribution": {
+      "at_risk_0": 312502,
+      "at_risk_1": 29246,
+      "at_risk_pct": 8.56
+    },
+    "by_cutoff_scenario": {
+      "1_day_before": {
+        "count": 170874,
+        "at_risk_count": 14623,
+        "at_risk_pct": 8.56
+      },
+      "7_day_before": {
+        "count": 170874,
+        "at_risk_count": 14623,
+        "at_risk_pct": 8.56
+      }
+    },
+    "by_assessment_type": {
+      "CMA": {
+        "count": 141054,
+        "at_risk_count": 7996,
+        "at_risk_pct": 5.67
+      },
+      "Exam": {
+        "count": 4188,
+        "at_risk_count": 1046,
+        "at_risk_pct": 24.98
+      },
+      "TMA": {
+        "count": 196506,
+        "at_risk_count": 20204,
+        "at_risk_pct": 10.28
+      }
+    }
+  },
+  "columns": [
+    "id_student",
+    "target_assessment_score",
+    "at_risk",
+    "code_module",
+    "code_presentation",
+    "id_assessment",
+    "target_assessment_type",
+    "target_assessment_weight",
+    "scheduled_date",
+    "cutoff_date",
+    "cutoff_scenario",
+    "days_until_assessment",
+    "num_previous_scheduled_assessments",
+    "grading_delay_scenario",
+    "registration_timing_days",
+    "vle_total_clicks_to_date",
+    "vle_active_days_to_date",
+    "vle_core_clicks_to_date",
+    "vle_forum_clicks_to_date",
+    "vle_quiz_clicks_to_date",
+    "vle_days_since_last_activity",
+    "vle_clicks_last_7d",
+    "vle_clicks_last_14d",
+    "vle_activity_trend_ratio",
+    "num_prior_submissions",
+    "prior_submission_lateness_mean",
+    "num_prior_scored_assessments",
+    "mean_prior_score",
+    "std_prior_score",
+    "prior_at_risk_rate",
+    "recent_prior_score"
+  ]
+}
