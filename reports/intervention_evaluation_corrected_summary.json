@@ -1,0 +1,93 @@
+{
+  "audit_objective": "Validation of Student-Level Intervention Aggregation & Leakage Elimination",
+  "peak_risk_aggregation_audit": {
+    "methodology": "P_s = max_a prob(s, a) across all semester assessments",
+    "total_students": 23351,
+    "positive_label_definition": "Student failed AT LEAST ONE assessment across entire course lifespan",
+    "at_risk_unique_students": 7821,
+    "base_rate_prevalence_pct": 33.49,
+    "timing_anomaly": {
+      "mean_scheduled_date_of_peak_risk": 90.1,
+      "median_scheduled_date_of_peak_risk": 61.0,
+      "pct_peak_assessments_after_day_120": 74.87,
+      "pct_failing_the_specific_peak_assessment": 17.94
+    },
+    "metrics": {
+      "recall_at_5": 0.1491,
+      "precision_at_5": 0.9987,
+      "recall_at_10": 0.2874,
+      "precision_at_10": 0.9627,
+      "recall_at_15": 0.3934,
+      "precision_at_15": 0.8785,
+      "recall_at_20": 0.4838,
+      "precision_at_20": 0.8101
+    },
+    "root_cause_of_96pct_precision": "Precision reaches 96.27% at top 10% because: (1) base rate was inflated to 33.49% by crediting a positive label if the student failed ANY assessment at ANY time; (2) students with multiple attempts had multiple chances for peak risk; and (3) 33.5% of students in top 10% did not fail the peak-risk assessment, but were credited as true positives because they failed another assessment."
+  },
+  "leakage_free_alternative_A_first_assessment": {
+    "methodology": "First-Assessment Milestone (Assessment 1 per unique student evaluated 7d prior)",
+    "total_students": 23351,
+    "positive_label_definition": "Student score < 50 on Assessment 1",
+    "at_risk_students": 2513,
+    "base_rate_prevalence_pct": 10.76,
+    "metrics": {
+      "recall_at_5": 0.2025,
+      "precision_at_5": 0.436,
+      "recall_at_10": 0.3812,
+      "precision_at_10": 0.4103,
+      "recall_at_15": 0.5078,
+      "precision_at_15": 0.3643,
+      "recall_at_20": 0.6017,
+      "precision_at_20": 0.3238
+    }
+  },
+  "leakage_free_alternative_B_day30_cutoff": {
+    "methodology": "Common Calendar Cutoff at Day 30 (Next upcoming assessment scheduled after Day 30)",
+    "total_students": 21719,
+    "positive_label_definition": "Student score < 50 on next upcoming assessment after Day 30",
+    "at_risk_students": 1676,
+    "base_rate_prevalence_pct": 7.72,
+    "metrics": {
+      "recall_at_5": 0.2578,
+      "precision_at_5": 0.3978,
+      "recall_at_10": 0.4111,
+      "precision_at_10": 0.3172,
+      "recall_at_15": 0.5149,
+      "precision_at_15": 0.2649,
+      "recall_at_20": 0.5937,
+      "precision_at_20": 0.2291
+    }
+  },
+  "chronological_2014J_leakage_free_evaluation": {
+    "alternative_A_first_assessment": {
+      "total_students": 8607,
+      "at_risk_students": 1272,
+      "base_rate_prevalence_pct": 14.78,
+      "metrics": {
+        "recall_at_5": 0.0818,
+        "precision_at_5": 0.2417,
+        "recall_at_10": 0.1423,
+        "precision_at_10": 0.2103,
+        "recall_at_15": 0.1965,
+        "precision_at_15": 0.1936,
+        "recall_at_20": 0.2343,
+        "precision_at_20": 0.1731
+      }
+    },
+    "alternative_B_day30_cutoff": {
+      "total_students": 7928,
+      "at_risk_students": 556,
+      "base_rate_prevalence_pct": 7.01,
+      "metrics": {
+        "recall_at_5": 0.0899,
+        "precision_at_5": 0.1261,
+        "recall_at_10": 0.196,
+        "precision_at_10": 0.1375,
+        "recall_at_15": 0.3273,
+        "precision_at_15": 0.153,
+        "recall_at_20": 0.4353,
+        "precision_at_20": 0.1526
+      }
+    }
+  }
+}
