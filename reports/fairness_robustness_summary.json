@@ -1,0 +1,2110 @@
+{
+  "fairness_audit": {
+    "gender": {
+      "attribute": "gender",
+      "subgroups": {
+        "F": {
+          "n_samples": 79083,
+          "n_positives": 6726,
+          "prevalence_pct": 8.5,
+          "selection_rate_pct": 11.34,
+          "precision_pct": 40.28,
+          "precision_95ci": [
+            39.27,
+            41.3
+          ],
+          "recall_pct": 53.72,
+          "recall_95ci": [
+            52.52,
+            54.91
+          ],
+          "false_positive_rate_pct": 7.4,
+          "false_positive_rate_95ci": [
+            7.21,
+            7.6
+          ],
+          "false_negative_rate_pct": 46.28,
+          "pr_auc": 0.4376,
+          "brier_score": 0.0604,
+          "confusion_matrix": {
+            "tp": 3613,
+            "fp": 5356,
+            "tn": 67001,
+            "fn": 3113
+          },
+          "small_sample_limitation": false
+        },
+        "M": {
+          "n_samples": 91791,
+          "n_positives": 7897,
+          "prevalence_pct": 8.6,
+          "selection_rate_pct": 13.06,
+          "precision_pct": 39.84,
+          "precision_95ci": [
+            38.97,
+            40.72
+          ],
+          "recall_pct": 60.49,
+          "recall_95ci": [
+            59.41,
+            61.56
+          ],
+          "false_positive_rate_pct": 8.6,
+          "false_positive_rate_95ci": [
+            8.41,
+            8.79
+          ],
+          "false_negative_rate_pct": 39.51,
+          "pr_auc": 0.4794,
+          "brier_score": 0.0583,
+          "confusion_matrix": {
+            "tp": 4777,
+            "fp": 7213,
+            "tn": 76681,
+            "fn": 3120
+          },
+          "small_sample_limitation": false
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.868,
+        "equal_opportunity_ratio": 0.888,
+        "predictive_parity_ratio": 0.989,
+        "false_positive_parity_ratio": 0.86,
+        "max_recall_difference_pct": 6.77,
+        "max_fpr_difference_pct": 1.2
+      }
+    },
+    "age_band": {
+      "attribute": "age_band",
+      "subgroups": {
+        "0-35": {
+          "n_samples": 117211,
+          "n_positives": 10641,
+          "prevalence_pct": 9.08,
+          "selection_rate_pct": 13.24,
+          "precision_pct": 40.03,
+          "precision_95ci": [
+            39.26,
+            40.81
+          ],
+          "recall_pct": 58.39,
+          "recall_95ci": [
+            57.45,
+            59.32
+          ],
+          "false_positive_rate_pct": 8.73,
+          "false_positive_rate_95ci": [
+            8.57,
+            8.9
+          ],
+          "false_negative_rate_pct": 41.61,
+          "pr_auc": 0.4679,
+          "brier_score": 0.0624,
+          "confusion_matrix": {
+            "tp": 6213,
+            "fp": 9307,
+            "tn": 97263,
+            "fn": 4428
+          },
+          "small_sample_limitation": false
+        },
+        "35-55": {
+          "n_samples": 52548,
+          "n_positives": 3922,
+          "prevalence_pct": 7.46,
+          "selection_rate_pct": 10.16,
+          "precision_pct": 40.1,
+          "precision_95ci": [
+            38.79,
+            41.42
+          ],
+          "recall_pct": 54.59,
+          "recall_95ci": [
+            53.03,
+            56.14
+          ],
+          "false_positive_rate_pct": 6.58,
+          "false_positive_rate_95ci": [
+            6.36,
+            6.8
+          ],
+          "false_negative_rate_pct": 45.41,
+          "pr_auc": 0.4431,
+          "brier_score": 0.0526,
+          "confusion_matrix": {
+            "tp": 2141,
+            "fp": 3198,
+            "tn": 45428,
+            "fn": 1781
+          },
+          "small_sample_limitation": false
+        },
+        "55<=": {
+          "n_samples": 1115,
+          "n_positives": 60,
+          "prevalence_pct": 5.38,
+          "selection_rate_pct": 8.97,
+          "precision_pct": 36.0,
+          "precision_95ci": [
+            27.27,
+            45.76
+          ],
+          "recall_pct": 60.0,
+          "recall_95ci": [
+            47.37,
+            71.43
+          ],
+          "false_positive_rate_pct": 6.07,
+          "false_positive_rate_95ci": [
+            4.78,
+            7.67
+          ],
+          "false_negative_rate_pct": 40.0,
+          "pr_auc": 0.4451,
+          "brier_score": 0.0391,
+          "confusion_matrix": {
+            "tp": 36,
+            "fp": 64,
+            "tn": 991,
+            "fn": 24
+          },
+          "small_sample_limitation": true
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.677,
+        "equal_opportunity_ratio": 0.91,
+        "predictive_parity_ratio": 0.898,
+        "false_positive_parity_ratio": 0.695,
+        "max_recall_difference_pct": 5.41,
+        "max_fpr_difference_pct": 2.66
+      }
+    },
+    "disability": {
+      "attribute": "disability",
+      "subgroups": {
+        "N": {
+          "n_samples": 155934,
+          "n_positives": 12958,
+          "prevalence_pct": 8.31,
+          "selection_rate_pct": 12.06,
+          "precision_pct": 39.78,
+          "precision_95ci": [
+            39.08,
+            40.48
+          ],
+          "recall_pct": 57.74,
+          "recall_95ci": [
+            56.89,
+            58.59
+          ],
+          "false_positive_rate_pct": 7.92,
+          "false_positive_rate_95ci": [
+            7.78,
+            8.06
+          ],
+          "false_negative_rate_pct": 42.26,
+          "pr_auc": 0.4597,
+          "brier_score": 0.0576,
+          "confusion_matrix": {
+            "tp": 7482,
+            "fp": 11327,
+            "tn": 131649,
+            "fn": 5476
+          },
+          "small_sample_limitation": false
+        },
+        "Y": {
+          "n_samples": 14940,
+          "n_positives": 1665,
+          "prevalence_pct": 11.14,
+          "selection_rate_pct": 14.39,
+          "precision_pct": 42.23,
+          "precision_95ci": [
+            40.16,
+            44.33
+          ],
+          "recall_pct": 54.53,
+          "recall_95ci": [
+            52.14,
+            56.91
+          ],
+          "false_positive_rate_pct": 9.36,
+          "false_positive_rate_95ci": [
+            8.87,
+            9.86
+          ],
+          "false_negative_rate_pct": 45.47,
+          "pr_auc": 0.4705,
+          "brier_score": 0.0766,
+          "confusion_matrix": {
+            "tp": 908,
+            "fp": 1242,
+            "tn": 12033,
+            "fn": 757
+          },
+          "small_sample_limitation": false
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.838,
+        "equal_opportunity_ratio": 0.944,
+        "predictive_parity_ratio": 0.942,
+        "false_positive_parity_ratio": 0.846,
+        "max_recall_difference_pct": 3.21,
+        "max_fpr_difference_pct": 1.44
+      }
+    },
+    "highest_education": {
+      "attribute": "highest_education",
+      "subgroups": {
+        "A Level or Equivalent": {
+          "n_samples": 78297,
+          "n_positives": 6258,
+          "prevalence_pct": 7.99,
+          "selection_rate_pct": 12.18,
+          "precision_pct": 37.99,
+          "precision_95ci": [
+            37.03,
+            38.97
+          ],
+          "recall_pct": 57.88,
+          "recall_95ci": [
+            56.65,
+            59.1
+          ],
+          "false_positive_rate_pct": 8.21,
+          "false_positive_rate_95ci": [
+            8.01,
+            8.41
+          ],
+          "false_negative_rate_pct": 42.12,
+          "pr_auc": 0.4427,
+          "brier_score": 0.0564,
+          "confusion_matrix": {
+            "tp": 3622,
+            "fp": 5911,
+            "tn": 66128,
+            "fn": 2636
+          },
+          "small_sample_limitation": false
+        },
+        "HE Qualification": {
+          "n_samples": 26793,
+          "n_positives": 1911,
+          "prevalence_pct": 7.13,
+          "selection_rate_pct": 11.68,
+          "precision_pct": 37.36,
+          "precision_95ci": [
+            35.68,
+            39.07
+          ],
+          "recall_pct": 61.17,
+          "recall_95ci": [
+            58.97,
+            63.33
+          ],
+          "false_positive_rate_pct": 7.88,
+          "false_positive_rate_95ci": [
+            7.55,
+            8.22
+          ],
+          "false_negative_rate_pct": 38.83,
+          "pr_auc": 0.4443,
+          "brier_score": 0.0501,
+          "confusion_matrix": {
+            "tp": 1169,
+            "fp": 1960,
+            "tn": 22922,
+            "fn": 742
+          },
+          "small_sample_limitation": false
+        },
+        "Lower Than A Level": {
+          "n_samples": 62533,
+          "n_positives": 6173,
+          "prevalence_pct": 9.87,
+          "selection_rate_pct": 12.66,
+          "precision_pct": 43.51,
+          "precision_95ci": [
+            42.42,
+            44.6
+          ],
+          "recall_pct": 55.78,
+          "recall_95ci": [
+            54.53,
+            57.01
+          ],
+          "false_positive_rate_pct": 7.93,
+          "false_positive_rate_95ci": [
+            7.71,
+            8.16
+          ],
+          "false_negative_rate_pct": 44.22,
+          "pr_auc": 0.4866,
+          "brier_score": 0.0668,
+          "confusion_matrix": {
+            "tp": 3443,
+            "fp": 4471,
+            "tn": 51889,
+            "fn": 2730
+          },
+          "small_sample_limitation": false
+        },
+        "No Formal quals": {
+          "n_samples": 1382,
+          "n_positives": 207,
+          "prevalence_pct": 14.98,
+          "selection_rate_pct": 14.91,
+          "precision_pct": 52.43,
+          "precision_95ci": [
+            45.63,
+            59.14
+          ],
+          "recall_pct": 52.17,
+          "recall_95ci": [
+            45.39,
+            58.88
+          ],
+          "false_positive_rate_pct": 8.34,
+          "false_positive_rate_95ci": [
+            6.89,
+            10.06
+          ],
+          "false_negative_rate_pct": 47.83,
+          "pr_auc": 0.5578,
+          "brier_score": 0.0962,
+          "confusion_matrix": {
+            "tp": 108,
+            "fp": 98,
+            "tn": 1077,
+            "fn": 99
+          },
+          "small_sample_limitation": true
+        },
+        "Post Graduate Qualification": {
+          "n_samples": 1869,
+          "n_positives": 74,
+          "prevalence_pct": 3.96,
+          "selection_rate_pct": 9.47,
+          "precision_pct": 27.12,
+          "precision_95ci": [
+            21.11,
+            34.1
+          ],
+          "recall_pct": 64.86,
+          "recall_95ci": [
+            53.5,
+            74.76
+          ],
+          "false_positive_rate_pct": 7.19,
+          "false_positive_rate_95ci": [
+            6.08,
+            8.48
+          ],
+          "false_negative_rate_pct": 35.14,
+          "pr_auc": 0.4179,
+          "brier_score": 0.0303,
+          "confusion_matrix": {
+            "tp": 48,
+            "fp": 129,
+            "tn": 1666,
+            "fn": 26
+          },
+          "small_sample_limitation": true
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.635,
+        "equal_opportunity_ratio": 0.804,
+        "predictive_parity_ratio": 0.517,
+        "false_positive_parity_ratio": 0.862,
+        "max_recall_difference_pct": 12.69,
+        "max_fpr_difference_pct": 1.15
+      }
+    },
+    "imd_band": {
+      "attribute": "imd_band",
+      "subgroups": {
+        "0-10%": {
+          "n_samples": 15063,
+          "n_positives": 1751,
+          "prevalence_pct": 11.62,
+          "selection_rate_pct": 14.91,
+          "precision_pct": 41.45,
+          "precision_95ci": [
+            39.43,
+            43.5
+          ],
+          "recall_pct": 53.17,
+          "recall_95ci": [
+            50.83,
+            55.5
+          ],
+          "false_positive_rate_pct": 9.88,
+          "false_positive_rate_95ci": [
+            9.38,
+            10.4
+          ],
+          "false_negative_rate_pct": 46.83,
+          "pr_auc": 0.4635,
+          "brier_score": 0.0805,
+          "confusion_matrix": {
+            "tp": 931,
+            "fp": 1315,
+            "tn": 11997,
+            "fn": 820
+          },
+          "small_sample_limitation": false
+        },
+        "10-20": {
+          "n_samples": 16552,
+          "n_positives": 1810,
+          "prevalence_pct": 10.94,
+          "selection_rate_pct": 13.96,
+          "precision_pct": 44.76,
+          "precision_95ci": [
+            42.74,
+            46.8
+          ],
+          "recall_pct": 57.13,
+          "recall_95ci": [
+            54.83,
+            59.39
+          ],
+          "false_positive_rate_pct": 8.66,
+          "false_positive_rate_95ci": [
+            8.21,
+            9.12
+          ],
+          "false_negative_rate_pct": 42.87,
+          "pr_auc": 0.493,
+          "brier_score": 0.0733,
+          "confusion_matrix": {
+            "tp": 1034,
+            "fp": 1276,
+            "tn": 13466,
+            "fn": 776
+          },
+          "small_sample_limitation": false
+        },
+        "20-30%": {
+          "n_samples": 17242,
+          "n_positives": 1585,
+          "prevalence_pct": 9.19,
+          "selection_rate_pct": 12.92,
+          "precision_pct": 40.91,
+          "precision_95ci": [
+            38.88,
+            42.96
+          ],
+          "recall_pct": 57.48,
+          "recall_95ci": [
+            55.03,
+            59.89
+          ],
+          "false_positive_rate_pct": 8.41,
+          "false_positive_rate_95ci": [
+            7.98,
+            8.85
+          ],
+          "false_negative_rate_pct": 42.52,
+          "pr_auc": 0.4622,
+          "brier_score": 0.0634,
+          "confusion_matrix": {
+            "tp": 911,
+            "fp": 1316,
+            "tn": 14341,
+            "fn": 674
+          },
+          "small_sample_limitation": false
+        },
+        "30-40%": {
+          "n_samples": 18911,
+          "n_positives": 1711,
+          "prevalence_pct": 9.05,
+          "selection_rate_pct": 12.59,
+          "precision_pct": 42.82,
+          "precision_95ci": [
+            40.84,
+            44.81
+          ],
+          "recall_pct": 59.56,
+          "recall_95ci": [
+            57.21,
+            61.86
+          ],
+          "false_positive_rate_pct": 7.91,
+          "false_positive_rate_95ci": [
+            7.52,
+            8.33
+          ],
+          "false_negative_rate_pct": 40.44,
+          "pr_auc": 0.506,
+          "brier_score": 0.06,
+          "confusion_matrix": {
+            "tp": 1019,
+            "fp": 1361,
+            "tn": 15839,
+            "fn": 692
+          },
+          "small_sample_limitation": false
+        },
+        "40-50%": {
+          "n_samples": 16766,
+          "n_positives": 1337,
+          "prevalence_pct": 7.97,
+          "selection_rate_pct": 11.68,
+          "precision_pct": 38.0,
+          "precision_95ci": [
+            35.87,
+            40.17
+          ],
+          "recall_pct": 55.65,
+          "recall_95ci": [
+            52.97,
+            58.29
+          ],
+          "false_positive_rate_pct": 7.87,
+          "false_positive_rate_95ci": [
+            7.45,
+            8.3
+          ],
+          "false_negative_rate_pct": 44.35,
+          "pr_auc": 0.4427,
+          "brier_score": 0.0565,
+          "confusion_matrix": {
+            "tp": 744,
+            "fp": 1214,
+            "tn": 14215,
+            "fn": 593
+          },
+          "small_sample_limitation": false
+        },
+        "50-60%": {
+          "n_samples": 16693,
+          "n_positives": 1451,
+          "prevalence_pct": 8.69,
+          "selection_rate_pct": 12.62,
+          "precision_pct": 41.31,
+          "precision_95ci": [
+            39.23,
+            43.43
+          ],
+          "recall_pct": 59.96,
+          "recall_95ci": [
+            57.41,
+            62.45
+          ],
+          "false_positive_rate_pct": 8.11,
+          "false_positive_rate_95ci": [
+            7.69,
+            8.55
+          ],
+          "false_negative_rate_pct": 40.04,
+          "pr_auc": 0.4886,
+          "brier_score": 0.0586,
+          "confusion_matrix": {
+            "tp": 870,
+            "fp": 1236,
+            "tn": 14006,
+            "fn": 581
+          },
+          "small_sample_limitation": false
+        },
+        "60-70%": {
+          "n_samples": 15849,
+          "n_positives": 1232,
+          "prevalence_pct": 7.77,
+          "selection_rate_pct": 11.81,
+          "precision_pct": 39.21,
+          "precision_95ci": [
+            37.02,
+            41.44
+          ],
+          "recall_pct": 59.58,
+          "recall_95ci": [
+            56.81,
+            62.28
+          ],
+          "false_positive_rate_pct": 7.79,
+          "false_positive_rate_95ci": [
+            7.36,
+            8.23
+          ],
+          "false_negative_rate_pct": 40.42,
+          "pr_auc": 0.4651,
+          "brier_score": 0.0539,
+          "confusion_matrix": {
+            "tp": 734,
+            "fp": 1138,
+            "tn": 13479,
+            "fn": 498
+          },
+          "small_sample_limitation": false
+        },
+        "70-80%": {
+          "n_samples": 15976,
+          "n_positives": 1268,
+          "prevalence_pct": 7.94,
+          "selection_rate_pct": 11.41,
+          "precision_pct": 38.45,
+          "precision_95ci": [
+            36.25,
+            40.71
+          ],
+          "recall_pct": 55.28,
+          "recall_95ci": [
+            52.54,
+            58.0
+          ],
+          "false_positive_rate_pct": 7.63,
+          "false_positive_rate_95ci": [
+            7.21,
+            8.07
+          ],
+          "false_negative_rate_pct": 44.72,
+          "pr_auc": 0.4365,
+          "brier_score": 0.0563,
+          "confusion_matrix": {
+            "tp": 701,
+            "fp": 1122,
+            "tn": 13586,
+            "fn": 567
+          },
+          "small_sample_limitation": false
+        },
+        "80-90%": {
+          "n_samples": 15523,
+          "n_positives": 1036,
+          "prevalence_pct": 6.67,
+          "selection_rate_pct": 10.84,
+          "precision_pct": 36.86,
+          "precision_95ci": [
+            34.59,
+            39.19
+          ],
+          "recall_pct": 59.85,
+          "recall_95ci": [
+            56.83,
+            62.79
+          ],
+          "false_positive_rate_pct": 7.33,
+          "false_positive_rate_95ci": [
+            6.92,
+            7.77
+          ],
+          "false_negative_rate_pct": 40.15,
+          "pr_auc": 0.4397,
+          "brier_score": 0.0473,
+          "confusion_matrix": {
+            "tp": 620,
+            "fp": 1062,
+            "tn": 13425,
+            "fn": 416
+          },
+          "small_sample_limitation": false
+        },
+        "90-100%": {
+          "n_samples": 14819,
+          "n_positives": 964,
+          "prevalence_pct": 6.51,
+          "selection_rate_pct": 10.61,
+          "precision_pct": 34.92,
+          "precision_95ci": [
+            32.61,
+            37.31
+          ],
+          "recall_pct": 56.95,
+          "recall_95ci": [
+            53.8,
+            60.04
+          ],
+          "false_positive_rate_pct": 7.38,
+          "false_positive_rate_95ci": [
+            6.96,
+            7.83
+          ],
+          "false_negative_rate_pct": 43.05,
+          "pr_auc": 0.3972,
+          "brier_score": 0.0482,
+          "confusion_matrix": {
+            "tp": 549,
+            "fp": 1023,
+            "tn": 12832,
+            "fn": 415
+          },
+          "small_sample_limitation": false
+        },
+        "Missing": {
+          "n_samples": 7480,
+          "n_positives": 478,
+          "prevalence_pct": 6.39,
+          "selection_rate_pct": 10.47,
+          "precision_pct": 35.38,
+          "precision_95ci": [
+            32.11,
+            38.79
+          ],
+          "recall_pct": 57.95,
+          "recall_95ci": [
+            53.48,
+            62.29
+          ],
+          "false_positive_rate_pct": 7.23,
+          "false_positive_rate_95ci": [
+            6.64,
+            7.86
+          ],
+          "false_negative_rate_pct": 42.05,
+          "pr_auc": 0.4187,
+          "brier_score": 0.0461,
+          "confusion_matrix": {
+            "tp": 277,
+            "fp": 506,
+            "tn": 6496,
+            "fn": 201
+          },
+          "small_sample_limitation": false
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.702,
+        "equal_opportunity_ratio": 0.887,
+        "predictive_parity_ratio": 0.78,
+        "false_positive_parity_ratio": 0.732,
+        "max_recall_difference_pct": 6.79,
+        "max_fpr_difference_pct": 2.65
+      }
+    },
+    "region": {
+      "attribute": "region",
+      "subgroups": {
+        "East Anglian Region": {
+          "n_samples": 17969,
+          "n_positives": 1476,
+          "prevalence_pct": 8.21,
+          "selection_rate_pct": 12.27,
+          "precision_pct": 40.14,
+          "precision_95ci": [
+            38.11,
+            42.2
+          ],
+          "recall_pct": 59.96,
+          "recall_95ci": [
+            57.44,
+            62.43
+          ],
+          "false_positive_rate_pct": 8.0,
+          "false_positive_rate_95ci": [
+            7.6,
+            8.43
+          ],
+          "false_negative_rate_pct": 40.04,
+          "pr_auc": 0.4754,
+          "brier_score": 0.0561,
+          "confusion_matrix": {
+            "tp": 885,
+            "fp": 1320,
+            "tn": 15173,
+            "fn": 591
+          },
+          "small_sample_limitation": false
+        },
+        "East Midlands Region": {
+          "n_samples": 12188,
+          "n_positives": 1035,
+          "prevalence_pct": 8.49,
+          "selection_rate_pct": 11.77,
+          "precision_pct": 42.37,
+          "precision_95ci": [
+            39.84,
+            44.94
+          ],
+          "recall_pct": 58.74,
+          "recall_95ci": [
+            55.72,
+            61.71
+          ],
+          "false_positive_rate_pct": 7.42,
+          "false_positive_rate_95ci": [
+            6.94,
+            7.92
+          ],
+          "false_negative_rate_pct": 41.26,
+          "pr_auc": 0.4792,
+          "brier_score": 0.0577,
+          "confusion_matrix": {
+            "tp": 608,
+            "fp": 827,
+            "tn": 10326,
+            "fn": 427
+          },
+          "small_sample_limitation": false
+        },
+        "Ireland": {
+          "n_samples": 7226,
+          "n_positives": 561,
+          "prevalence_pct": 7.76,
+          "selection_rate_pct": 12.59,
+          "precision_pct": 32.86,
+          "precision_95ci": [
+            29.88,
+            35.98
+          ],
+          "recall_pct": 53.3,
+          "recall_95ci": [
+            49.16,
+            57.39
+          ],
+          "false_positive_rate_pct": 9.17,
+          "false_positive_rate_95ci": [
+            8.5,
+            9.88
+          ],
+          "false_negative_rate_pct": 46.7,
+          "pr_auc": 0.3827,
+          "brier_score": 0.0586,
+          "confusion_matrix": {
+            "tp": 299,
+            "fp": 611,
+            "tn": 6054,
+            "fn": 262
+          },
+          "small_sample_limitation": false
+        },
+        "London Region": {
+          "n_samples": 16047,
+          "n_positives": 1617,
+          "prevalence_pct": 10.08,
+          "selection_rate_pct": 13.98,
+          "precision_pct": 40.24,
+          "precision_95ci": [
+            38.23,
+            42.28
+          ],
+          "recall_pct": 55.84,
+          "recall_95ci": [
+            53.41,
+            58.25
+          ],
+          "false_positive_rate_pct": 9.29,
+          "false_positive_rate_95ci": [
+            8.83,
+            9.78
+          ],
+          "false_negative_rate_pct": 44.16,
+          "pr_auc": 0.4546,
+          "brier_score": 0.0703,
+          "confusion_matrix": {
+            "tp": 903,
+            "fp": 1341,
+            "tn": 13089,
+            "fn": 714
+          },
+          "small_sample_limitation": false
+        },
+        "North Region": {
+          "n_samples": 10014,
+          "n_positives": 784,
+          "prevalence_pct": 7.83,
+          "selection_rate_pct": 11.13,
+          "precision_pct": 39.28,
+          "precision_95ci": [
+            36.46,
+            42.18
+          ],
+          "recall_pct": 55.87,
+          "recall_95ci": [
+            52.37,
+            59.31
+          ],
+          "false_positive_rate_pct": 7.33,
+          "false_positive_rate_95ci": [
+            6.82,
+            7.88
+          ],
+          "false_negative_rate_pct": 44.13,
+          "pr_auc": 0.4518,
+          "brier_score": 0.0544,
+          "confusion_matrix": {
+            "tp": 438,
+            "fp": 677,
+            "tn": 8553,
+            "fn": 346
+          },
+          "small_sample_limitation": false
+        },
+        "North Western Region": {
+          "n_samples": 13689,
+          "n_positives": 1371,
+          "prevalence_pct": 10.02,
+          "selection_rate_pct": 13.19,
+          "precision_pct": 41.39,
+          "precision_95ci": [
+            39.13,
+            43.67
+          ],
+          "recall_pct": 54.49,
+          "recall_95ci": [
+            51.84,
+            57.11
+          ],
+          "false_positive_rate_pct": 8.59,
+          "false_positive_rate_95ci": [
+            8.11,
+            9.1
+          ],
+          "false_negative_rate_pct": 45.51,
+          "pr_auc": 0.4897,
+          "brier_score": 0.0675,
+          "confusion_matrix": {
+            "tp": 747,
+            "fp": 1058,
+            "tn": 11260,
+            "fn": 624
+          },
+          "small_sample_limitation": false
+        },
+        "Scotland": {
+          "n_samples": 17598,
+          "n_positives": 1344,
+          "prevalence_pct": 7.64,
+          "selection_rate_pct": 12.7,
+          "precision_pct": 37.0,
+          "precision_95ci": [
+            35.02,
+            39.02
+          ],
+          "recall_pct": 61.53,
+          "recall_95ci": [
+            58.9,
+            64.1
+          ],
+          "false_positive_rate_pct": 8.66,
+          "false_positive_rate_95ci": [
+            8.24,
+            9.1
+          ],
+          "false_negative_rate_pct": 38.47,
+          "pr_auc": 0.4531,
+          "brier_score": 0.0535,
+          "confusion_matrix": {
+            "tp": 827,
+            "fp": 1408,
+            "tn": 14846,
+            "fn": 517
+          },
+          "small_sample_limitation": false
+        },
+        "South East Region": {
+          "n_samples": 11612,
+          "n_positives": 842,
+          "prevalence_pct": 7.25,
+          "selection_rate_pct": 10.55,
+          "precision_pct": 39.27,
+          "precision_95ci": [
+            36.57,
+            42.03
+          ],
+          "recall_pct": 57.13,
+          "recall_95ci": [
+            53.76,
+            60.43
+          ],
+          "false_positive_rate_pct": 6.91,
+          "false_positive_rate_95ci": [
+            6.44,
+            7.4
+          ],
+          "false_negative_rate_pct": 42.87,
+          "pr_auc": 0.4434,
+          "brier_score": 0.0514,
+          "confusion_matrix": {
+            "tp": 481,
+            "fp": 744,
+            "tn": 10026,
+            "fn": 361
+          },
+          "small_sample_limitation": false
+        },
+        "South Region": {
+          "n_samples": 17270,
+          "n_positives": 1378,
+          "prevalence_pct": 7.98,
+          "selection_rate_pct": 11.45,
+          "precision_pct": 40.14,
+          "precision_95ci": [
+            38.0,
+            42.32
+          ],
+          "recall_pct": 57.62,
+          "recall_95ci": [
+            54.99,
+            60.2
+          ],
+          "false_positive_rate_pct": 7.45,
+          "false_positive_rate_95ci": [
+            7.05,
+            7.87
+          ],
+          "false_negative_rate_pct": 42.38,
+          "pr_auc": 0.4478,
+          "brier_score": 0.0557,
+          "confusion_matrix": {
+            "tp": 794,
+            "fp": 1184,
+            "tn": 14708,
+            "fn": 584
+          },
+          "small_sample_limitation": false
+        },
+        "South West Region": {
+          "n_samples": 13185,
+          "n_positives": 1214,
+          "prevalence_pct": 9.21,
+          "selection_rate_pct": 12.74,
+          "precision_pct": 42.56,
+          "precision_95ci": [
+            40.21,
+            44.94
+          ],
+          "recall_pct": 58.9,
+          "recall_95ci": [
+            56.1,
+            61.63
+          ],
+          "false_positive_rate_pct": 8.06,
+          "false_positive_rate_95ci": [
+            7.59,
+            8.56
+          ],
+          "false_negative_rate_pct": 41.1,
+          "pr_auc": 0.4964,
+          "brier_score": 0.0613,
+          "confusion_matrix": {
+            "tp": 715,
+            "fp": 965,
+            "tn": 11006,
+            "fn": 499
+          },
+          "small_sample_limitation": false
+        },
+        "Wales": {
+          "n_samples": 11085,
+          "n_positives": 982,
+          "prevalence_pct": 8.86,
+          "selection_rate_pct": 11.9,
+          "precision_pct": 41.93,
+          "precision_95ci": [
+            39.29,
+            44.61
+          ],
+          "recall_pct": 56.31,
+          "recall_95ci": [
+            53.19,
+            59.39
+          ],
+          "false_positive_rate_pct": 7.58,
+          "false_positive_rate_95ci": [
+            7.08,
+            8.11
+          ],
+          "false_negative_rate_pct": 43.69,
+          "pr_auc": 0.4772,
+          "brier_score": 0.0605,
+          "confusion_matrix": {
+            "tp": 553,
+            "fp": 766,
+            "tn": 9337,
+            "fn": 429
+          },
+          "small_sample_limitation": false
+        },
+        "West Midlands Region": {
+          "n_samples": 12840,
+          "n_positives": 1142,
+          "prevalence_pct": 8.89,
+          "selection_rate_pct": 12.48,
+          "precision_pct": 39.7,
+          "precision_95ci": [
+            37.33,
+            42.12
+          ],
+          "recall_pct": 55.69,
+          "recall_95ci": [
+            52.8,
+            58.55
+          ],
+          "false_positive_rate_pct": 8.26,
+          "false_positive_rate_95ci": [
+            7.77,
+            8.77
+          ],
+          "false_negative_rate_pct": 44.31,
+          "pr_auc": 0.4395,
+          "brier_score": 0.063,
+          "confusion_matrix": {
+            "tp": 636,
+            "fp": 966,
+            "tn": 10732,
+            "fn": 506
+          },
+          "small_sample_limitation": false
+        },
+        "Yorkshire Region": {
+          "n_samples": 10151,
+          "n_positives": 877,
+          "prevalence_pct": 8.64,
+          "selection_rate_pct": 11.88,
+          "precision_pct": 41.79,
+          "precision_95ci": [
+            39.04,
+            44.6
+          ],
+          "recall_pct": 57.47,
+          "recall_95ci": [
+            54.17,
+            60.7
+          ],
+          "false_positive_rate_pct": 7.57,
+          "false_positive_rate_95ci": [
+            7.05,
+            8.13
+          ],
+          "false_negative_rate_pct": 42.53,
+          "pr_auc": 0.4656,
+          "brier_score": 0.0595,
+          "confusion_matrix": {
+            "tp": 504,
+            "fp": 702,
+            "tn": 8572,
+            "fn": 373
+          },
+          "small_sample_limitation": false
+        }
+      },
+      "parity_disparities": {
+        "demographic_parity_ratio": 0.755,
+        "equal_opportunity_ratio": 0.866,
+        "predictive_parity_ratio": 0.772,
+        "false_positive_parity_ratio": 0.744,
+        "max_recall_difference_pct": 8.23,
+        "max_fpr_difference_pct": 2.38
+      }
+    }
+  },
+  "robustness_analysis": {
+    "presentations": {
+      "2013B": {
+        "n_samples": 33776,
+        "n_positives": 3017,
+        "prevalence_pct": 8.93,
+        "selection_rate_pct": 12.94,
+        "precision_pct": 41.15,
+        "precision_95ci": [
+          39.7,
+          42.61
+        ],
+        "recall_pct": 59.63,
+        "recall_95ci": [
+          57.87,
+          61.37
+        ],
+        "false_positive_rate_pct": 8.37,
+        "false_positive_rate_95ci": [
+          8.06,
+          8.68
+        ],
+        "false_negative_rate_pct": 40.37,
+        "pr_auc": 0.4944,
+        "brier_score": 0.0596,
+        "confusion_matrix": {
+          "tp": 1799,
+          "fp": 2573,
+          "tn": 28186,
+          "fn": 1218
+        }
+      },
+      "2013J": {
+        "n_samples": 48982,
+        "n_positives": 3514,
+        "prevalence_pct": 7.17,
+        "selection_rate_pct": 8.97,
+        "precision_pct": 40.79,
+        "precision_95ci": [
+          39.35,
+          42.25
+        ],
+        "recall_pct": 51.0,
+        "recall_95ci": [
+          49.34,
+          52.65
+        ],
+        "false_positive_rate_pct": 5.72,
+        "false_positive_rate_95ci": [
+          5.51,
+          5.94
+        ],
+        "false_negative_rate_pct": 49.0,
+        "pr_auc": 0.4255,
+        "brier_score": 0.0515,
+        "confusion_matrix": {
+          "tp": 1792,
+          "fp": 2601,
+          "tn": 42867,
+          "fn": 1722
+        }
+      },
+      "2014B": {
+        "n_samples": 38102,
+        "n_positives": 3455,
+        "prevalence_pct": 9.07,
+        "selection_rate_pct": 13.2,
+        "precision_pct": 39.64,
+        "precision_95ci": [
+          38.29,
+          41.0
+        ],
+        "recall_pct": 57.68,
+        "recall_95ci": [
+          56.03,
+          59.32
+        ],
+        "false_positive_rate_pct": 8.76,
+        "false_positive_rate_95ci": [
+          8.47,
+          9.06
+        ],
+        "false_negative_rate_pct": 42.32,
+        "pr_auc": 0.4661,
+        "brier_score": 0.0626,
+        "confusion_matrix": {
+          "tp": 1993,
+          "fp": 3035,
+          "tn": 31612,
+          "fn": 1462
+        }
+      },
+      "2014J": {
+        "n_samples": 50014,
+        "n_positives": 4637,
+        "prevalence_pct": 9.27,
+        "selection_rate_pct": 14.33,
+        "precision_pct": 39.16,
+        "precision_95ci": [
+          38.03,
+          40.29
+        ],
+        "recall_pct": 60.51,
+        "recall_95ci": [
+          59.1,
+          61.91
+        ],
+        "false_positive_rate_pct": 9.61,
+        "false_positive_rate_95ci": [
+          9.34,
+          9.88
+        ],
+        "false_negative_rate_pct": 39.49,
+        "pr_auc": 0.4573,
+        "brier_score": 0.0641,
+        "confusion_matrix": {
+          "tp": 2806,
+          "fp": 4360,
+          "tn": 41017,
+          "fn": 1831
+        }
+      }
+    },
+    "modules": {
+      "AAA": {
+        "n_samples": 3146,
+        "n_positives": 237,
+        "prevalence_pct": 7.53,
+        "selection_rate_pct": 9.5,
+        "precision_pct": 36.79,
+        "precision_95ci": [
+          31.52,
+          42.39
+        ],
+        "recall_pct": 46.41,
+        "recall_95ci": [
+          40.17,
+          52.77
+        ],
+        "false_positive_rate_pct": 6.5,
+        "false_positive_rate_95ci": [
+          5.66,
+          7.45
+        ],
+        "false_negative_rate_pct": 53.59,
+        "pr_auc": 0.3376,
+        "brier_score": 0.0584,
+        "confusion_matrix": {
+          "tp": 110,
+          "fp": 189,
+          "tn": 2720,
+          "fn": 127
+        }
+      },
+      "BBB": {
+        "n_samples": 42979,
+        "n_positives": 3166,
+        "prevalence_pct": 7.37,
+        "selection_rate_pct": 9.37,
+        "precision_pct": 39.45,
+        "precision_95ci": [
+          37.95,
+          40.97
+        ],
+        "recall_pct": 50.16,
+        "recall_95ci": [
+          48.42,
+          51.9
+        ],
+        "false_positive_rate_pct": 6.12,
+        "false_positive_rate_95ci": [
+          5.89,
+          6.36
+        ],
+        "false_negative_rate_pct": 49.84,
+        "pr_auc": 0.3793,
+        "brier_score": 0.0549,
+        "confusion_matrix": {
+          "tp": 1588,
+          "fp": 2437,
+          "tn": 37376,
+          "fn": 1578
+        }
+      },
+      "CCC": {
+        "n_samples": 17014,
+        "n_positives": 2590,
+        "prevalence_pct": 15.22,
+        "selection_rate_pct": 28.11,
+        "precision_pct": 38.22,
+        "precision_95ci": [
+          36.85,
+          39.6
+        ],
+        "recall_pct": 70.58,
+        "recall_95ci": [
+          68.79,
+          72.3
+        ],
+        "false_positive_rate_pct": 20.49,
+        "false_positive_rate_95ci": [
+          19.84,
+          21.15
+        ],
+        "false_negative_rate_pct": 29.42,
+        "pr_auc": 0.5157,
+        "brier_score": 0.0981,
+        "confusion_matrix": {
+          "tp": 1828,
+          "fp": 2955,
+          "tn": 11469,
+          "fn": 762
+        }
+      },
+      "DDD": {
+        "n_samples": 29865,
+        "n_positives": 4730,
+        "prevalence_pct": 15.84,
+        "selection_rate_pct": 25.74,
+        "precision_pct": 43.1,
+        "precision_95ci": [
+          42.0,
+          44.21
+        ],
+        "recall_pct": 70.04,
+        "recall_95ci": [
+          68.72,
+          71.33
+        ],
+        "false_positive_rate_pct": 17.4,
+        "false_positive_rate_95ci": [
+          16.93,
+          17.87
+        ],
+        "false_negative_rate_pct": 29.96,
+        "pr_auc": 0.5639,
+        "brier_score": 0.0959,
+        "confusion_matrix": {
+          "tp": 3313,
+          "fp": 4373,
+          "tn": 20762,
+          "fn": 1417
+        }
+      },
+      "EEE": {
+        "n_samples": 7886,
+        "n_positives": 352,
+        "prevalence_pct": 4.46,
+        "selection_rate_pct": 5.45,
+        "precision_pct": 37.91,
+        "precision_95ci": [
+          33.45,
+          42.58
+        ],
+        "recall_pct": 46.31,
+        "recall_95ci": [
+          41.17,
+          51.53
+        ],
+        "false_positive_rate_pct": 3.54,
+        "false_positive_rate_95ci": [
+          3.15,
+          3.99
+        ],
+        "false_negative_rate_pct": 53.69,
+        "pr_auc": 0.3489,
+        "brier_score": 0.0345,
+        "confusion_matrix": {
+          "tp": 163,
+          "fp": 267,
+          "tn": 7267,
+          "fn": 189
+        }
+      },
+      "FFF": {
+        "n_samples": 54769,
+        "n_positives": 2636,
+        "prevalence_pct": 4.81,
+        "selection_rate_pct": 5.67,
+        "precision_pct": 38.8,
+        "precision_95ci": [
+          37.1,
+          40.52
+        ],
+        "recall_pct": 45.71,
+        "recall_95ci": [
+          43.82,
+          47.62
+        ],
+        "false_positive_rate_pct": 3.65,
+        "false_positive_rate_95ci": [
+          3.49,
+          3.81
+        ],
+        "false_negative_rate_pct": 54.29,
+        "pr_auc": 0.3828,
+        "brier_score": 0.0361,
+        "confusion_matrix": {
+          "tp": 1205,
+          "fp": 1901,
+          "tn": 50232,
+          "fn": 1431
+        }
+      },
+      "GGG": {
+        "n_samples": 15215,
+        "n_positives": 912,
+        "prevalence_pct": 5.99,
+        "selection_rate_pct": 4.14,
+        "precision_pct": 29.05,
+        "precision_95ci": [
+          25.64,
+          32.71
+        ],
+        "recall_pct": 20.07,
+        "recall_95ci": [
+          17.59,
+          22.79
+        ],
+        "false_positive_rate_pct": 3.13,
+        "false_positive_rate_95ci": [
+          2.85,
+          3.42
+        ],
+        "false_negative_rate_pct": 79.93,
+        "pr_auc": 0.206,
+        "brier_score": 0.0521,
+        "confusion_matrix": {
+          "tp": 183,
+          "fp": 447,
+          "tn": 13856,
+          "fn": 729
+        }
+      }
+    },
+    "assessment_types": {
+      "TMA": {
+        "n_samples": 98253,
+        "n_positives": 10102,
+        "prevalence_pct": 10.28,
+        "selection_rate_pct": 14.61,
+        "precision_pct": 41.69,
+        "precision_95ci": [
+          40.88,
+          42.49
+        ],
+        "recall_pct": 59.24,
+        "recall_95ci": [
+          58.27,
+          60.19
+        ],
+        "false_positive_rate_pct": 9.5,
+        "false_positive_rate_95ci": [
+          9.3,
+          9.69
+        ],
+        "false_negative_rate_pct": 40.76,
+        "pr_auc": 0.4797,
+        "brier_score": 0.0695,
+        "confusion_matrix": {
+          "tp": 5984,
+          "fp": 8371,
+          "tn": 79780,
+          "fn": 4118
+        }
+      },
+      "CMA": {
+        "n_samples": 70527,
+        "n_positives": 3998,
+        "prevalence_pct": 5.67,
+        "selection_rate_pct": 8.01,
+        "precision_pct": 34.85,
+        "precision_95ci": [
+          33.62,
+          36.1
+        ],
+        "recall_pct": 49.22,
+        "recall_95ci": [
+          47.68,
+          50.77
+        ],
+        "false_positive_rate_pct": 5.53,
+        "false_positive_rate_95ci": [
+          5.36,
+          5.71
+        ],
+        "false_negative_rate_pct": 50.78,
+        "pr_auc": 0.3797,
+        "brier_score": 0.0428,
+        "confusion_matrix": {
+          "tp": 1968,
+          "fp": 3679,
+          "tn": 62850,
+          "fn": 2030
+        }
+      },
+      "Exam": {
+        "n_samples": 2094,
+        "n_positives": 523,
+        "prevalence_pct": 24.98,
+        "selection_rate_pct": 45.7,
+        "precision_pct": 45.77,
+        "precision_95ci": [
+          42.63,
+          48.94
+        ],
+        "recall_pct": 83.75,
+        "recall_95ci": [
+          80.34,
+          86.66
+        ],
+        "false_positive_rate_pct": 33.04,
+        "false_positive_rate_95ci": [
+          30.75,
+          35.4
+        ],
+        "false_negative_rate_pct": 16.25,
+        "pr_auc": 0.6377,
+        "brier_score": 0.1322,
+        "confusion_matrix": {
+          "tp": 438,
+          "fp": 519,
+          "tn": 1052,
+          "fn": 85
+        }
+      }
+    },
+    "horizons": {
+      "7_day_early_warning": {
+        "n_samples": 170874,
+        "n_positives": 14623,
+        "prevalence_pct": 8.56,
+        "selection_rate_pct": 12.27,
+        "precision_pct": 40.03,
+        "precision_95ci": [
+          39.37,
+          40.7
+        ],
+        "recall_pct": 57.38,
+        "recall_95ci": [
+          56.57,
+          58.17
+        ],
+        "false_positive_rate_pct": 8.04,
+        "false_positive_rate_95ci": [
+          7.91,
+          8.18
+        ],
+        "false_negative_rate_pct": 42.62,
+        "pr_auc": 0.4606,
+        "brier_score": 0.0592,
+        "confusion_matrix": {
+          "tp": 8390,
+          "fp": 12569,
+          "tn": 143682,
+          "fn": 6233
+        }
+      },
+      "1_day_checkpoint": {
+        "n_samples": 170874,
+        "n_positives": 14623,
+        "prevalence_pct": 8.56,
+        "selection_rate_pct": 12.25,
+        "precision_pct": 40.41,
+        "precision_95ci": [
+          39.74,
+          41.07
+        ],
+        "recall_pct": 57.82,
+        "recall_95ci": [
+          57.02,
+          58.62
+        ],
+        "false_positive_rate_pct": 7.98,
+        "false_positive_rate_95ci": [
+          7.85,
+          8.12
+        ],
+        "false_negative_rate_pct": 42.18,
+        "pr_auc": 0.4665,
+        "brier_score": 0.0588,
+        "confusion_matrix": {
+          "tp": 8455,
+          "fp": 12470,
+          "tn": 143781,
+          "fn": 6168
+        }
+      }
+    },
+    "grading_delays": {
+      "14_day_delay": {
+        "n_samples": 170874,
+        "n_positives": 14623,
+        "prevalence_pct": 8.56,
+        "selection_rate_pct": 12.27,
+        "precision_pct": 40.03,
+        "precision_95ci": [
+          39.37,
+          40.7
+        ],
+        "recall_pct": 57.38,
+        "recall_95ci": [
+          56.57,
+          58.17
+        ],
+        "false_positive_rate_pct": 8.04,
+        "false_positive_rate_95ci": [
+          7.91,
+          8.18
+        ],
+        "false_negative_rate_pct": 42.62,
+        "pr_auc": 0.4606,
+        "brier_score": 0.0592,
+        "confusion_matrix": {
+          "tp": 8390,
+          "fp": 12569,
+          "tn": 143682,
+          "fn": 6233
+        }
+      },
+      "7_day_delay": {
+        "n_samples": 170874,
+        "n_positives": 14623,
+        "prevalence_pct": 8.56,
+        "selection_rate_pct": 12.09,
+        "precision_pct": 40.14,
+        "precision_95ci": [
+          39.48,
+          40.81
+        ],
+        "recall_pct": 56.71,
+        "recall_95ci": [
+          55.9,
+          57.51
+        ],
+        "false_positive_rate_pct": 7.91,
+        "false_positive_rate_95ci": [
+          7.78,
+          8.05
+        ],
+        "false_negative_rate_pct": 43.29,
+        "pr_auc": 0.4576,
+        "brier_score": 0.0594,
+        "confusion_matrix": {
+          "tp": 8292,
+          "fp": 12364,
+          "tn": 143887,
+          "fn": 6331
+        }
+      }
+    },
+    "score_availability": {
+      "missing_historical_score": {
+        "n_samples": 29478,
+        "n_positives": 3092,
+        "prevalence_pct": 10.49,
+        "selection_rate_pct": 15.88,
+        "precision_pct": 33.35,
+        "precision_95ci": [
+          32.01,
+          34.71
+        ],
+        "recall_pct": 50.49,
+        "recall_95ci": [
+          48.72,
+          52.25
+        ],
+        "false_positive_rate_pct": 11.82,
+        "false_positive_rate_95ci": [
+          11.44,
+          12.22
+        ],
+        "false_negative_rate_pct": 49.51,
+        "pr_auc": 0.3203,
+        "brier_score": 0.081,
+        "confusion_matrix": {
+          "tp": 1561,
+          "fp": 3120,
+          "tn": 23266,
+          "fn": 1531
+        }
+      },
+      "observed_historical_score": {
+        "n_samples": 141396,
+        "n_positives": 11531,
+        "prevalence_pct": 8.16,
+        "selection_rate_pct": 11.51,
+        "precision_pct": 41.95,
+        "precision_95ci": [
+          41.2,
+          42.71
+        ],
+        "recall_pct": 59.22,
+        "recall_95ci": [
+          58.32,
+          60.12
+        ],
+        "false_positive_rate_pct": 7.28,
+        "false_positive_rate_95ci": [
+          7.14,
+          7.42
+        ],
+        "false_negative_rate_pct": 40.78,
+        "pr_auc": 0.4882,
+        "brier_score": 0.0547,
+        "confusion_matrix": {
+          "tp": 6829,
+          "fp": 9449,
+          "tn": 120416,
+          "fn": 4702
+        }
+      }
+    },
+    "vle_engagement_levels": {
+      "Q1_lowest_activity": {
+        "n_samples": 42751,
+        "n_positives": 5505,
+        "prevalence_pct": 12.88,
+        "selection_rate_pct": 20.29,
+        "precision_pct": 36.47,
+        "precision_95ci": [
+          35.46,
+          37.48
+        ],
+        "recall_pct": 57.46,
+        "recall_95ci": [
+          56.15,
+          58.76
+        ],
+        "false_positive_rate_pct": 14.8,
+        "false_positive_rate_95ci": [
+          14.44,
+          15.16
+        ],
+        "false_negative_rate_pct": 42.54,
+        "pr_auc": 0.4219,
+        "brier_score": 0.0923,
+        "confusion_matrix": {
+          "tp": 3163,
+          "fp": 5511,
+          "tn": 31735,
+          "fn": 2342
+        }
+      },
+      "Q2_medium_low": {
+        "n_samples": 42713,
+        "n_positives": 4115,
+        "prevalence_pct": 9.63,
+        "selection_rate_pct": 13.28,
+        "precision_pct": 42.76,
+        "precision_95ci": [
+          41.48,
+          44.05
+        ],
+        "recall_pct": 58.93,
+        "recall_95ci": [
+          57.42,
+          60.42
+        ],
+        "false_positive_rate_pct": 8.41,
+        "false_positive_rate_95ci": [
+          8.14,
+          8.69
+        ],
+        "false_negative_rate_pct": 41.07,
+        "pr_auc": 0.494,
+        "brier_score": 0.0643,
+        "confusion_matrix": {
+          "tp": 2425,
+          "fp": 3246,
+          "tn": 35352,
+          "fn": 1690
+        }
+      },
+      "Q3_medium_high": {
+        "n_samples": 42713,
+        "n_positives": 3458,
+        "prevalence_pct": 8.1,
+        "selection_rate_pct": 11.35,
+        "precision_pct": 42.56,
+        "precision_95ci": [
+          41.17,
+          43.95
+        ],
+        "recall_pct": 59.69,
+        "recall_95ci": [
+          58.04,
+          61.31
+        ],
+        "false_positive_rate_pct": 7.1,
+        "false_positive_rate_95ci": [
+          6.85,
+          7.36
+        ],
+        "false_negative_rate_pct": 40.31,
+        "pr_auc": 0.4918,
+        "brier_score": 0.0539,
+        "confusion_matrix": {
+          "tp": 2064,
+          "fp": 2786,
+          "tn": 36469,
+          "fn": 1394
+        }
+      },
+      "Q4_highest_activity": {
+        "n_samples": 42697,
+        "n_positives": 1545,
+        "prevalence_pct": 3.62,
+        "selection_rate_pct": 4.13,
+        "precision_pct": 41.84,
+        "precision_95ci": [
+          39.55,
+          44.15
+        ],
+        "recall_pct": 47.77,
+        "recall_95ci": [
+          45.28,
+          50.26
+        ],
+        "false_positive_rate_pct": 2.49,
+        "false_positive_rate_95ci": [
+          2.35,
+          2.65
+        ],
+        "false_negative_rate_pct": 52.23,
+        "pr_auc": 0.4148,
+        "brier_score": 0.0264,
+        "confusion_matrix": {
+          "tp": 738,
+          "fp": 1026,
+          "tn": 40126,
+          "fn": 807
+        }
+      }
+    },
+    "chronological_generalization": {
+      "chronological_2014J_all_learners": {
+        "n_samples": 50014,
+        "n_positives": 4637,
+        "prevalence_pct": 9.27,
+        "selection_rate_pct": 18.45,
+        "precision_pct": 25.93,
+        "precision_95ci": [
+          25.05,
+          26.84
+        ],
+        "recall_pct": 51.61,
+        "recall_95ci": [
+          50.17,
+          53.04
+        ],
+        "false_positive_rate_pct": 15.06,
+        "false_positive_rate_95ci": [
+          14.73,
+          15.39
+        ],
+        "false_negative_rate_pct": 48.39,
+        "pr_auc": 0.3005,
+        "brier_score": 0.0812,
+        "confusion_matrix": {
+          "tp": 2393,
+          "fp": 6834,
+          "tn": 38543,
+          "fn": 2244
+        }
+      },
+      "chronological_2014J_novel_learners_only": {
+        "n_samples": 43698,
+        "n_positives": 3741,
+        "prevalence_pct": 8.56,
+        "selection_rate_pct": 16.43,
+        "precision_pct": 24.68,
+        "precision_95ci": [
+          23.69,
+          25.69
+        ],
+        "recall_pct": 47.37,
+        "recall_95ci": [
+          45.77,
+          48.97
+        ],
+        "false_positive_rate_pct": 13.54,
+        "false_positive_rate_95ci": [
+          13.21,
+          13.88
+        ],
+        "false_negative_rate_pct": 52.63,
+        "pr_auc": 0.2793,
+        "brier_score": 0.0776,
+        "confusion_matrix": {
+          "tp": 1772,
+          "fp": 5409,
+          "tn": 34548,
+          "fn": 1969
+        }
+      }
+    }
+  },
+  "failure_mode_analysis": {
+    "True_Positive": {
+      "count": 8390,
+      "share_of_cohort_pct": 4.91,
+      "mean_predicted_probability": 0.4634,
+      "mean_recent_prior_score": 48.9,
+      "pct_missing_prior_score": 18.61,
+      "mean_vle_active_days": 37.13,
+      "mean_vle_clicks_last_7d": 19.49,
+      "mean_registration_timing_days": -68.92,
+      "mean_target_assessment_weight": 18.85,
+      "assessment_type_distribution": {
+        "TMA": 71.32,
+        "CMA": 23.46,
+        "Exam": 5.22
+      }
+    },
+    "False_Positive": {
+      "count": 12569,
+      "share_of_cohort_pct": 7.36,
+      "mean_predicted_probability": 0.3496,
+      "mean_recent_prior_score": 55.56,
+      "pct_missing_prior_score": 24.82,
+      "mean_vle_active_days": 33.94,
+      "mean_vle_clicks_last_7d": 21.13,
+      "mean_registration_timing_days": -67.25,
+      "mean_target_assessment_weight": 16.56,
+      "assessment_type_distribution": {
+        "TMA": 66.6,
+        "CMA": 29.27,
+        "Exam": 4.13
+      }
+    },
+    "True_Negative": {
+      "count": 104396,
+      "share_of_cohort_pct": 61.1,
+      "mean_predicted_probability": 0.018,
+      "mean_recent_prior_score": 83.03,
+      "pct_missing_prior_score": 11.2,
+      "mean_vle_active_days": 61.34,
+      "mean_vle_clicks_last_7d": 79.99,
+      "mean_registration_timing_days": -66.08,
+      "mean_target_assessment_weight": 9.74,
+      "assessment_type_distribution": {
+        "TMA": 50.18,
+        "CMA": 49.29,
+        "Exam": 0.53
+      }
+    },
+    "False_Negative": {
+      "count": 1800,
+      "share_of_cohort_pct": 1.05,
+      "mean_predicted_probability": 0.0283,
+      "mean_recent_prior_score": 79.59,
+      "pct_missing_prior_score": 15.39,
+      "mean_vle_active_days": 47.63,
+      "mean_vle_clicks_last_7d": 53.21,
+      "mean_registration_timing_days": -64.63,
+      "mean_target_assessment_weight": 10.78,
+      "assessment_type_distribution": {
+        "TMA": 58.78,
+        "CMA": 40.39,
+        "Exam": 0.83
+      }
+    }
+  },
+  "risk_tier_validation": {
+    "snapshot_level": {
+      "total_records": 170874,
+      "low_risk": {
+        "count": 106196,
+        "failures": 1800
+      },
+      "moderate_risk": {
+        "count": 43719,
+        "failures": 4433
+      },
+      "high_risk": {
+        "count": 20959,
+        "failures": 8390
+      }
+    },
+    "assessment_1_milestone": {
+      "total_unique_students": 23351,
+      "low_risk": {
+        "count": 9976,
+        "failures": 236
+      },
+      "moderate_risk": {
+        "count": 9360,
+        "failures": 883
+      },
+      "high_risk": {
+        "count": 4015,
+        "failures": 1394
+      }
+    },
+    "day30_calendar_campaign": {
+      "total_unique_students": 21719,
+      "low_risk": {
+        "count": 11806,
+        "failures": 237
+      },
+      "moderate_risk": {
+        "count": 8259,
+        "failures": 866
+      },
+      "high_risk": {
+        "count": 1654,
+        "failures": 573
+      }
+    }
+  },
+  "total_execution_time_seconds": 3.03
+}
