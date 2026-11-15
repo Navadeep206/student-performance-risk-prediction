@@ -1,0 +1,2198 @@
+{
+  "timestamp": "2026-11-15T11:50:58Z",
+  "candidate_models": [
+    "logistic_regression",
+    "random_forest",
+    "hist_gradient_boosting"
+  ],
+  "dimension_1_grouped_cv": {
+    "overall_cv_benchmarks": {
+      "logistic_regression": {
+        "tau_020": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3226,
+          "roc_auc": 0.8009,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146131,
+            "fp": 10120,
+            "fn": 8833,
+            "tp": 5790
+          },
+          "precision_pct": 36.39,
+          "recall_pct": 39.6,
+          "f1_pct": 37.93,
+          "fnr_pct": 60.4,
+          "fpr_pct": 6.48,
+          "recall_at_10_pct": 41.29,
+          "recall_at_20_pct": 59.56,
+          "brier_score": 0.0674,
+          "ece": 0.0065
+        },
+        "tau_010": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3226,
+          "roc_auc": 0.8009,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 122512,
+            "fp": 33739,
+            "fn": 4900,
+            "tp": 9723
+          },
+          "precision_pct": 22.37,
+          "recall_pct": 66.49,
+          "f1_pct": 33.48,
+          "fnr_pct": 33.51,
+          "fpr_pct": 21.59,
+          "recall_at_10_pct": 41.29,
+          "recall_at_20_pct": 59.56,
+          "brier_score": 0.0674,
+          "ece": 0.0065
+        }
+      },
+      "random_forest": {
+        "tau_020": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4368,
+          "roc_auc": 0.8541,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146460,
+            "fp": 9791,
+            "fn": 7462,
+            "tp": 7161
+          },
+          "precision_pct": 42.24,
+          "recall_pct": 48.97,
+          "f1_pct": 45.36,
+          "fnr_pct": 51.03,
+          "fpr_pct": 6.27,
+          "recall_at_10_pct": 49.22,
+          "recall_at_20_pct": 69.06,
+          "brier_score": 0.0616,
+          "ece": 0.0179
+        },
+        "tau_010": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4368,
+          "roc_auc": 0.8541,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 126125,
+            "fp": 30126,
+            "fn": 3882,
+            "tp": 10741
+          },
+          "precision_pct": 26.28,
+          "recall_pct": 73.45,
+          "f1_pct": 38.71,
+          "fnr_pct": 26.55,
+          "fpr_pct": 19.28,
+          "recall_at_10_pct": 49.22,
+          "recall_at_20_pct": 69.06,
+          "brier_score": 0.0616,
+          "ece": 0.0179
+        }
+      },
+      "hist_gradient_boosting": {
+        "tau_020": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4606,
+          "roc_auc": 0.8687,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 143682,
+            "fp": 12569,
+            "fn": 6233,
+            "tp": 8390
+          },
+          "precision_pct": 40.03,
+          "recall_pct": 57.38,
+          "f1_pct": 47.16,
+          "fnr_pct": 42.62,
+          "fpr_pct": 8.04,
+          "recall_at_10_pct": 51.38,
+          "recall_at_20_pct": 71.2,
+          "brier_score": 0.0592,
+          "ece": 0.0015
+        },
+        "tau_010": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4606,
+          "roc_auc": 0.8687,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 128755,
+            "fp": 27496,
+            "fn": 3735,
+            "tp": 10888
+          },
+          "precision_pct": 28.37,
+          "recall_pct": 74.46,
+          "f1_pct": 41.08,
+          "fnr_pct": 25.54,
+          "fpr_pct": 17.6,
+          "recall_at_10_pct": 51.38,
+          "recall_at_20_pct": 71.2,
+          "brier_score": 0.0592,
+          "ece": 0.0015
+        }
+      }
+    },
+    "fold_variability": {
+      "logistic_regression": {
+        "fold_0": {
+          "n_samples": 34175,
+          "n_positives": 2925,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3256,
+          "roc_auc": 0.797,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29227,
+            "fp": 2023,
+            "fn": 1757,
+            "tp": 1168
+          },
+          "precision_pct": 36.6,
+          "recall_pct": 39.93,
+          "f1_pct": 38.19,
+          "fnr_pct": 60.07,
+          "fpr_pct": 6.47,
+          "recall_at_10_pct": 41.57,
+          "recall_at_20_pct": 59.52,
+          "brier_score": 0.0674,
+          "ece": 0.0052
+        },
+        "fold_1": {
+          "n_samples": 34174,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3309,
+          "roc_auc": 0.805,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29306,
+            "fp": 1944,
+            "fn": 1760,
+            "tp": 1164
+          },
+          "precision_pct": 37.45,
+          "recall_pct": 39.81,
+          "f1_pct": 38.59,
+          "fnr_pct": 60.19,
+          "fpr_pct": 6.22,
+          "recall_at_10_pct": 42.2,
+          "recall_at_20_pct": 59.75,
+          "brier_score": 0.067,
+          "ece": 0.0072
+        },
+        "fold_2": {
+          "n_samples": 34177,
+          "n_positives": 2926,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3261,
+          "roc_auc": 0.803,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29212,
+            "fp": 2039,
+            "fn": 1753,
+            "tp": 1173
+          },
+          "precision_pct": 36.52,
+          "recall_pct": 40.09,
+          "f1_pct": 38.22,
+          "fnr_pct": 59.91,
+          "fpr_pct": 6.52,
+          "recall_at_10_pct": 41.29,
+          "recall_at_20_pct": 61.0,
+          "brier_score": 0.0672,
+          "ece": 0.0087
+        },
+        "fold_3": {
+          "n_samples": 34175,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3107,
+          "roc_auc": 0.7977,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29194,
+            "fp": 2057,
+            "fn": 1787,
+            "tp": 1137
+          },
+          "precision_pct": 35.6,
+          "recall_pct": 38.89,
+          "f1_pct": 37.17,
+          "fnr_pct": 61.11,
+          "fpr_pct": 6.58,
+          "recall_at_10_pct": 40.49,
+          "recall_at_20_pct": 58.89,
+          "brier_score": 0.0681,
+          "ece": 0.0054
+        },
+        "fold_4": {
+          "n_samples": 34173,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3235,
+          "roc_auc": 0.8018,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29192,
+            "fp": 2057,
+            "fn": 1776,
+            "tp": 1148
+          },
+          "precision_pct": 35.82,
+          "recall_pct": 39.26,
+          "f1_pct": 37.46,
+          "fnr_pct": 60.74,
+          "fpr_pct": 6.58,
+          "recall_at_10_pct": 40.87,
+          "recall_at_20_pct": 58.69,
+          "brier_score": 0.0674,
+          "ece": 0.0069
+        },
+        "variability": {
+          "pr_auc_mean": 0.3234,
+          "pr_auc_std": 0.0068,
+          "pr_auc_min": 0.3107,
+          "pr_auc_max": 0.3309,
+          "roc_auc_mean": 0.8009,
+          "roc_auc_std": 0.0031,
+          "recall_at_020_mean": 39.6,
+          "recall_at_020_std": 0.45,
+          "brier_score_mean": 0.0674,
+          "brier_score_std": 0.0004
+        }
+      },
+      "random_forest": {
+        "fold_0": {
+          "n_samples": 34175,
+          "n_positives": 2925,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4442,
+          "roc_auc": 0.8554,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29336,
+            "fp": 1914,
+            "fn": 1470,
+            "tp": 1455
+          },
+          "precision_pct": 43.19,
+          "recall_pct": 49.74,
+          "f1_pct": 46.23,
+          "fnr_pct": 50.26,
+          "fpr_pct": 6.12,
+          "recall_at_10_pct": 50.19,
+          "recall_at_20_pct": 70.09,
+          "brier_score": 0.0615,
+          "ece": 0.0196
+        },
+        "fold_1": {
+          "n_samples": 34174,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4454,
+          "roc_auc": 0.8558,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29374,
+            "fp": 1876,
+            "fn": 1469,
+            "tp": 1455
+          },
+          "precision_pct": 43.68,
+          "recall_pct": 49.76,
+          "f1_pct": 46.52,
+          "fnr_pct": 50.24,
+          "fpr_pct": 6.0,
+          "recall_at_10_pct": 50.44,
+          "recall_at_20_pct": 69.53,
+          "brier_score": 0.0612,
+          "ece": 0.0181
+        },
+        "fold_2": {
+          "n_samples": 34177,
+          "n_positives": 2926,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4411,
+          "roc_auc": 0.8567,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29238,
+            "fp": 2013,
+            "fn": 1483,
+            "tp": 1443
+          },
+          "precision_pct": 41.75,
+          "recall_pct": 49.32,
+          "f1_pct": 45.22,
+          "fnr_pct": 50.68,
+          "fpr_pct": 6.44,
+          "recall_at_10_pct": 49.15,
+          "recall_at_20_pct": 69.45,
+          "brier_score": 0.0615,
+          "ece": 0.0179
+        },
+        "fold_3": {
+          "n_samples": 34175,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4286,
+          "roc_auc": 0.8482,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29238,
+            "fp": 2013,
+            "fn": 1511,
+            "tp": 1413
+          },
+          "precision_pct": 41.24,
+          "recall_pct": 48.32,
+          "f1_pct": 44.5,
+          "fnr_pct": 51.68,
+          "fpr_pct": 6.44,
+          "recall_at_10_pct": 48.29,
+          "recall_at_20_pct": 67.24,
+          "brier_score": 0.0621,
+          "ece": 0.0156
+        },
+        "fold_4": {
+          "n_samples": 34173,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4295,
+          "roc_auc": 0.8546,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 29274,
+            "fp": 1975,
+            "fn": 1529,
+            "tp": 1395
+          },
+          "precision_pct": 41.39,
+          "recall_pct": 47.71,
+          "f1_pct": 44.33,
+          "fnr_pct": 52.29,
+          "fpr_pct": 6.32,
+          "recall_at_10_pct": 48.02,
+          "recall_at_20_pct": 69.04,
+          "brier_score": 0.0618,
+          "ece": 0.0185
+        },
+        "variability": {
+          "pr_auc_mean": 0.4378,
+          "pr_auc_std": 0.0073,
+          "pr_auc_min": 0.4286,
+          "pr_auc_max": 0.4454,
+          "roc_auc_mean": 0.8541,
+          "roc_auc_std": 0.003,
+          "recall_at_020_mean": 48.97,
+          "recall_at_020_std": 0.82,
+          "brier_score_mean": 0.0616,
+          "brier_score_std": 0.0003
+        }
+      },
+      "hist_gradient_boosting": {
+        "fold_0": {
+          "n_samples": 34175,
+          "n_positives": 2925,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4669,
+          "roc_auc": 0.8699,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 28745,
+            "fp": 2505,
+            "fn": 1230,
+            "tp": 1695
+          },
+          "precision_pct": 40.36,
+          "recall_pct": 57.95,
+          "f1_pct": 47.58,
+          "fnr_pct": 42.05,
+          "fpr_pct": 8.02,
+          "recall_at_10_pct": 52.03,
+          "recall_at_20_pct": 71.79,
+          "brier_score": 0.059,
+          "ece": 0.0024
+        },
+        "fold_1": {
+          "n_samples": 34174,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4735,
+          "roc_auc": 0.8717,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 28791,
+            "fp": 2459,
+            "fn": 1227,
+            "tp": 1697
+          },
+          "precision_pct": 40.83,
+          "recall_pct": 58.04,
+          "f1_pct": 47.94,
+          "fnr_pct": 41.96,
+          "fpr_pct": 7.87,
+          "recall_at_10_pct": 52.67,
+          "recall_at_20_pct": 71.89,
+          "brier_score": 0.0585,
+          "ece": 0.0025
+        },
+        "fold_2": {
+          "n_samples": 34177,
+          "n_positives": 2926,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4627,
+          "roc_auc": 0.8708,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 28745,
+            "fp": 2506,
+            "fn": 1232,
+            "tp": 1694
+          },
+          "precision_pct": 40.33,
+          "recall_pct": 57.89,
+          "f1_pct": 47.54,
+          "fnr_pct": 42.11,
+          "fpr_pct": 8.02,
+          "recall_at_10_pct": 51.44,
+          "recall_at_20_pct": 71.84,
+          "brier_score": 0.0591,
+          "ece": 0.0028
+        },
+        "fold_3": {
+          "n_samples": 34175,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4496,
+          "roc_auc": 0.8639,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 28708,
+            "fp": 2543,
+            "fn": 1279,
+            "tp": 1645
+          },
+          "precision_pct": 39.28,
+          "recall_pct": 56.26,
+          "f1_pct": 46.26,
+          "fnr_pct": 43.74,
+          "fpr_pct": 8.14,
+          "recall_at_10_pct": 50.38,
+          "recall_at_20_pct": 69.94,
+          "brier_score": 0.0599,
+          "ece": 0.0022
+        },
+        "fold_4": {
+          "n_samples": 34173,
+          "n_positives": 2924,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.453,
+          "roc_auc": 0.867,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 28693,
+            "fp": 2556,
+            "fn": 1265,
+            "tp": 1659
+          },
+          "precision_pct": 39.36,
+          "recall_pct": 56.74,
+          "f1_pct": 46.48,
+          "fnr_pct": 43.26,
+          "fpr_pct": 8.18,
+          "recall_at_10_pct": 50.41,
+          "recall_at_20_pct": 70.83,
+          "brier_score": 0.0596,
+          "ece": 0.002
+        },
+        "variability": {
+          "pr_auc_mean": 0.4611,
+          "pr_auc_std": 0.0088,
+          "pr_auc_min": 0.4496,
+          "pr_auc_max": 0.4735,
+          "roc_auc_mean": 0.8687,
+          "roc_auc_std": 0.0029,
+          "recall_at_020_mean": 57.38,
+          "recall_at_020_std": 0.73,
+          "brier_score_mean": 0.0592,
+          "brier_score_std": 0.0005
+        }
+      }
+    }
+  },
+  "dimension_2_chronological_holdout": {
+    "logistic_regression": {
+      "overall_2014j": {
+        "tau_020": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.2062,
+          "roc_auc": 0.7535,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 42044,
+            "fp": 3333,
+            "fn": 3334,
+            "tp": 1303
+          },
+          "precision_pct": 28.11,
+          "recall_pct": 28.1,
+          "f1_pct": 28.1,
+          "fnr_pct": 71.9,
+          "fpr_pct": 7.35,
+          "recall_at_10_pct": 30.36,
+          "recall_at_20_pct": 48.31,
+          "brier_score": 0.0907,
+          "ece": 0.0517
+        },
+        "tau_010": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.2062,
+          "roc_auc": 0.7535,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 39013,
+            "fp": 6364,
+            "fn": 2615,
+            "tp": 2022
+          },
+          "precision_pct": 24.11,
+          "recall_pct": 43.61,
+          "f1_pct": 31.05,
+          "fnr_pct": 56.39,
+          "fpr_pct": 14.02,
+          "recall_at_10_pct": 30.36,
+          "recall_at_20_pct": 48.31,
+          "brier_score": 0.0907,
+          "ece": 0.0517
+        }
+      },
+      "novel_students_2014j": {
+        "tau_020": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.1909,
+          "roc_auc": 0.7524,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 36991,
+            "fp": 2966,
+            "fn": 2695,
+            "tp": 1046
+          },
+          "precision_pct": 26.07,
+          "recall_pct": 27.96,
+          "f1_pct": 26.98,
+          "fnr_pct": 72.04,
+          "fpr_pct": 7.42,
+          "recall_at_10_pct": 30.29,
+          "recall_at_20_pct": 48.14,
+          "brier_score": 0.0867,
+          "ece": 0.0488
+        },
+        "tau_010": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.1909,
+          "roc_auc": 0.7524,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 34389,
+            "fp": 5568,
+            "fn": 2138,
+            "tp": 1603
+          },
+          "precision_pct": 22.35,
+          "recall_pct": 42.85,
+          "f1_pct": 29.38,
+          "fnr_pct": 57.15,
+          "fpr_pct": 13.93,
+          "recall_at_10_pct": 30.29,
+          "recall_at_20_pct": 48.14,
+          "brier_score": 0.0867,
+          "ece": 0.0488
+        }
+      },
+      "returning_students_2014j": {
+        "tau_020": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.3147,
+          "roc_auc": 0.7557,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5053,
+            "fp": 367,
+            "fn": 639,
+            "tp": 257
+          },
+          "precision_pct": 41.19,
+          "recall_pct": 28.68,
+          "f1_pct": 33.82,
+          "fnr_pct": 71.32,
+          "fpr_pct": 6.77,
+          "recall_at_10_pct": 29.13,
+          "recall_at_20_pct": 47.99,
+          "brier_score": 0.1183,
+          "ece": 0.0761
+        },
+        "tau_010": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.3147,
+          "roc_auc": 0.7557,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 4624,
+            "fp": 796,
+            "fn": 477,
+            "tp": 419
+          },
+          "precision_pct": 34.49,
+          "recall_pct": 46.76,
+          "f1_pct": 39.7,
+          "fnr_pct": 53.24,
+          "fpr_pct": 14.69,
+          "recall_at_10_pct": 29.13,
+          "recall_at_20_pct": 47.99,
+          "brier_score": 0.1183,
+          "ece": 0.0761
+        }
+      }
+    },
+    "random_forest": {
+      "overall_2014j": {
+        "tau_020": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.3093,
+          "roc_auc": 0.7914,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 39534,
+            "fp": 5843,
+            "fn": 2412,
+            "tp": 2225
+          },
+          "precision_pct": 27.58,
+          "recall_pct": 47.98,
+          "f1_pct": 35.03,
+          "fnr_pct": 52.02,
+          "fpr_pct": 12.88,
+          "recall_at_10_pct": 33.53,
+          "recall_at_20_pct": 54.95,
+          "brier_score": 0.0768,
+          "ece": 0.0266
+        },
+        "tau_010": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.3093,
+          "roc_auc": 0.7914,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 32905,
+            "fp": 12472,
+            "fn": 1517,
+            "tp": 3120
+          },
+          "precision_pct": 20.01,
+          "recall_pct": 67.28,
+          "f1_pct": 30.85,
+          "fnr_pct": 32.72,
+          "fpr_pct": 27.49,
+          "recall_at_10_pct": 33.53,
+          "recall_at_20_pct": 54.95,
+          "brier_score": 0.0768,
+          "ece": 0.0266
+        }
+      },
+      "novel_students_2014j": {
+        "tau_020": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.2877,
+          "roc_auc": 0.7862,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 35205,
+            "fp": 4752,
+            "fn": 2103,
+            "tp": 1638
+          },
+          "precision_pct": 25.63,
+          "recall_pct": 43.79,
+          "f1_pct": 32.34,
+          "fnr_pct": 56.21,
+          "fpr_pct": 11.89,
+          "recall_at_10_pct": 33.04,
+          "recall_at_20_pct": 53.06,
+          "brier_score": 0.0731,
+          "ece": 0.0291
+        },
+        "tau_010": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.2877,
+          "roc_auc": 0.7862,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 29904,
+            "fp": 10053,
+            "fn": 1393,
+            "tp": 2348
+          },
+          "precision_pct": 18.93,
+          "recall_pct": 62.76,
+          "f1_pct": 29.09,
+          "fnr_pct": 37.24,
+          "fpr_pct": 25.16,
+          "recall_at_10_pct": 33.04,
+          "recall_at_20_pct": 53.06,
+          "brier_score": 0.0731,
+          "ece": 0.0291
+        }
+      },
+      "returning_students_2014j": {
+        "tau_020": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.4128,
+          "roc_auc": 0.8036,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 4329,
+            "fp": 1091,
+            "fn": 309,
+            "tp": 587
+          },
+          "precision_pct": 34.98,
+          "recall_pct": 65.51,
+          "f1_pct": 45.61,
+          "fnr_pct": 34.49,
+          "fpr_pct": 20.13,
+          "recall_at_10_pct": 32.59,
+          "recall_at_20_pct": 53.46,
+          "brier_score": 0.102,
+          "ece": 0.0213
+        },
+        "tau_010": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.4128,
+          "roc_auc": 0.8036,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 3001,
+            "fp": 2419,
+            "fn": 124,
+            "tp": 772
+          },
+          "precision_pct": 24.19,
+          "recall_pct": 86.16,
+          "f1_pct": 37.78,
+          "fnr_pct": 13.84,
+          "fpr_pct": 44.63,
+          "recall_at_10_pct": 32.59,
+          "recall_at_20_pct": 53.46,
+          "brier_score": 0.102,
+          "ece": 0.0213
+        }
+      }
+    },
+    "hist_gradient_boosting": {
+      "overall_2014j": {
+        "tau_020": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.3005,
+          "roc_auc": 0.7969,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 38543,
+            "fp": 6834,
+            "fn": 2244,
+            "tp": 2393
+          },
+          "precision_pct": 25.93,
+          "recall_pct": 51.61,
+          "f1_pct": 34.52,
+          "fnr_pct": 48.39,
+          "fpr_pct": 15.06,
+          "recall_at_10_pct": 34.12,
+          "recall_at_20_pct": 54.24,
+          "brier_score": 0.0812,
+          "ece": 0.042
+        },
+        "tau_010": {
+          "n_samples": 50014,
+          "n_positives": 4637,
+          "prevalence_pct": 9.27,
+          "pr_auc": 0.3005,
+          "roc_auc": 0.7969,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 33877,
+            "fp": 11500,
+            "fn": 1526,
+            "tp": 3111
+          },
+          "precision_pct": 21.29,
+          "recall_pct": 67.09,
+          "f1_pct": 32.33,
+          "fnr_pct": 32.91,
+          "fpr_pct": 25.34,
+          "recall_at_10_pct": 34.12,
+          "recall_at_20_pct": 54.24,
+          "brier_score": 0.0812,
+          "ece": 0.042
+        }
+      },
+      "novel_students_2014j": {
+        "tau_020": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.2793,
+          "roc_auc": 0.7926,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 34548,
+            "fp": 5409,
+            "fn": 1969,
+            "tp": 1772
+          },
+          "precision_pct": 24.68,
+          "recall_pct": 47.37,
+          "f1_pct": 32.45,
+          "fnr_pct": 52.63,
+          "fpr_pct": 13.54,
+          "recall_at_10_pct": 33.71,
+          "recall_at_20_pct": 53.17,
+          "brier_score": 0.0776,
+          "ece": 0.0434
+        },
+        "tau_010": {
+          "n_samples": 43698,
+          "n_positives": 3741,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.2793,
+          "roc_auc": 0.7926,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 30658,
+            "fp": 9299,
+            "fn": 1395,
+            "tp": 2346
+          },
+          "precision_pct": 20.15,
+          "recall_pct": 62.71,
+          "f1_pct": 30.5,
+          "fnr_pct": 37.29,
+          "fpr_pct": 23.27,
+          "recall_at_10_pct": 33.71,
+          "recall_at_20_pct": 53.17,
+          "brier_score": 0.0776,
+          "ece": 0.0434
+        }
+      },
+      "returning_students_2014j": {
+        "tau_020": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.4059,
+          "roc_auc": 0.8006,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3995,
+            "fp": 1425,
+            "fn": 275,
+            "tp": 621
+          },
+          "precision_pct": 30.35,
+          "recall_pct": 69.31,
+          "f1_pct": 42.22,
+          "fnr_pct": 30.69,
+          "fpr_pct": 26.29,
+          "recall_at_10_pct": 32.37,
+          "recall_at_20_pct": 51.45,
+          "brier_score": 0.1057,
+          "ece": 0.0352
+        },
+        "tau_010": {
+          "n_samples": 6316,
+          "n_positives": 896,
+          "prevalence_pct": 14.19,
+          "pr_auc": 0.4059,
+          "roc_auc": 0.8006,
+          "threshold": 0.1,
+          "confusion_matrix": {
+            "tn": 3219,
+            "fp": 2201,
+            "fn": 131,
+            "tp": 765
+          },
+          "precision_pct": 25.79,
+          "recall_pct": 85.38,
+          "f1_pct": 39.62,
+          "fnr_pct": 14.62,
+          "fpr_pct": 40.61,
+          "recall_at_10_pct": 32.37,
+          "recall_at_20_pct": 51.45,
+          "brier_score": 0.1057,
+          "ece": 0.0352
+        }
+      }
+    }
+  },
+  "dimension_3_cold_start": {
+    "logistic_regression": {
+      "cold_start_unobserved_grades": {
+        "n_samples": 10407,
+        "n_positives": 1415,
+        "prevalence_pct": 13.6,
+        "pr_auc": 0.1302,
+        "roc_auc": 0.5144,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 8992,
+          "fp": 0,
+          "fn": 1415,
+          "tp": 0
+        },
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1_pct": 0.0,
+        "fnr_pct": 100.0,
+        "fpr_pct": 0.0,
+        "recall_at_10_pct": 6.86,
+        "recall_at_20_pct": 13.64,
+        "brier_score": 0.1256,
+        "ece": 0.0898
+      },
+      "non_cold_start_observed_grades": {
+        "n_samples": 39607,
+        "n_positives": 3222,
+        "prevalence_pct": 8.13,
+        "pr_auc": 0.223,
+        "roc_auc": 0.8048,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 33052,
+          "fp": 3333,
+          "fn": 1919,
+          "tp": 1303
+        },
+        "precision_pct": 28.11,
+        "recall_pct": 40.44,
+        "f1_pct": 33.16,
+        "fnr_pct": 59.56,
+        "fpr_pct": 9.16,
+        "recall_at_10_pct": 34.17,
+        "recall_at_20_pct": 60.92,
+        "brier_score": 0.0815,
+        "ece": 0.0418
+      },
+      "cold_start_pr_auc_drop_pct": 41.61
+    },
+    "random_forest": {
+      "cold_start_unobserved_grades": {
+        "n_samples": 10407,
+        "n_positives": 1415,
+        "prevalence_pct": 13.6,
+        "pr_auc": 0.1683,
+        "roc_auc": 0.5716,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 7829,
+          "fp": 1163,
+          "fn": 1139,
+          "tp": 276
+        },
+        "precision_pct": 19.18,
+        "recall_pct": 19.51,
+        "f1_pct": 19.34,
+        "fnr_pct": 80.49,
+        "fpr_pct": 12.93,
+        "recall_at_10_pct": 14.91,
+        "recall_at_20_pct": 25.16,
+        "brier_score": 0.1221,
+        "ece": 0.0732
+      },
+      "non_cold_start_observed_grades": {
+        "n_samples": 39607,
+        "n_positives": 3222,
+        "prevalence_pct": 8.13,
+        "pr_auc": 0.3616,
+        "roc_auc": 0.8482,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 31705,
+          "fp": 4680,
+          "fn": 1273,
+          "tp": 1949
+        },
+        "precision_pct": 29.4,
+        "recall_pct": 60.49,
+        "f1_pct": 39.57,
+        "fnr_pct": 39.51,
+        "fpr_pct": 12.86,
+        "recall_at_10_pct": 41.15,
+        "recall_at_20_pct": 67.97,
+        "brier_score": 0.0649,
+        "ece": 0.0283
+      },
+      "cold_start_pr_auc_drop_pct": 53.46
+    },
+    "hist_gradient_boosting": {
+      "cold_start_unobserved_grades": {
+        "n_samples": 10407,
+        "n_positives": 1415,
+        "prevalence_pct": 13.6,
+        "pr_auc": 0.1687,
+        "roc_auc": 0.5698,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 6957,
+          "fp": 2035,
+          "fn": 1032,
+          "tp": 383
+        },
+        "precision_pct": 15.84,
+        "recall_pct": 27.07,
+        "f1_pct": 19.98,
+        "fnr_pct": 72.93,
+        "fpr_pct": 22.63,
+        "recall_at_10_pct": 15.12,
+        "recall_at_20_pct": 24.59,
+        "brier_score": 0.1263,
+        "ece": 0.091
+      },
+      "non_cold_start_observed_grades": {
+        "n_samples": 39607,
+        "n_positives": 3222,
+        "prevalence_pct": 8.13,
+        "pr_auc": 0.3478,
+        "roc_auc": 0.8477,
+        "threshold": 0.2,
+        "confusion_matrix": {
+          "tn": 31586,
+          "fp": 4799,
+          "fn": 1212,
+          "tp": 2010
+        },
+        "precision_pct": 29.52,
+        "recall_pct": 62.38,
+        "f1_pct": 40.08,
+        "fnr_pct": 37.62,
+        "fpr_pct": 13.19,
+        "recall_at_10_pct": 41.19,
+        "recall_at_20_pct": 68.28,
+        "brier_score": 0.0693,
+        "ece": 0.0291
+      },
+      "cold_start_pr_auc_drop_pct": 51.5
+    }
+  },
+  "dimension_4_by_module": {
+    "AAA": {
+      "n_samples": 1515,
+      "n_positives": 129,
+      "prevalence_pct": 8.51,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 1515,
+          "n_positives": 129,
+          "prevalence_pct": 8.51,
+          "pr_auc": 0.3189,
+          "roc_auc": 0.7977,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 1315,
+            "fp": 71,
+            "fn": 89,
+            "tp": 40
+          },
+          "precision_pct": 36.04,
+          "recall_pct": 31.01,
+          "f1_pct": 33.33,
+          "fnr_pct": 68.99,
+          "fpr_pct": 5.12,
+          "recall_at_10_pct": 39.53,
+          "recall_at_20_pct": 57.36,
+          "brier_score": 0.068,
+          "ece": 0.0105
+        },
+        "random_forest": {
+          "n_samples": 1515,
+          "n_positives": 129,
+          "prevalence_pct": 8.51,
+          "pr_auc": 0.2876,
+          "roc_auc": 0.7868,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 1208,
+            "fp": 178,
+            "fn": 65,
+            "tp": 64
+          },
+          "precision_pct": 26.45,
+          "recall_pct": 49.61,
+          "f1_pct": 34.5,
+          "fnr_pct": 50.39,
+          "fpr_pct": 12.84,
+          "recall_at_10_pct": 37.21,
+          "recall_at_20_pct": 55.81,
+          "brier_score": 0.0731,
+          "ece": 0.0352
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 1515,
+          "n_positives": 129,
+          "prevalence_pct": 8.51,
+          "pr_auc": 0.3268,
+          "roc_auc": 0.8132,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 1256,
+            "fp": 130,
+            "fn": 72,
+            "tp": 57
+          },
+          "precision_pct": 30.48,
+          "recall_pct": 44.19,
+          "f1_pct": 36.08,
+          "fnr_pct": 55.81,
+          "fpr_pct": 9.38,
+          "recall_at_10_pct": 38.76,
+          "recall_at_20_pct": 56.59,
+          "brier_score": 0.0699,
+          "ece": 0.0248
+        }
+      }
+    },
+    "BBB": {
+      "n_samples": 7398,
+      "n_positives": 1236,
+      "prevalence_pct": 16.71,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 7398,
+          "n_positives": 1236,
+          "prevalence_pct": 16.71,
+          "pr_auc": 0.1595,
+          "roc_auc": 0.509,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 4180,
+            "fp": 1982,
+            "fn": 959,
+            "tp": 277
+          },
+          "precision_pct": 12.26,
+          "recall_pct": 22.41,
+          "f1_pct": 15.85,
+          "fnr_pct": 77.59,
+          "fpr_pct": 32.16,
+          "recall_at_10_pct": 7.12,
+          "recall_at_20_pct": 15.94,
+          "brier_score": 0.2475,
+          "ece": 0.2508
+        },
+        "random_forest": {
+          "n_samples": 7398,
+          "n_positives": 1236,
+          "prevalence_pct": 16.71,
+          "pr_auc": 0.1923,
+          "roc_auc": 0.4781,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3858,
+            "fp": 2304,
+            "fn": 899,
+            "tp": 337
+          },
+          "precision_pct": 12.76,
+          "recall_pct": 27.27,
+          "f1_pct": 17.38,
+          "fnr_pct": 72.73,
+          "fpr_pct": 37.39,
+          "recall_at_10_pct": 14.08,
+          "recall_at_20_pct": 19.09,
+          "brier_score": 0.1827,
+          "ece": 0.1901
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 7398,
+          "n_positives": 1236,
+          "prevalence_pct": 16.71,
+          "pr_auc": 0.2002,
+          "roc_auc": 0.5154,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3976,
+            "fp": 2186,
+            "fn": 921,
+            "tp": 315
+          },
+          "precision_pct": 12.59,
+          "recall_pct": 25.49,
+          "f1_pct": 16.86,
+          "fnr_pct": 74.51,
+          "fpr_pct": 35.48,
+          "recall_at_10_pct": 13.27,
+          "recall_at_20_pct": 18.77,
+          "brier_score": 0.2102,
+          "ece": 0.2288
+        }
+      }
+    },
+    "CCC": {
+      "n_samples": 10277,
+      "n_positives": 1386,
+      "prevalence_pct": 13.49,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 10277,
+          "n_positives": 1386,
+          "prevalence_pct": 13.49,
+          "pr_auc": 0.4471,
+          "roc_auc": 0.8085,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 8633,
+            "fp": 258,
+            "fn": 1018,
+            "tp": 368
+          },
+          "precision_pct": 58.79,
+          "recall_pct": 26.55,
+          "f1_pct": 36.58,
+          "fnr_pct": 73.45,
+          "fpr_pct": 2.9,
+          "recall_at_10_pct": 38.02,
+          "recall_at_20_pct": 56.85,
+          "brier_score": 0.1051,
+          "ece": 0.0789
+        },
+        "random_forest": {
+          "n_samples": 10277,
+          "n_positives": 1386,
+          "prevalence_pct": 13.49,
+          "pr_auc": 0.4636,
+          "roc_auc": 0.8262,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 6930,
+            "fp": 1961,
+            "fn": 426,
+            "tp": 960
+          },
+          "precision_pct": 32.87,
+          "recall_pct": 69.26,
+          "f1_pct": 44.58,
+          "fnr_pct": 30.74,
+          "fpr_pct": 22.06,
+          "recall_at_10_pct": 37.66,
+          "recall_at_20_pct": 56.28,
+          "brier_score": 0.0934,
+          "ece": 0.0252
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 10277,
+          "n_positives": 1386,
+          "prevalence_pct": 13.49,
+          "pr_auc": 0.4621,
+          "roc_auc": 0.8188,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 6284,
+            "fp": 2607,
+            "fn": 344,
+            "tp": 1042
+          },
+          "precision_pct": 28.56,
+          "recall_pct": 75.18,
+          "f1_pct": 41.39,
+          "fnr_pct": 24.82,
+          "fpr_pct": 29.32,
+          "recall_at_10_pct": 36.0,
+          "recall_at_20_pct": 54.26,
+          "brier_score": 0.0961,
+          "ece": 0.0334
+        }
+      }
+    },
+    "DDD": {
+      "n_samples": 7051,
+      "n_positives": 829,
+      "prevalence_pct": 11.76,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 7051,
+          "n_positives": 829,
+          "prevalence_pct": 11.76,
+          "pr_auc": 0.3672,
+          "roc_auc": 0.7913,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5721,
+            "fp": 501,
+            "fn": 482,
+            "tp": 347
+          },
+          "precision_pct": 40.92,
+          "recall_pct": 41.86,
+          "f1_pct": 41.38,
+          "fnr_pct": 58.14,
+          "fpr_pct": 8.05,
+          "recall_at_10_pct": 37.15,
+          "recall_at_20_pct": 55.49,
+          "brier_score": 0.0891,
+          "ece": 0.0237
+        },
+        "random_forest": {
+          "n_samples": 7051,
+          "n_positives": 829,
+          "prevalence_pct": 11.76,
+          "pr_auc": 0.4913,
+          "roc_auc": 0.8379,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5427,
+            "fp": 795,
+            "fn": 310,
+            "tp": 519
+          },
+          "precision_pct": 39.5,
+          "recall_pct": 62.61,
+          "f1_pct": 48.44,
+          "fnr_pct": 37.39,
+          "fpr_pct": 12.78,
+          "recall_at_10_pct": 44.27,
+          "recall_at_20_pct": 64.41,
+          "brier_score": 0.0797,
+          "ece": 0.0239
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 7051,
+          "n_positives": 829,
+          "prevalence_pct": 11.76,
+          "pr_auc": 0.4963,
+          "roc_auc": 0.841,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5054,
+            "fp": 1168,
+            "fn": 245,
+            "tp": 584
+          },
+          "precision_pct": 33.33,
+          "recall_pct": 70.45,
+          "f1_pct": 45.25,
+          "fnr_pct": 29.55,
+          "fpr_pct": 18.77,
+          "recall_at_10_pct": 44.87,
+          "recall_at_20_pct": 63.57,
+          "brier_score": 0.0802,
+          "ece": 0.0337
+        }
+      }
+    },
+    "EEE": {
+      "n_samples": 3227,
+      "n_positives": 126,
+      "prevalence_pct": 3.9,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 3227,
+          "n_positives": 126,
+          "prevalence_pct": 3.9,
+          "pr_auc": 0.2428,
+          "roc_auc": 0.8374,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3062,
+            "fp": 39,
+            "fn": 103,
+            "tp": 23
+          },
+          "precision_pct": 37.1,
+          "recall_pct": 18.25,
+          "f1_pct": 24.47,
+          "fnr_pct": 81.75,
+          "fpr_pct": 1.26,
+          "recall_at_10_pct": 50.0,
+          "recall_at_20_pct": 72.22,
+          "brier_score": 0.0336,
+          "ece": 0.0098
+        },
+        "random_forest": {
+          "n_samples": 3227,
+          "n_positives": 126,
+          "prevalence_pct": 3.9,
+          "pr_auc": 0.3301,
+          "roc_auc": 0.8945,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3011,
+            "fp": 90,
+            "fn": 83,
+            "tp": 43
+          },
+          "precision_pct": 32.33,
+          "recall_pct": 34.13,
+          "f1_pct": 33.2,
+          "fnr_pct": 65.87,
+          "fpr_pct": 2.9,
+          "recall_at_10_pct": 59.52,
+          "recall_at_20_pct": 81.75,
+          "brier_score": 0.0315,
+          "ece": 0.0158
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 3227,
+          "n_positives": 126,
+          "prevalence_pct": 3.9,
+          "pr_auc": 0.3744,
+          "roc_auc": 0.8956,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3010,
+            "fp": 91,
+            "fn": 70,
+            "tp": 56
+          },
+          "precision_pct": 38.1,
+          "recall_pct": 44.44,
+          "f1_pct": 41.03,
+          "fnr_pct": 55.56,
+          "fpr_pct": 2.93,
+          "recall_at_10_pct": 64.29,
+          "recall_at_20_pct": 80.95,
+          "brier_score": 0.03,
+          "ece": 0.0108
+        }
+      }
+    },
+    "FFF": {
+      "n_samples": 16175,
+      "n_positives": 646,
+      "prevalence_pct": 3.99,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 16175,
+          "n_positives": 646,
+          "prevalence_pct": 3.99,
+          "pr_auc": 0.2939,
+          "roc_auc": 0.8437,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 15201,
+            "fp": 328,
+            "fn": 452,
+            "tp": 194
+          },
+          "precision_pct": 37.16,
+          "recall_pct": 30.03,
+          "f1_pct": 33.22,
+          "fnr_pct": 69.97,
+          "fpr_pct": 2.11,
+          "recall_at_10_pct": 54.33,
+          "recall_at_20_pct": 69.66,
+          "brier_score": 0.0328,
+          "ece": 0.0049
+        },
+        "random_forest": {
+          "n_samples": 16175,
+          "n_positives": 646,
+          "prevalence_pct": 3.99,
+          "pr_auc": 0.3393,
+          "roc_auc": 0.8747,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 15106,
+            "fp": 423,
+            "fn": 389,
+            "tp": 257
+          },
+          "precision_pct": 37.79,
+          "recall_pct": 39.78,
+          "f1_pct": 38.76,
+          "fnr_pct": 60.22,
+          "fpr_pct": 2.72,
+          "recall_at_10_pct": 60.99,
+          "recall_at_20_pct": 76.47,
+          "brier_score": 0.0313,
+          "ece": 0.0104
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 16175,
+          "n_positives": 646,
+          "prevalence_pct": 3.99,
+          "pr_auc": 0.3544,
+          "roc_auc": 0.8824,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 15000,
+            "fp": 529,
+            "fn": 356,
+            "tp": 290
+          },
+          "precision_pct": 35.41,
+          "recall_pct": 44.89,
+          "f1_pct": 39.59,
+          "fnr_pct": 55.11,
+          "fpr_pct": 3.41,
+          "recall_at_10_pct": 61.3,
+          "recall_at_20_pct": 77.71,
+          "brier_score": 0.031,
+          "ece": 0.0056
+        }
+      }
+    },
+    "GGG": {
+      "n_samples": 4371,
+      "n_positives": 285,
+      "prevalence_pct": 6.52,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 4371,
+          "n_positives": 285,
+          "prevalence_pct": 6.52,
+          "pr_auc": 0.1722,
+          "roc_auc": 0.6972,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3932,
+            "fp": 154,
+            "fn": 231,
+            "tp": 54
+          },
+          "precision_pct": 25.96,
+          "recall_pct": 18.95,
+          "f1_pct": 21.91,
+          "fnr_pct": 81.05,
+          "fpr_pct": 3.77,
+          "recall_at_10_pct": 28.77,
+          "recall_at_20_pct": 44.56,
+          "brier_score": 0.0584,
+          "ece": 0.014
+        },
+        "random_forest": {
+          "n_samples": 4371,
+          "n_positives": 285,
+          "prevalence_pct": 6.52,
+          "pr_auc": 0.2203,
+          "roc_auc": 0.7537,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3994,
+            "fp": 92,
+            "fn": 240,
+            "tp": 45
+          },
+          "precision_pct": 32.85,
+          "recall_pct": 15.79,
+          "f1_pct": 21.33,
+          "fnr_pct": 84.21,
+          "fpr_pct": 2.25,
+          "recall_at_10_pct": 34.39,
+          "recall_at_20_pct": 49.12,
+          "brier_score": 0.0565,
+          "ece": 0.0084
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 4371,
+          "n_positives": 285,
+          "prevalence_pct": 6.52,
+          "pr_auc": 0.2229,
+          "roc_auc": 0.7685,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 3963,
+            "fp": 123,
+            "fn": 236,
+            "tp": 49
+          },
+          "precision_pct": 28.49,
+          "recall_pct": 17.19,
+          "f1_pct": 21.44,
+          "fnr_pct": 82.81,
+          "fpr_pct": 3.01,
+          "recall_at_10_pct": 33.68,
+          "recall_at_20_pct": 52.28,
+          "brier_score": 0.0565,
+          "ece": 0.0114
+        }
+      }
+    }
+  },
+  "dimension_5_by_milestone": {
+    "TMA_1_Onboarding": {
+      "n_samples": 15161,
+      "n_positives": 1492,
+      "prevalence_pct": 9.84,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 15161,
+          "n_positives": 1492,
+          "prevalence_pct": 9.84,
+          "pr_auc": 0.1139,
+          "roc_auc": 0.5713,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 12665,
+            "fp": 1004,
+            "fn": 1326,
+            "tp": 166
+          },
+          "precision_pct": 14.19,
+          "recall_pct": 11.13,
+          "f1_pct": 12.47,
+          "fnr_pct": 88.87,
+          "fpr_pct": 7.35,
+          "recall_at_10_pct": 12.8,
+          "recall_at_20_pct": 21.18,
+          "brier_score": 0.1219,
+          "ece": 0.0902
+        },
+        "random_forest": {
+          "n_samples": 15161,
+          "n_positives": 1492,
+          "prevalence_pct": 9.84,
+          "pr_auc": 0.1363,
+          "roc_auc": 0.6427,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 12577,
+            "fp": 1092,
+            "fn": 1281,
+            "tp": 211
+          },
+          "precision_pct": 16.19,
+          "recall_pct": 14.14,
+          "f1_pct": 15.1,
+          "fnr_pct": 85.86,
+          "fpr_pct": 7.99,
+          "recall_at_10_pct": 15.75,
+          "recall_at_20_pct": 27.48,
+          "brier_score": 0.097,
+          "ece": 0.0606
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 15161,
+          "n_positives": 1492,
+          "prevalence_pct": 9.84,
+          "pr_auc": 0.1367,
+          "roc_auc": 0.6486,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 11752,
+            "fp": 1917,
+            "fn": 1182,
+            "tp": 310
+          },
+          "precision_pct": 13.92,
+          "recall_pct": 20.78,
+          "f1_pct": 16.67,
+          "fnr_pct": 79.22,
+          "fpr_pct": 14.02,
+          "recall_at_10_pct": 14.95,
+          "recall_at_20_pct": 27.01,
+          "brier_score": 0.1027,
+          "ece": 0.0775
+        }
+      }
+    },
+    "TMA_2_Midterm": {
+      "n_samples": 8036,
+      "n_positives": 819,
+      "prevalence_pct": 10.19,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 8036,
+          "n_positives": 819,
+          "prevalence_pct": 10.19,
+          "pr_auc": 0.2684,
+          "roc_auc": 0.8015,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 6318,
+            "fp": 899,
+            "fn": 448,
+            "tp": 371
+          },
+          "precision_pct": 29.21,
+          "recall_pct": 45.3,
+          "f1_pct": 35.52,
+          "fnr_pct": 54.7,
+          "fpr_pct": 12.46,
+          "recall_at_10_pct": 24.54,
+          "recall_at_20_pct": 57.88,
+          "brier_score": 0.0981,
+          "ece": 0.0569
+        },
+        "random_forest": {
+          "n_samples": 8036,
+          "n_positives": 819,
+          "prevalence_pct": 10.19,
+          "pr_auc": 0.379,
+          "roc_auc": 0.8314,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5950,
+            "fp": 1267,
+            "fn": 288,
+            "tp": 531
+          },
+          "precision_pct": 29.53,
+          "recall_pct": 64.84,
+          "f1_pct": 40.58,
+          "fnr_pct": 35.16,
+          "fpr_pct": 17.56,
+          "recall_at_10_pct": 36.39,
+          "recall_at_20_pct": 59.95,
+          "brier_score": 0.0794,
+          "ece": 0.0394
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 8036,
+          "n_positives": 819,
+          "prevalence_pct": 10.19,
+          "pr_auc": 0.3338,
+          "roc_auc": 0.8238,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5995,
+            "fp": 1222,
+            "fn": 289,
+            "tp": 530
+          },
+          "precision_pct": 30.25,
+          "recall_pct": 64.71,
+          "f1_pct": 41.23,
+          "fnr_pct": 35.29,
+          "fpr_pct": 16.93,
+          "recall_at_10_pct": 33.94,
+          "recall_at_20_pct": 59.83,
+          "brier_score": 0.0893,
+          "ece": 0.0468
+        }
+      }
+    },
+    "TMA_3_Capstone": {
+      "n_samples": 9309,
+      "n_positives": 1245,
+      "prevalence_pct": 13.37,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 9309,
+          "n_positives": 1245,
+          "prevalence_pct": 13.37,
+          "pr_auc": 0.3409,
+          "roc_auc": 0.7898,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 6950,
+            "fp": 1114,
+            "fn": 687,
+            "tp": 558
+          },
+          "precision_pct": 33.37,
+          "recall_pct": 44.82,
+          "f1_pct": 38.26,
+          "fnr_pct": 55.18,
+          "fpr_pct": 13.81,
+          "recall_at_10_pct": 26.1,
+          "recall_at_20_pct": 49.8,
+          "brier_score": 0.1053,
+          "ece": 0.051
+        },
+        "random_forest": {
+          "n_samples": 9309,
+          "n_positives": 1245,
+          "prevalence_pct": 13.37,
+          "pr_auc": 0.4735,
+          "roc_auc": 0.8263,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 6040,
+            "fp": 2024,
+            "fn": 334,
+            "tp": 911
+          },
+          "precision_pct": 31.04,
+          "recall_pct": 73.17,
+          "f1_pct": 43.59,
+          "fnr_pct": 26.83,
+          "fpr_pct": 25.1,
+          "recall_at_10_pct": 38.63,
+          "recall_at_20_pct": 55.34,
+          "brier_score": 0.0954,
+          "ece": 0.042
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 9309,
+          "n_positives": 1245,
+          "prevalence_pct": 13.37,
+          "pr_auc": 0.4399,
+          "roc_auc": 0.8275,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 5995,
+            "fp": 2069,
+            "fn": 309,
+            "tp": 936
+          },
+          "precision_pct": 31.15,
+          "recall_pct": 75.18,
+          "f1_pct": 44.05,
+          "fnr_pct": 24.82,
+          "fpr_pct": 25.66,
+          "recall_at_10_pct": 35.74,
+          "recall_at_20_pct": 56.79,
+          "brier_score": 0.1017,
+          "ece": 0.0512
+        }
+      }
+    },
+    "CMA_Computer_Quizzes": {
+      "n_samples": 17508,
+      "n_positives": 1081,
+      "prevalence_pct": 6.17,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 17508,
+          "n_positives": 1081,
+          "prevalence_pct": 6.17,
+          "pr_auc": 0.269,
+          "roc_auc": 0.8182,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 16111,
+            "fp": 316,
+            "fn": 873,
+            "tp": 208
+          },
+          "precision_pct": 39.69,
+          "recall_pct": 19.24,
+          "f1_pct": 25.92,
+          "fnr_pct": 80.76,
+          "fpr_pct": 1.92,
+          "recall_at_10_pct": 38.02,
+          "recall_at_20_pct": 56.43,
+          "brier_score": 0.0525,
+          "ece": 0.0265
+        },
+        "random_forest": {
+          "n_samples": 17508,
+          "n_positives": 1081,
+          "prevalence_pct": 6.17,
+          "pr_auc": 0.3667,
+          "roc_auc": 0.8678,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 14967,
+            "fp": 1460,
+            "fn": 509,
+            "tp": 572
+          },
+          "precision_pct": 28.15,
+          "recall_pct": 52.91,
+          "f1_pct": 36.75,
+          "fnr_pct": 47.09,
+          "fpr_pct": 8.89,
+          "recall_at_10_pct": 47.64,
+          "recall_at_20_pct": 71.79,
+          "brier_score": 0.0481,
+          "ece": 0.0165
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 17508,
+          "n_positives": 1081,
+          "prevalence_pct": 6.17,
+          "pr_auc": 0.3844,
+          "roc_auc": 0.8757,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 14801,
+            "fp": 1626,
+            "fn": 464,
+            "tp": 617
+          },
+          "precision_pct": 27.51,
+          "recall_pct": 57.08,
+          "f1_pct": 37.12,
+          "fnr_pct": 42.92,
+          "fpr_pct": 9.9,
+          "recall_at_10_pct": 49.12,
+          "recall_at_20_pct": 74.19,
+          "brier_score": 0.0478,
+          "ece": 0.0133
+        }
+      }
+    }
+  },
+  "dimension_6_by_horizon": {
+    "7_day_before": {
+      "n_samples": 170874,
+      "n_positives": 14623,
+      "prevalence_pct": 8.56,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3226,
+          "roc_auc": 0.8009,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146131,
+            "fp": 10120,
+            "fn": 8833,
+            "tp": 5790
+          },
+          "precision_pct": 36.39,
+          "recall_pct": 39.6,
+          "f1_pct": 37.93,
+          "fnr_pct": 60.4,
+          "fpr_pct": 6.48,
+          "recall_at_10_pct": 41.29,
+          "recall_at_20_pct": 59.56,
+          "brier_score": 0.0674,
+          "ece": 0.0065
+        },
+        "random_forest": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4368,
+          "roc_auc": 0.8541,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146460,
+            "fp": 9791,
+            "fn": 7462,
+            "tp": 7161
+          },
+          "precision_pct": 42.24,
+          "recall_pct": 48.97,
+          "f1_pct": 45.36,
+          "fnr_pct": 51.03,
+          "fpr_pct": 6.27,
+          "recall_at_10_pct": 49.22,
+          "recall_at_20_pct": 69.06,
+          "brier_score": 0.0616,
+          "ece": 0.0179
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4606,
+          "roc_auc": 0.8687,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 143682,
+            "fp": 12569,
+            "fn": 6233,
+            "tp": 8390
+          },
+          "precision_pct": 40.03,
+          "recall_pct": 57.38,
+          "f1_pct": 47.16,
+          "fnr_pct": 42.62,
+          "fpr_pct": 8.04,
+          "recall_at_10_pct": 51.38,
+          "recall_at_20_pct": 71.2,
+          "brier_score": 0.0592,
+          "ece": 0.0015
+        }
+      }
+    },
+    "1_day_before": {
+      "n_samples": 170874,
+      "n_positives": 14623,
+      "prevalence_pct": 8.56,
+      "models": {
+        "logistic_regression": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.3273,
+          "roc_auc": 0.8024,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146048,
+            "fp": 10203,
+            "fn": 8710,
+            "tp": 5913
+          },
+          "precision_pct": 36.69,
+          "recall_pct": 40.44,
+          "f1_pct": 38.47,
+          "fnr_pct": 59.56,
+          "fpr_pct": 6.53,
+          "recall_at_10_pct": 41.74,
+          "recall_at_20_pct": 60.1,
+          "brier_score": 0.0672,
+          "ece": 0.0067
+        },
+        "random_forest": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4397,
+          "roc_auc": 0.8561,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 146700,
+            "fp": 9551,
+            "fn": 7513,
+            "tp": 7110
+          },
+          "precision_pct": 42.67,
+          "recall_pct": 48.62,
+          "f1_pct": 45.45,
+          "fnr_pct": 51.38,
+          "fpr_pct": 6.11,
+          "recall_at_10_pct": 49.42,
+          "recall_at_20_pct": 69.38,
+          "brier_score": 0.0614,
+          "ece": 0.0181
+        },
+        "hist_gradient_boosting": {
+          "n_samples": 170874,
+          "n_positives": 14623,
+          "prevalence_pct": 8.56,
+          "pr_auc": 0.4665,
+          "roc_auc": 0.872,
+          "threshold": 0.2,
+          "confusion_matrix": {
+            "tn": 143781,
+            "fp": 12470,
+            "fn": 6168,
+            "tp": 8455
+          },
+          "precision_pct": 40.41,
+          "recall_pct": 57.82,
+          "f1_pct": 47.57,
+          "fnr_pct": 42.18,
+          "fpr_pct": 7.98,
+          "recall_at_10_pct": 51.71,
+          "recall_at_20_pct": 71.87,
+          "brier_score": 0.0588,
+          "ece": 0.0018
+        }
+      }
+    },
+    "horizon_delta_1d_minus_7d": {
+      "logistic_regression": {
+        "pr_auc_delta": 0.0047,
+        "roc_auc_delta": 0.0015,
+        "recall_at_020_delta": 0.84,
+        "brier_score_delta": -0.0002
+      },
+      "random_forest": {
+        "pr_auc_delta": 0.0029,
+        "roc_auc_delta": 0.002,
+        "recall_at_020_delta": -0.35,
+        "brier_score_delta": -0.0002
+      },
+      "hist_gradient_boosting": {
+        "pr_auc_delta": 0.0059,
+        "roc_auc_delta": 0.0033,
+        "recall_at_020_delta": 0.44,
+        "brier_score_delta": -0.0004
+      }
+    }
+  },
+  "dimension_7_selection_verdict": {
+    "selected_model": "HistGradientBoostingClassifier",
+    "selection_status": "Conditional Operational Selection with Governed Triage",
+    "universal_winner_exists": false,
+    "universal_winner_rationale": "No universal candidate model dominates every dimension. HistGradientBoosting delivers the highest grouped-CV ranking (0.4606) and superior cold-start sensitivity (Recall@0.20 = 27.07% vs 19.51% for RF), while Random Forest exhibits slightly superior prospective ranking on 2014J (PR-AUC 0.3093 vs 0.3005) and lower calibration error (ECE 0.0266 vs 0.0420). Linear Logistic Regression is decisively rejected due to catastrophic cold-start collapse.",
+    "comparative_audit_matrix": {
+      "grouped_cv_pr_auc": {
+        "hist_gradient_boosting": 0.4606,
+        "random_forest": 0.4368,
+        "logistic_regression": 0.3226
+      },
+      "prospective_holdout_pr_auc": {
+        "hist_gradient_boosting": 0.3005,
+        "random_forest": 0.3093,
+        "logistic_regression": 0.2062
+      },
+      "generalization_gap_delta": {
+        "hist_gradient_boosting": 0.1601,
+        "random_forest": 0.1275,
+        "logistic_regression": 0.1164
+      },
+      "cold_start_recall_at_020": {
+        "hist_gradient_boosting": 27.07,
+        "random_forest": 19.51,
+        "logistic_regression": 0.0
+      },
+      "prospective_brier_score": {
+        "hist_gradient_boosting": 0.0812,
+        "random_forest": 0.0768,
+        "logistic_regression": 0.0907
+      },
+      "prospective_ece": {
+        "hist_gradient_boosting": 0.042,
+        "random_forest": 0.0266,
+        "logistic_regression": 0.0517
+      }
+    },
+    "architectural_justification": [
+      "1. Cold-Start Discrimination: HGB's native tree routing handles unobserved prior scores gracefully, capturing 27.07% of failing students under cold start versus only 19.51% for Random Forest and 0.0% for Logistic Regression.",
+      "2. Non-Linear Interaction Modeling: Gradient boosting captures non-linear interactions between VLE click recency and cumulative registration timing that linear models miss completely.",
+      "3. Operational Governance Integration: Combining HGB with the Module GGG Governance Router (suppressing decoupled practice quizzes and applying tau=0.10 on TMAs) resolves course-specific fragility."
+    ],
+    "governed_deployment_policy": [
+      "Deploy HistGradientBoostingClassifier as primary risk-ranking engine.",
+      "Enforce ModuleGGGGovernanceRouter to suppress alerts on unweighted self-paced quizzes (GGG CMAs).",
+      "Apply dual-threshold operational policy: tau=0.20 for high-stake courses; tau=0.10 for low-prevalence/TMA milestones.",
+      "Anchor academic outreach at TMA 3 Capstone milestones where ROC-AUC exceeds 0.81 across all modules."
+    ]
+  },
+  "pipeline_runtime_seconds": 8.2
+}

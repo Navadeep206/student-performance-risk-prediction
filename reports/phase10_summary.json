@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "phase": "Phase 10 — Model Saving, API Development & Final Safety Acceptance Audit",
+    "timestamp": "2026-11-15T07:25:00Z",
+    "status": "Final Shadow-Mode Safety & Artifact Acceptance Certified",
+    "production_approval_status": "WITHHELD (Mandatory Shadow Mode Enforced)"
+  },
+  "model_artifacts": {
+    "primary_model": {
+      "name": "HistGradientBoostingClassifier",
+      "version": "1.0.0",
+      "file": "optimized_hist_gradient_boosting.joblib",
+      "sha256_hash": "a5ad045e8af28e318d71d036bdc6888f171934242511637396581ed8d4d80771",
+      "feature_count": 23,
+      "supported_horizons": [7],
+      "assumed_grading_delay_days": 14,
+      "training_provenance": {
+        "source_dataset": "data/processed/prediction_dataset.csv",
+        "training_snapshots_count": 120860,
+        "presentations_included": ["2013B", "2013J", "2014B"],
+        "temporal_holdout_quarantined": ["2014J"],
+        "positive_prevalence_pct": 8.26
+      },
+      "verification_status": "CERTIFIED_INDEPENDENTLY_VALID"
+    },
+    "challenger_model": {
+      "name": "RandomForestClassifier",
+      "version": "1.0.0",
+      "file": "challenger_random_forest.joblib",
+      "sha256_hash": "93262efb5a02412a42303834a7ff0eef61a3d5b87cd4b7696f3ec5b722c87f2c",
+      "training_provenance": {
+        "source_dataset": "data/processed/prediction_dataset.csv",
+        "training_snapshots_count": 120860,
+        "presentations_included": ["2013B", "2013J", "2014B"],
+        "temporal_holdout_quarantined": ["2014J"]
+      },
+      "verification_status": "CERTIFIED_INDEPENDENTLY_VALID"
+    }
+  },
+  "api_endpoints": {
+    "GET /health": "Health check, model availability, and shadow mode status",
+    "GET /model-info": "Model metadata, features, threshold governance, and training provenance",
+    "POST /predict": "Single prediction with universal CMA suppression, GGG TMA thresholding, and HMAC audit logging",
+    "POST /predict/batch": "Batch prediction with isolated record validation"
+  },
+  "safety_and_governance_guarantees": {
+    "shadow_mode_read_only_enforced": true,
+    "student_outreach_enabled_strictly_false": true,
+    "suppress_automated_outreach_strictly_true": true,
+    "security_violation_error_on_outreach_attempt": true,
+    "zero_communication_or_intervention_endpoints": true,
+    "silent_hmac_secret_fallback_removed": true,
+    "missing_hmac_secret_safe_failover_500": true,
+    "thread_safe_decision_audit_logging": true,
+    "immutable_decision_audit_records": true,
+    "raw_student_id_and_secret_never_logged": true,
+    "universal_cma_outreach_suppressed": true,
+    "ggg_tma_calibrated_threshold": 0.10,
+    "standard_tma_threshold": 0.20,
+    "target_leakage_rejected_422": true,
+    "sensitive_demographics_rejected_422": true
+  },
+  "api_test_results": {
+    "total_tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "test_cases": [
+      "test_health_endpoint",
+      "test_model_info_endpoint",
+      "test_ggg_tma_at_probability_012_routing_and_outreach_disabled",
+      "test_predict_single_standard_tma_above_and_below_threshold",
+      "test_predict_single_cma_universal_suppression",
+      "test_predict_unknown_metadata_safe_handling",
+      "test_attempted_outreach_raises_security_violation",
+      "test_api_does_not_expose_outreach_endpoints",
+      "test_missing_hmac_secret_fails_safely_no_silent_fallback",
+      "test_short_hmac_secret_fails_safely",
+      "test_predict_prohibited_target_leakage_rejected",
+      "test_predict_prohibited_sensitive_demographics_rejected",
+      "test_predict_batch_isolated_fault_handling",
+      "test_concurrent_api_prediction_requests",
+      "test_model_artifact_manager_missing_and_corrupt_files",
+      "test_saved_hgb_artifact_verification_against_approved_pipeline",
+      "test_saved_rf_challenger_artifact_verification"
+    ]
+  },
+  "regression_test_summary": {
+    "total_repository_tests": 106,
+    "passed": 106,
+    "failed": 0,
+    "pass_rate_pct": 100.0
+  }
+}

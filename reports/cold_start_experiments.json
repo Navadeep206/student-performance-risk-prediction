@@ -1,0 +1,334 @@
+{
+  "cv_strategy_benchmarks": {
+    "strategy_1_baseline": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.2684,
+        "roc_auc": 0.7762,
+        "precision_at_020": 29.83,
+        "recall_at_020": 40.31,
+        "f1_at_020": 34.29,
+        "fpr_at_020": 9.14,
+        "brier_score": 0.0719,
+        "ece": 0.0013
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.4886,
+        "roc_auc": 0.8807,
+        "precision_at_020": 42.13,
+        "recall_at_020": 59.74,
+        "f1_at_020": 49.41,
+        "fpr_at_020": 7.29,
+        "brier_score": 0.0547,
+        "ece": 0.0015
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.4585,
+        "roc_auc": 0.8667,
+        "precision_at_020": 40.15,
+        "recall_at_020": 56.48,
+        "f1_at_020": 46.93,
+        "fpr_at_020": 7.58,
+        "brier_score": 0.0574,
+        "ece": 0.0014
+      }
+    },
+    "strategy_2_indicators": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.2684,
+        "roc_auc": 0.7762,
+        "precision_at_020": 29.83,
+        "recall_at_020": 40.31,
+        "f1_at_020": 34.29,
+        "fpr_at_020": 9.14,
+        "brier_score": 0.0719,
+        "ece": 0.0013
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.4886,
+        "roc_auc": 0.8807,
+        "precision_at_020": 42.13,
+        "recall_at_020": 59.74,
+        "f1_at_020": 49.41,
+        "fpr_at_020": 7.29,
+        "brier_score": 0.0547,
+        "ece": 0.0015
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.4585,
+        "roc_auc": 0.8667,
+        "precision_at_020": 40.15,
+        "recall_at_020": 56.48,
+        "f1_at_020": 46.93,
+        "fpr_at_020": 7.58,
+        "brier_score": 0.0574,
+        "ece": 0.0014
+      }
+    },
+    "strategy_3_engagement_only": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.1606,
+        "roc_auc": 0.6818,
+        "precision_at_020": 19.66,
+        "recall_at_020": 10.44,
+        "f1_at_020": 13.63,
+        "fpr_at_020": 4.11,
+        "brier_score": 0.0776,
+        "ece": 0.0043
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.2047,
+        "roc_auc": 0.7392,
+        "precision_at_020": 25.8,
+        "recall_at_020": 26.08,
+        "f1_at_020": 25.94,
+        "fpr_at_020": 6.67,
+        "brier_score": 0.0701,
+        "ece": 0.0016
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.1985,
+        "roc_auc": 0.731,
+        "precision_at_020": 25.21,
+        "recall_at_020": 23.45,
+        "f1_at_020": 24.3,
+        "fpr_at_020": 6.27,
+        "brier_score": 0.0713,
+        "ece": 0.0015
+      }
+    },
+    "strategy_4_academic_independent": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.262,
+        "roc_auc": 0.7735,
+        "precision_at_020": 29.49,
+        "recall_at_020": 37.39,
+        "f1_at_020": 32.97,
+        "fpr_at_020": 8.62,
+        "brier_score": 0.0722,
+        "ece": 0.0042
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.2679,
+        "roc_auc": 0.7834,
+        "precision_at_020": 29.88,
+        "recall_at_020": 37.92,
+        "f1_at_020": 33.43,
+        "fpr_at_020": 7.91,
+        "brier_score": 0.067,
+        "ece": 0.0026
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.2669,
+        "roc_auc": 0.7818,
+        "precision_at_020": 29.82,
+        "recall_at_020": 37.83,
+        "f1_at_020": 33.35,
+        "fpr_at_020": 8.02,
+        "brier_score": 0.0679,
+        "ece": 0.0024
+      }
+    },
+    "strategy_5_reduced_early": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.2532,
+        "roc_auc": 0.7569,
+        "precision_at_020": 28.79,
+        "recall_at_020": 38.46,
+        "f1_at_020": 32.93,
+        "fpr_at_020": 9.17,
+        "brier_score": 0.0729,
+        "ece": 0.0064
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.2479,
+        "roc_auc": 0.7667,
+        "precision_at_020": 29.14,
+        "recall_at_020": 33.35,
+        "f1_at_020": 31.11,
+        "fpr_at_020": 7.21,
+        "brier_score": 0.0681,
+        "ece": 0.0032
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.2485,
+        "roc_auc": 0.7651,
+        "precision_at_020": 29.08,
+        "recall_at_020": 34.21,
+        "f1_at_020": 31.43,
+        "fpr_at_020": 7.51,
+        "brier_score": 0.0689,
+        "ece": 0.0021
+      }
+    },
+    "strategy_6_segmented_specialist": {
+      "cold_start_metrics": {
+        "n_samples": 19071,
+        "n_positives": 1677,
+        "prevalence_pct": 8.79,
+        "pr_auc": 0.2608,
+        "roc_auc": 0.7729,
+        "precision_at_020": 29.55,
+        "recall_at_020": 39.18,
+        "f1_at_020": 33.69,
+        "fpr_at_020": 9.0,
+        "brier_score": 0.0722,
+        "ece": 0.0021
+      },
+      "non_cold_start_metrics": {
+        "n_samples": 101789,
+        "n_positives": 8309,
+        "prevalence_pct": 8.16,
+        "pr_auc": 0.4886,
+        "roc_auc": 0.8807,
+        "precision_at_020": 42.13,
+        "recall_at_020": 59.74,
+        "f1_at_020": 49.41,
+        "fpr_at_020": 7.29,
+        "brier_score": 0.0547,
+        "ece": 0.0015
+      },
+      "overall_cohort_metrics": {
+        "n_samples": 120860,
+        "n_positives": 9986,
+        "prevalence_pct": 8.26,
+        "pr_auc": 0.4578,
+        "roc_auc": 0.8664,
+        "precision_at_020": 40.13,
+        "recall_at_020": 56.29,
+        "f1_at_020": 46.86,
+        "fpr_at_020": 7.56,
+        "brier_score": 0.0574,
+        "ece": 0.0016
+      }
+    }
+  },
+  "holdout_2014j_comparison": {
+    "strategy_1_baseline_2014j": {
+      "cold_start": {
+        "n_samples": 10407,
+        "n_positives": 1415,
+        "prevalence_pct": 13.6,
+        "pr_auc": 0.1687,
+        "roc_auc": 0.5698,
+        "precision_at_020": 15.84,
+        "recall_at_020": 27.07,
+        "f1_at_020": 19.98,
+        "fpr_at_020": 22.63,
+        "brier_score": 0.1263,
+        "ece": 0.091
+      },
+      "non_cold_start": {
+        "n_samples": 39607,
+        "n_positives": 3222,
+        "prevalence_pct": 8.13,
+        "pr_auc": 0.3478,
+        "roc_auc": 0.8477,
+        "precision_at_020": 29.52,
+        "recall_at_020": 62.38,
+        "f1_at_020": 40.08,
+        "fpr_at_020": 13.19,
+        "brier_score": 0.0693,
+        "ece": 0.0291
+      },
+      "overall": {
+        "n_samples": 50014,
+        "n_positives": 4637,
+        "prevalence_pct": 9.27,
+        "pr_auc": 0.3005,
+        "roc_auc": 0.7969,
+        "precision_at_020": 25.93,
+        "recall_at_020": 51.61,
+        "f1_at_020": 34.52,
+        "fpr_at_020": 15.06,
+        "brier_score": 0.0812,
+        "ece": 0.042
+      }
+    },
+    "strategy_6_segmented_2014j": {
+      "cold_start": {
+        "n_samples": 10407,
+        "n_positives": 1415,
+        "prevalence_pct": 13.6,
+        "pr_auc": 0.1742,
+        "roc_auc": 0.5856,
+        "precision_at_020": 17.09,
+        "recall_at_020": 26.22,
+        "f1_at_020": 20.69,
+        "fpr_at_020": 20.02,
+        "brier_score": 0.1244,
+        "ece": 0.089
+      },
+      "non_cold_start": {
+        "n_samples": 39607,
+        "n_positives": 3222,
+        "prevalence_pct": 8.13,
+        "pr_auc": 0.3478,
+        "roc_auc": 0.8477,
+        "precision_at_020": 29.52,
+        "recall_at_020": 62.38,
+        "f1_at_020": 40.08,
+        "fpr_at_020": 13.19,
+        "brier_score": 0.0693,
+        "ece": 0.0291
+      },
+      "overall": {
+        "n_samples": 50014,
+        "n_positives": 4637,
+        "prevalence_pct": 9.27,
+        "pr_auc": 0.3021,
+        "roc_auc": 0.7985,
+        "precision_at_020": 26.51,
+        "recall_at_020": 51.35,
+        "f1_at_020": 34.97,
+        "fpr_at_020": 14.54,
+        "brier_score": 0.0808,
+        "ece": 0.0415
+      }
+    }
+  }
+}

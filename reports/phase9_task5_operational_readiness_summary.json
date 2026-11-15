@@ -1,0 +1,211 @@
+{
+  "audit_metadata": {
+    "task": "Phase 9 Task 5 Operational Readiness & Deployment Feasibility Audit",
+    "timestamp": "2026-11-15T06:54:11Z",
+    "status": "Audit Complete & Certified (Production Approval Withheld)",
+    "primary_candidate": "HistGradientBoostingClassifier",
+    "challenger_candidate": "RandomForestClassifier",
+    "deployment_permission": "DENIED (Investigation and Verification Task Only)"
+  },
+  "operational_requirements_status": {
+    "1. Calibration Methodology & Ranking Integrity": "VERIFIED",
+    "2. Counselor Workload & Alert Volume Viability": "REQUIRES INSTITUTIONAL INPUT",
+    "3. Module GGG Governance Router Core Functionality": "VERIFIED",
+    "4. Universal CMA Outreach Suppression Integration": "PARTIALLY VERIFIED",
+    "5. Static Registration & Coursework Telemetry": "VERIFIED",
+    "6. Dynamic VLE Clickstream Ingestion at 7-Day Horizon": "VERIFIED",
+    "7. Real-Time VLE Ingestion at 1-Day Horizon": "NOT VERIFIED",
+    "8. Actual Grade Publication Delay (14-Day Simulation)": "REQUIRES INSTITUTIONAL INPUT",
+    "9. Shadow-Mode Evaluation Protocol & Governance Gates": "VERIFIED"
+  },
+  "section_1_calibration_consistency": {
+    "mathematical_monotonic_invariance_verified": true,
+    "synthetic_test_metrics": {
+      "base_ap": 0.956685,
+      "sigmoid_ap": 0.956685,
+      "ap_difference": 0.0,
+      "base_roc_auc": 0.997159,
+      "sigmoid_roc_auc": 0.997159,
+      "roc_difference": 0.0
+    },
+    "calibrated_classifier_cv_mechanism": {
+      "refits_base_estimators": true,
+      "estimator_cloning_folds": "K-fold cross-validation (default cv=3 or cv=5)",
+      "subsample_training_size": "Trained on (K-1)/K of data per fold, not full training set",
+      "prediction_ensembling": "Averages predicted probabilities across K refitted estimators",
+      "explanation_of_phase6_ap_drop": "Phase 6 reported a drop in PR-AUC under CalibratedClassifierCV(method='sigmoid') not because a monotonic sigmoid alters ranking, but because CalibratedClassifierCV refits K separate clone estimators on subsampled partitions of training data and averages their predictions, producing a different ensemble ranking. Furthermore, isotonic calibration maps continuous scores into flat step plateaus, creating extensive ties and degrading fine-grained ranking resolution."
+    }
+  },
+  "section_2_counselor_workload": {
+    "cohort_parameters": {
+      "total_snapshots": 50014,
+      "total_unique_students": 8607
+    },
+    "alert_volume_comparison": {
+      "raw_unconstrained_tau_020": {
+        "total_alerts": 9227,
+        "tma_alerts": 6984,
+        "cma_alerts": 2243,
+        "alert_rate_pct": 18.45
+      },
+      "governed_tma_only_policy": {
+        "total_actionable_alerts": 7130,
+        "cma_alerts_suppressed": 2243,
+        "alert_reduction_from_cma_suppression": 2097,
+        "alert_reduction_pct": 22.73,
+        "alert_rate_pct": 14.26
+      }
+    },
+    "student_coverage_governed": {
+      "unique_students_alerted": 3299,
+      "pct_eligible_students_alerted": 38.33,
+      "mean_alerts_per_alerted_student": 2.16,
+      "max_alerts_per_student": 9,
+      "alert_frequency_distribution": {
+        "1_alert": 1430,
+        "2_alerts": 709,
+        "3_alerts": 441,
+        "4_alerts": 663,
+        "5_or_more_alerts": 56
+      }
+    },
+    "module_level_alert_distribution": {
+      "AAA": 187,
+      "BBB": 2501,
+      "CCC": 1532,
+      "DDD": 1752,
+      "EEE": 147,
+      "FFF": 772,
+      "GGG": 239
+    },
+    "milestone_level_alert_distribution": {
+      "TMA_1_Onboarding": 2280,
+      "TMA_2_Midterm": 1801,
+      "TMA_3_Capstone": 3049
+    },
+    "advisor_workload_modeling": {
+      "semester_duration_weeks": 34,
+      "mean_alerts_per_week": 209.7,
+      "peak_milestone_weeks_alert_volume": "350 - 650 alerts/week during major TMA cutoffs",
+      "tiered_intervention_cadence_model": {
+        "tier_1_nudge": {
+          "scope": "Single-alert students (N = 1,430)",
+          "method": "Automated supportive LMS nudges / check-ins",
+          "human_advisor_hours_required": 0
+        },
+        "tier_2_counseling": {
+          "scope": "Persistent alert students with >= 2 alerts (N = 1,869 unique students)",
+          "method": "Direct academic advisor 1-on-1 counseling",
+          "caseload_per_week": 55.0
+        }
+      },
+      "institutional_input_required": [
+        "Full-time academic advisor (FTE) staffing count.",
+        "Counseling appointment duration allocation (15-min call vs 30-min coaching).",
+        "Course-level decentralized tutoring vs centralized student support responsibilities."
+      ]
+    }
+  },
+  "section_3_governance_router": {
+    "router_verification_results": {
+      "ggg_cma_suppressed": true,
+      "ggg_tma_onboarding_calibrated_threshold": true,
+      "ggg_tma_midterm_calibrated_threshold": true,
+      "other_modules_retain_020_default": true,
+      "invalid_metadata_safe_handling": true
+    },
+    "integration_gap_analysis": {
+      "cma_general_suppression_gap": true,
+      "gap_description": "ModuleGGGGovernanceRouter currently suppresses CMAs exclusively for Module GGG. For modules AAA through FFF, CMAs currently default to suppress_automated_outreach=False. In production, institutional router must explicitly suppress automated advisor outreach for CMAs across ALL modules to enforce the 'Research-Only' governance mandate.",
+      "metadata_audit_trail_gap": "The router records module, assessment type, probability, threshold, and recommendation, but does not currently log the model_name, model_version, or input_feature_hash."
+    }
+  },
+  "section_4_telemetry_and_features": {
+    "static_registration_features": {
+      "features": [
+        "date_registration"
+      ],
+      "timing": "Pre-semester (Days -30 to 0) or early enrollment",
+      "real_world_feasibility": "VERIFIED (Available in Student Information System prior to prediction cutoff)"
+    },
+    "coursework_structure_features": {
+      "features": [
+        "code_module",
+        "code_presentation",
+        "scheduled_date",
+        "assessment_type",
+        "weight"
+      ],
+      "timing": "Syllabus creation / Course catalogue setup",
+      "real_world_feasibility": "VERIFIED (Static institutional course database)"
+    },
+    "vle_engagement_telemetry": {
+      "features": [
+        "vle_clicks_last_7d",
+        "vle_clicks_last_14d",
+        "vle_clicks_last_30d",
+        "vle_clicks_cum",
+        "vle_active_days_cum",
+        "days_since_last_click",
+        "vle_clicks_forumng",
+        "vle_clicks_oucontent",
+        "vle_clicks_homepage"
+      ],
+      "timing": "Filtered strictly to events with date <= cutoff_date",
+      "real_world_feasibility": "PARTIALLY VERIFIED",
+      "telemetry_latency_constraint": "In real-world learning management systems, clickstream events require an ETL pipeline (event stream or nightly batch). A 7-day pre-deadline prediction horizon provides sufficient operational buffer for a 24-48h ingestion lag. However, a 1-day horizon is operationally brittle and would fail under clickstream ingestion delays."
+    },
+    "historical_assessment_grades_and_publication_delay": {
+      "features": [
+        "prev_score",
+        "avg_score_to_date",
+        "clean_prev_score",
+        "prev_scores_count"
+      ],
+      "timing": "date_submitted + delay_days <= cutoff_date (delay_days = 14)",
+      "real_world_feasibility": "REQUIRES INSTITUTIONAL INPUT",
+      "grading_delay_critical_caveat": "OULAD records only date_submitted and final score; it DOES NOT record the actual date when tutors finished grading or when grades were released to students. The 14-day delay is a simulated policy benchmark. Real-world deployment requires linking to actual gradebook release events in the LMS/SIS. Tutors who take >14 days would leave scores unobserved, reverting the student to cold-start feature routing."
+    }
+  },
+  "section_5_shadow_mode_design": {
+    "deployment_mode": "Silent / Passive Shadow Mode (Zero Student Outreach)",
+    "prediction_logging_schema": [
+      "prediction_id (UUID v4)",
+      "timestamp_utc (ISO 8601)",
+      "student_id (Anonymized SHA-256 hash)",
+      "code_module",
+      "code_presentation",
+      "id_assessment",
+      "assessment_type",
+      "cutoff_date",
+      "scheduled_date",
+      "model_name (HistGradientBoostingClassifier)",
+      "model_version (e.g. v1.2.0-phase9)",
+      "feature_pipeline_version (e.g. v1.2.0-remediated)",
+      "input_feature_hash (SHA-256)",
+      "raw_risk_probability (Float)",
+      "operational_threshold (Float)",
+      "predicted_at_risk (Boolean)",
+      "governance_routing_action",
+      "suppress_automated_outreach (Boolean)",
+      "advising_recommendation_text"
+    ],
+    "advisor_review_protocol": {
+      "access_channel": "Internal, read-only academic advisor risk portal",
+      "student_contact_rule": "NO direct student messaging triggered automatically by model",
+      "weekly_review_cadence": "Advisors review flagged rosters at weekly mentoring huddles",
+      "qualitative_feedback_logging": "Advisors log whether flagged students sought help or showed early difficulty"
+    },
+    "shadow_telemetry_monitoring_gates": {
+      "missing_data_monitoring": "Track cold-start rate; trigger alert if missing prior scores exceed 25%",
+      "feature_drift_monitoring": "Weekly continuous PSI calculation on clicks_last_7d and days_since_last_click (alert if PSI > 0.20)",
+      "ingestion_latency_tracking": "Log delta between LMS event timestamps and model scoring run (alert if lag > 24h)",
+      "alert_volume_volatility": "Flag if weekly alert proportion deviates > 25% from expected 15-20% benchmark",
+      "calibration_drift_audit": "Compute rolling Brier score and ECE against published retrospective grades"
+    },
+    "incident_investigation_procedure": {
+      "false_positive_audit": "Review students with P >= 0.20 who scored >= 75; investigate whether informal tutor support or late cramming occurred",
+      "false_negative_audit": "Review students with P < 0.20 who scored < 50; inspect sudden drop-off, illness flags, or cold-start feature sparsity"
+    }
+  }
+}

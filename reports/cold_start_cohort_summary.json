@@ -1,0 +1,70 @@
+{
+  "cold_start_population": {
+    "n_snapshots": 29478,
+    "n_unique_learners": 23351,
+    "share_of_total_snapshots_pct": 17.25,
+    "at_risk_failures": 3092,
+    "failure_rate_pct": 10.49,
+    "mean_scheduled_date": 26.6,
+    "median_scheduled_date": 23.0,
+    "mean_target_assessment_weight": 7.44,
+    "mean_vle_total_clicks": 261.15,
+    "mean_vle_active_days": 11.08,
+    "mean_vle_clicks_last_7d": 64.34,
+    "mean_days_since_last_activity": 31.2,
+    "mean_registration_timing_days": -66.39,
+    "mean_baseline_predicted_prob": 0.1043,
+    "assessment_type_distribution": {
+      "TMA": 84.8,
+      "CMA": 15.19,
+      "Exam": 0.01
+    },
+    "module_distribution": {
+      "FFF": 21.82,
+      "BBB": 21.19,
+      "DDD": 20.42,
+      "CCC": 19.07,
+      "EEE": 7.83,
+      "GGG": 7.25,
+      "AAA": 2.42
+    }
+  },
+  "non_cold_start_population": {
+    "n_snapshots": 141396,
+    "n_unique_learners": 21075,
+    "share_of_total_snapshots_pct": 82.75,
+    "at_risk_failures": 11531,
+    "failure_rate_pct": 8.16,
+    "mean_scheduled_date": 152.32,
+    "median_scheduled_date": 152.0,
+    "mean_target_assessment_weight": 12.08,
+    "mean_vle_total_clicks": 1458.19,
+    "mean_vle_active_days": 58.59,
+    "mean_vle_clicks_last_7d": 58.95,
+    "mean_days_since_last_activity": 7.85,
+    "mean_registration_timing_days": -65.74,
+    "mean_baseline_predicted_prob": 0.0811,
+    "assessment_type_distribution": {
+      "TMA": 51.81,
+      "CMA": 46.71,
+      "Exam": 1.48
+    },
+    "module_distribution": {
+      "FFF": 34.19,
+      "BBB": 25.98,
+      "DDD": 16.86,
+      "GGG": 9.25,
+      "CCC": 8.06,
+      "EEE": 3.94,
+      "AAA": 1.72
+    }
+  },
+  "disparity_tests": {
+    "failure_rate_difference_pct": 2.33,
+    "scheduled_date_difference_days": -125.72,
+    "vle_active_days_t_statistic": -367.78,
+    "vle_active_days_p_value": 0.0,
+    "registration_timing_t_statistic": -2.13,
+    "registration_timing_p_value": 0.033184435906598295
+  }
+}

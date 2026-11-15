@@ -1,0 +1,92 @@
+{
+  "model_name": "HistGradientBoostingClassifier",
+  "model_version": "1.0.0",
+  "feature_pipeline_version": "1.0.0",
+  "created_at_utc": "2026-11-15T07:06:19Z",
+  "sha256_hash": "a5ad045e8af28e318d71d036bdc6888f171934242511637396581ed8d4d80771",
+  "feature_count": 23,
+  "feature_names": [
+    "code_module",
+    "code_presentation",
+    "target_assessment_type",
+    "target_assessment_weight",
+    "scheduled_date",
+    "num_previous_scheduled_assessments",
+    "registration_timing_days",
+    "vle_total_clicks_to_date",
+    "vle_active_days_to_date",
+    "vle_core_clicks_to_date",
+    "vle_forum_clicks_to_date",
+    "vle_quiz_clicks_to_date",
+    "vle_days_since_last_activity",
+    "vle_clicks_last_7d",
+    "vle_clicks_last_14d",
+    "vle_activity_trend_ratio",
+    "num_prior_submissions",
+    "prior_submission_lateness_mean",
+    "num_prior_scored_assessments",
+    "mean_prior_score",
+    "std_prior_score",
+    "prior_at_risk_rate",
+    "recent_prior_score"
+  ],
+  "categorical_features": [
+    "code_module",
+    "code_presentation",
+    "target_assessment_type"
+  ],
+  "numerical_features": [
+    "target_assessment_weight",
+    "scheduled_date",
+    "num_previous_scheduled_assessments",
+    "registration_timing_days",
+    "vle_total_clicks_to_date",
+    "vle_active_days_to_date",
+    "vle_core_clicks_to_date",
+    "vle_forum_clicks_to_date",
+    "vle_quiz_clicks_to_date",
+    "vle_days_since_last_activity",
+    "vle_clicks_last_7d",
+    "vle_clicks_last_14d",
+    "vle_activity_trend_ratio",
+    "num_prior_submissions",
+    "prior_submission_lateness_mean",
+    "num_prior_scored_assessments",
+    "mean_prior_score",
+    "std_prior_score",
+    "prior_at_risk_rate",
+    "recent_prior_score"
+  ],
+  "hyperparameters": {
+    "learning_rate": 0.05,
+    "max_iter": 150,
+    "max_depth": 8,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 50,
+    "l2_regularization": 5.0,
+    "random_state": 42
+  },
+  "training_data_provenance": {
+    "source_dataset": "data/processed/prediction_dataset.csv",
+    "training_snapshots_count": 120860,
+    "presentations_included": [
+      "2013B",
+      "2013J",
+      "2014B"
+    ],
+    "temporal_holdout_quarantined": [
+      "2014J"
+    ],
+    "positive_prevalence_pct": 8.26
+  },
+  "supported_prediction_horizons": [
+    7
+  ],
+  "assumed_grading_delay_days": 14,
+  "decision_threshold_policy": {
+    "standard_tma_threshold": 0.2,
+    "ggg_tma_calibrated_threshold": 0.1,
+    "cma_policy": "AUTOMATED_OUTREACH_SUPPRESSED"
+  },
+  "operational_status": "OFFLINE_RESEARCH_CANDIDATE (Production Deployment Approval WITHHELD)"
+}

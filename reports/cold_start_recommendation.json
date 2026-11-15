@@ -1,0 +1,16 @@
+{
+  "primary_architectural_recommendation": "Retain Unified HistGradientBoosting with Native Missing-Value Routing",
+  "justification": [
+    "Dedicated cold-start specialist models reduce PR-AUC by -0.018 because they discard 84.2% of historical training data.",
+    "Explicit missingness indicator columns provide zero performance gain because gradient boosting natively partitions NaNs.",
+    "Linear models (Logistic Regression) catastrophically fail on cold-start (PR-AUC 0.126) due to median imputation distortion.",
+    "Unified HGB model maximizes non-cold-start performance while preserving the highest cold-start discrimination."
+  ],
+  "operational_advisory_guidelines": [
+    "Acknowledge the 34% cold-start uncertainty gap: early predictions carry higher variance.",
+    "Treat early alerts prior to Assessment 1 as onboarding check-in opportunities rather than academic distress notices.",
+    "Do not recommend increasing VLE clicks as a causal remedy; clicks are observational engagement proxies.",
+    "Recalibrate probability thresholds dynamically after Assessment 1 grades are released."
+  ],
+  "separate_model_justified": false
+}

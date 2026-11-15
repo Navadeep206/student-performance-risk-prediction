@@ -1,0 +1,220 @@
+{
+  "audit_metadata": {
+    "task": "Phase 9 Task 4 Final Model Selection Policy Audit",
+    "timestamp": "2026-11-15T06:45:01Z",
+    "status": "Complete, Audited & Certified",
+    "primary_candidate": "HistGradientBoostingClassifier",
+    "challenger_candidate": "RandomForestClassifier",
+    "baseline_candidate": "LogisticRegression"
+  },
+  "section_1_calibration_audit": {
+    "phase6_training_isolation": {
+      "calibrator_methods_tested": [
+        "isotonic",
+        "sigmoid (Platt scaling)"
+      ],
+      "cv_scheme": "Inner 3-fold grouped CV on training partitions only",
+      "outer_validation_leakage": false,
+      "chronological_2014j_labels_used": false,
+      "holdout_leakage_status": "Strictly Isolated (Zero 2014J labels accessed)"
+    },
+    "ranking_degradation_mechanism": {
+      "base_hgb_pr_auc": 0.4669,
+      "isotonic_pr_auc": 0.3538,
+      "sigmoid_pr_auc": 0.2915,
+      "isotonic_pr_auc_drop": -0.1131,
+      "sigmoid_pr_auc_drop": -0.1754,
+      "root_cause": "In binary classification with imbalanced prevalence (8.56%), isotonic regression fits a piecewise constant step function that maps continuous scores into coarse discrete plateaus. This generates massive ties among predictions, destroying continuous ranking resolution and degrading average precision."
+    },
+    "task4_empirical_calibration_evidence": {
+      "grouped_cv": {
+        "hist_gradient_boosting": {
+          "brier_score": 0.0592,
+          "ece": 0.0163
+        },
+        "random_forest": {
+          "brier_score": 0.0616,
+          "ece": 0.0179
+        },
+        "logistic_regression": {
+          "brier_score": 0.0674,
+          "ece": 0.0065
+        }
+      },
+      "prospective_2014j_holdout": {
+        "hist_gradient_boosting": {
+          "brier_score": 0.0812,
+          "ece": 0.042
+        },
+        "random_forest": {
+          "brier_score": 0.0768,
+          "ece": 0.0266
+        },
+        "logistic_regression": {
+          "brier_score": 0.0907,
+          "ece": 0.0517
+        }
+      },
+      "holdout_ece_gap_rf_vs_hgb": 0.0154,
+      "holdout_brier_gap_rf_vs_hgb": 0.0044
+    },
+    "policy_verdict": {
+      "production_calibration_recommended": false,
+      "justification": "The modest calibration gain (1.54% lower ECE for RF) does not justify risking the 11.3 to 17.5 point collapse in PR-AUC observed with post-hoc calibration, nor does it offset HGB's 38.7% relative recall advantage on cold-start learners. Native log-loss probabilities from HistGradientBoosting remain the approved operational standard."
+    }
+  },
+  "section_2_threshold_governance": {
+    "tau_020_evidence": {
+      "derivation_source": "Train-only F1 optimization across inner CV folds in Phase 5 and Phase 6 (mean tau*=0.21, standardized to 0.20)",
+      "governance_role": "Standard High-Risk Threshold (Tier 3 Human Outreach)",
+      "grouped_cv_metrics": {
+        "n_samples": 170874,
+        "alert_volume": 20959,
+        "alert_volume_pct": 12.27,
+        "precision_pct": 40.03,
+        "recall_pct": 57.38,
+        "fnr_pct": 42.62
+      },
+      "prospective_2014j_metrics": {
+        "n_samples": 50014,
+        "alert_volume": 9227,
+        "alert_volume_pct": 18.45,
+        "precision_pct": 25.93,
+        "recall_pct": 51.61,
+        "fnr_pct": 48.39
+      }
+    },
+    "tau_010_evidence": {
+      "derivation_source": "High-sensitivity / early-warning threshold evaluated for low-prevalence modules and course onboarding",
+      "governance_role": "Calibrated Threshold for Module GGG TMAs",
+      "grouped_cv_metrics": {
+        "n_samples": 170874,
+        "alert_volume": 38384,
+        "alert_volume_pct": 22.46,
+        "precision_pct": 28.37,
+        "recall_pct": 74.46,
+        "fnr_pct": 25.54
+      },
+      "prospective_2014j_metrics": {
+        "n_samples": 50014,
+        "alert_volume": 14611,
+        "alert_volume_pct": 29.21,
+        "precision_pct": 21.29,
+        "recall_pct": 67.09,
+        "fnr_pct": 32.91
+      }
+    },
+    "module_ggg_specific_justification": {
+      "evaluation_population": "5,656 matched actionable TMA snapshots (411 failures, prevalence 7.27%)",
+      "tau_020_performance": {
+        "alert_volume": 221,
+        "alert_volume_pct": 3.91,
+        "precision_pct": 36.65,
+        "recall_pct": 19.71,
+        "fnr_pct": 80.29
+      },
+      "tau_010_performance": {
+        "alert_volume": 1009,
+        "alert_volume_pct": 17.84,
+        "precision_pct": 18.63,
+        "recall_pct": 45.74,
+        "fnr_pct": 54.26
+      },
+      "justification_summary": "In Module GGG, tau=0.20 suffered from an 80.29% FNR due to decoupled zero-weight practice quizzes and absent early grades. Calibrating to tau=0.10 more than doubled sensitivity (from 19.71% to 45.74%) at an operationally manageable 17.84% alert volume."
+    },
+    "module_generalization_guardrail": {
+      "prohibit_broad_generalization": true,
+      "evidence_other_low_prevalence_modules": {
+        "module_eee": {
+          "prevalence_pct": 3.9,
+          "tau_020_metrics": {
+            "alerts": 147,
+            "alert_pct": 4.6,
+            "precision_pct": 38.1,
+            "recall_pct": 44.44,
+            "fnr_pct": 55.56
+          }
+        },
+        "module_fff": {
+          "prevalence_pct": 4.0,
+          "tau_020_metrics": {
+            "alerts": 819,
+            "alert_pct": 5.1,
+            "precision_pct": 35.41,
+            "recall_pct": 44.89,
+            "fnr_pct": 55.11
+          }
+        }
+      },
+      "governance_mandate": "Do NOT generalize GGG's 0.10 threshold to other low-prevalence modules without course-specific matched evaluation. Modules EEE and FFF maintain balanced 35-38% precision and ~45% recall under tau=0.20. Lowering tau to 0.10 across all modules would induce severe false-positive alert fatigue."
+    }
+  },
+  "section_3_cma_governance": {
+    "cma_population_2014j": {
+      "n_snapshots": 31894,
+      "n_positives": 2828,
+      "prevalence_pct": 8.87,
+      "share_of_all_2014j_snapshots_pct": 63.77
+    },
+    "cma_offline_candidate_performance": {
+      "hist_gradient_boosting_pr_auc": 0.3844,
+      "random_forest_pr_auc": 0.3667,
+      "logistic_regression_pr_auc": 0.269
+    },
+    "operational_concerns": [
+      "CMAs are frequent, short-cycle, self-paced, or formative automated computer quizzes.",
+      "In Module GGG, CMAs carry 0% course credit and are completely decoupled from exam completion.",
+      "Mobilizing human advisor phone outreach for automated quizzes causes severe alert fatigue.",
+      "High offline PR-AUC reflects statistical association with platform activity, not actionable advisor intervention efficacy."
+    ],
+    "governance_mandates": [
+      "Preserve ModuleGGGGovernanceRouter policy: fully suppress alerts on decoupled GGG CMAs.",
+      "Classify all CMA snapshot metrics strictly as 'Research-Only Telemetry'.",
+      "Prohibit automated counselor outreach triggered by CMA predictions across all modules."
+    ]
+  },
+  "section_4_final_model_selection": {
+    "governed_model_roles": {
+      "primary_candidate": {
+        "model": "HistGradientBoostingClassifier",
+        "role": "Primary At-Risk Early Warning & Ranking Engine",
+        "strengths": [
+          "Top-ranked 5-fold grouped CV discrimination (PR-AUC 0.4606, ROC-AUC 0.8687).",
+          "Superior cold-start sensitivity (Recall@0.20 = 27.07% vs 19.51% for RF), catching 38.7% more failing students.",
+          "Native tree missingness routing without imputation distortion.",
+          "Highest responsiveness to short-term pre-deadline VLE telemetry (+0.0387 PR-AUC at 1d horizon)."
+        ]
+      },
+      "challenger_candidate": {
+        "model": "RandomForestClassifier",
+        "role": "Comparative Challenger for Generalization & Probability Calibration",
+        "strengths": [
+          "Leading prospective chronological holdout ranking in 2014J (PR-AUC 0.3093 vs 0.3005 for HGB).",
+          "Superior out-of-the-box probability calibration (ECE 0.0266, Brier 0.0768).",
+          "Smaller generalization drop from CV to holdout (Delta = -0.1275 vs -0.1601)."
+        ],
+        "limitations": [
+          "Substantial cold-start sensitivity deficit (Recall@0.20 = 19.51% vs 27.07%).",
+          "Requires explicit feature imputation."
+        ]
+      },
+      "baseline_candidate": {
+        "model": "LogisticRegression",
+        "role": "Retained Offline Linear Baseline & Sanity Check",
+        "status": "Rejected for Operational Deployment; Retained as Scientific Baseline",
+        "rationale": "Catastrophic collapse on cold-start learners (Recall@0.20 = 0.00%, FNR = 100.0%) due to median imputation distortion. Cannot model non-linear VLE engagement patterns. Retained strictly as an offline linear benchmark."
+      }
+    },
+    "production_approval_boundary": {
+      "offline_research_status": "HistGradientBoosting is certified as the scientifically best-performing primary candidate.",
+      "production_deployment_approval": "WITHHELD (Pending Phase 9 Task 5 Operational Verification)",
+      "mandatory_production_prerequisites": [
+        "Complete Phase 9 Task 5: Operational Integration and Deployment Readiness Verification.",
+        "Verify counseling center operational capacity against prospective alert volumes (9,227 alerts across 2014J).",
+        "Implement and test ModuleGGGGovernanceRouter within real-time inference pipelines.",
+        "Establish live data latency and VLE telemetry validation gates.",
+        "Conduct shadow-mode operational pilot alongside counselors prior to automated workflow activation."
+      ]
+    }
+  }
+}

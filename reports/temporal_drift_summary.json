@@ -1,0 +1,550 @@
+{
+  "cohort_overview": {
+    "training_cohort": {
+      "presentations": [
+        "2013B",
+        "2013J",
+        "2014B"
+      ],
+      "n_snapshots": 120860,
+      "n_unique_students": 15955,
+      "at_risk_count": 9986,
+      "at_risk_prevalence_pct": 8.26
+    },
+    "prospective_cohort_2014J": {
+      "presentation": "2014J",
+      "n_snapshots": 50014,
+      "n_unique_students": 8607,
+      "at_risk_count": 4637,
+      "at_risk_prevalence_pct": 9.27,
+      "novel_students_count": 43698,
+      "novel_students_share_pct": 87.37
+    },
+    "performance_generalization_gap": {
+      "grouped_cv_pr_auc": 0.4606,
+      "grouped_cv_roc_auc": 0.8687,
+      "grouped_cv_brier": 0.0592,
+      "chronological_2014j_all_pr_auc": 0.3005,
+      "chronological_2014j_all_roc_auc": 0.7969,
+      "chronological_2014j_all_brier": 0.0812,
+      "chronological_2014j_novel_pr_auc": 0.2793,
+      "chronological_2014j_novel_roc_auc": 0.7854,
+      "chronological_2014j_novel_brier": 0.0776,
+      "pr_auc_degradation_pct": 34.76
+    }
+  },
+  "label_shift": {
+    "training_prevalence_pct": 8.26,
+    "test_2014j_prevalence_pct": 9.27,
+    "prevalence_difference_pct": 1.01,
+    "relative_increase_pct": 12.21,
+    "chi2_statistic": 45.8896,
+    "p_value": 1.2511096572017808e-11,
+    "statistically_significant": true,
+    "interpretation": "Statistically significant upward label shift (+12.2% relative increase from 8.26% to 9.27%)."
+  },
+  "numerical_feature_drift": {
+    "target_assessment_weight": {
+      "psi": 2.6398,
+      "shift_severity": "Significant Drift (PSI >= 0.25)",
+      "ks_statistic": 0.1648,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 3.5518,
+      "cohen_d": 0.078,
+      "train_mean": 10.93,
+      "test_mean": 12.11,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "scheduled_date": {
+      "psi": 2.5464,
+      "shift_severity": "Significant Drift (PSI >= 0.25)",
+      "ks_statistic": 0.1659,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 7.6592,
+      "cohen_d": -0.007,
+      "train_mean": 130.79,
+      "test_mean": 130.26,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "num_prior_scored_assessments": {
+      "psi": 0.6109,
+      "shift_severity": "Significant Drift (PSI >= 0.25)",
+      "ks_statistic": 0.1517,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 0.828,
+      "cohen_d": -0.326,
+      "train_mean": 3.36,
+      "test_mean": 2.53,
+      "train_missing_pct": 0.77,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": -0.77
+    },
+    "num_prior_submissions": {
+      "psi": 0.254,
+      "shift_severity": "Significant Drift (PSI >= 0.25)",
+      "ks_statistic": 0.1374,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 0.7958,
+      "cohen_d": -0.312,
+      "train_mean": 3.39,
+      "test_mean": 2.59,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_quiz_clicks_to_date": {
+      "psi": 0.2294,
+      "shift_severity": "Moderate Drift (0.10 <= PSI < 0.25)",
+      "ks_statistic": 0.1425,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 66.3208,
+      "cohen_d": 0.178,
+      "train_mean": 198.86,
+      "test_mean": 264.11,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "num_previous_scheduled_assessments": {
+      "psi": 0.1064,
+      "shift_severity": "Moderate Drift (0.10 <= PSI < 0.25)",
+      "ks_statistic": 0.1471,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 0.9461,
+      "cohen_d": -0.287,
+      "train_mean": 4.28,
+      "test_mean": 3.34,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_forum_clicks_to_date": {
+      "psi": 0.091,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.1298,
+      "ks_p_value": 0.0,
+      "wasserstein_distance": 57.2325,
+      "cohen_d": -0.114,
+      "train_mean": 269.59,
+      "test_mean": 212.43,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "mean_prior_score": {
+      "psi": 0.0789,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0784,
+      "ks_p_value": 4.589353283589764e-153,
+      "wasserstein_distance": 3.1685,
+      "cohen_d": -0.053,
+      "train_mean": 76.28,
+      "test_mean": 75.61,
+      "train_missing_pct": 15.78,
+      "test_missing_pct": 20.81,
+      "missing_rate_diff_pct": 5.03
+    },
+    "prior_submission_lateness_mean": {
+      "psi": 0.0617,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.087,
+      "ks_p_value": 1.499437531302761e-193,
+      "wasserstein_distance": 0.8412,
+      "cohen_d": -0.124,
+      "train_mean": -0.9,
+      "test_mean": -1.69,
+      "train_missing_pct": 14.81,
+      "test_missing_pct": 17.9,
+      "missing_rate_diff_pct": 3.09
+    },
+    "vle_core_clicks_to_date": {
+      "psi": 0.0614,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.1019,
+      "ks_p_value": 5.1067e-320,
+      "wasserstein_distance": 68.3436,
+      "cohen_d": 0.086,
+      "train_mean": 496.54,
+      "test_mean": 564.24,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "std_prior_score": {
+      "psi": 0.0604,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0763,
+      "ks_p_value": 1.0859316197733344e-144,
+      "wasserstein_distance": 1.7036,
+      "cohen_d": 0.058,
+      "train_mean": 8.81,
+      "test_mean": 9.23,
+      "train_missing_pct": 15.78,
+      "test_missing_pct": 20.81,
+      "missing_rate_diff_pct": 5.03
+    },
+    "recent_prior_score": {
+      "psi": 0.0568,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.091,
+      "ks_p_value": 5.13764838435501e-206,
+      "wasserstein_distance": 2.6246,
+      "cohen_d": -0.145,
+      "train_mean": 77.07,
+      "test_mean": 74.44,
+      "train_missing_pct": 15.78,
+      "test_missing_pct": 20.81,
+      "missing_rate_diff_pct": 5.03
+    },
+    "registration_timing_days": {
+      "psi": 0.0306,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.047,
+      "ks_p_value": 1.8980182871384123e-68,
+      "wasserstein_distance": 4.7516,
+      "cohen_d": 0.022,
+      "train_mean": -66.16,
+      "test_mean": -65.11,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": -0.0
+    },
+    "vle_clicks_last_14d": {
+      "psi": 0.0148,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0602,
+      "ks_p_value": 5.28136019571733e-112,
+      "wasserstein_distance": 12.8913,
+      "cohen_d": 0.072,
+      "train_mean": 116.39,
+      "test_mean": 129.03,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_clicks_last_7d": {
+      "psi": 0.0057,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0314,
+      "ks_p_value": 1.1362048966958159e-30,
+      "wasserstein_distance": 5.7885,
+      "cohen_d": 0.056,
+      "train_mean": 58.2,
+      "test_mean": 63.92,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "prior_at_risk_rate": {
+      "psi": 0.0055,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0323,
+      "ks_p_value": 1.82712127611199e-32,
+      "wasserstein_distance": 0.0153,
+      "cohen_d": 0.097,
+      "train_mean": 0.05,
+      "test_mean": 0.07,
+      "train_missing_pct": 0.77,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": -0.77
+    },
+    "vle_days_since_last_activity": {
+      "psi": 0.0044,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0217,
+      "ks_p_value": 7.508439413455799e-15,
+      "wasserstein_distance": 0.9726,
+      "cohen_d": 0.003,
+      "train_mean": 11.82,
+      "test_mean": 12.02,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_active_days_to_date": {
+      "psi": 0.0026,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0209,
+      "ks_p_value": 7.992658714957036e-14,
+      "wasserstein_distance": 1.5254,
+      "cohen_d": -0.022,
+      "train_mean": 50.68,
+      "test_mean": 49.69,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_activity_trend_ratio": {
+      "psi": 0.002,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0186,
+      "ks_p_value": 4.3926382576232693e-11,
+      "wasserstein_distance": 0.7577,
+      "cohen_d": 0.004,
+      "train_mean": 9.05,
+      "test_mean": 9.23,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    },
+    "vle_total_clicks_to_date": {
+      "psi": 0.001,
+      "shift_severity": "Stable (PSI < 0.10)",
+      "ks_statistic": 0.0124,
+      "ks_p_value": 3.748693129374604e-05,
+      "wasserstein_distance": 46.2782,
+      "cohen_d": 0.028,
+      "train_mean": 1238.34,
+      "test_mean": 1283.94,
+      "train_missing_pct": 0.0,
+      "test_missing_pct": 0.0,
+      "missing_rate_diff_pct": 0.0
+    }
+  },
+  "categorical_feature_drift": {
+    "code_module": {
+      "psi": 0.3372,
+      "train_distribution_pct": {
+        "FFF": 31.93,
+        "BBB": 29.44,
+        "DDD": 18.88,
+        "GGG": 8.97,
+        "CCC": 5.57,
+        "EEE": 3.85,
+        "AAA": 1.35
+      },
+      "test_distribution_pct": {
+        "FFF": 32.34,
+        "CCC": 20.55,
+        "BBB": 14.79,
+        "DDD": 14.1,
+        "GGG": 8.74,
+        "EEE": 6.45,
+        "AAA": 3.03
+      },
+      "distribution_difference_pct": {
+        "CCC": 14.97,
+        "EEE": 2.6,
+        "GGG": -0.23,
+        "DDD": -4.78,
+        "AAA": 1.68,
+        "BBB": -14.65,
+        "FFF": 0.41
+      }
+    },
+    "code_presentation": {
+      "psi": 39.8569,
+      "train_distribution_pct": {
+        "2013J": 40.53,
+        "2014B": 31.53,
+        "2013B": 27.95
+      },
+      "test_distribution_pct": {
+        "2014J": 100.0
+      },
+      "distribution_difference_pct": {
+        "2014B": -31.53,
+        "2013B": -27.95,
+        "2013J": -40.53,
+        "2014J": 100.0
+      }
+    },
+    "target_assessment_type": {
+      "psi": 0.3156,
+      "train_distribution_pct": {
+        "TMA": 54.4,
+        "CMA": 43.87,
+        "Exam": 1.73
+      },
+      "test_distribution_pct": {
+        "TMA": 64.99,
+        "CMA": 35.01
+      },
+      "distribution_difference_pct": {
+        "CMA": -8.86,
+        "TMA": 10.59,
+        "Exam": -1.73
+      }
+    }
+  },
+  "concept_drift_analysis": {
+    "module_conditional_failure_rates": {
+      "AAA": {
+        "train_snapshots": 1631,
+        "test_snapshots": 1515,
+        "train_failure_rate_pct": 6.62,
+        "test_failure_rate_pct": 8.51,
+        "failure_rate_shift_pct": 1.89,
+        "relative_risk_ratio": 1.29,
+        "interpretation": "Stable"
+      },
+      "BBB": {
+        "train_snapshots": 35581,
+        "test_snapshots": 7398,
+        "train_failure_rate_pct": 5.42,
+        "test_failure_rate_pct": 16.71,
+        "failure_rate_shift_pct": 11.28,
+        "relative_risk_ratio": 3.08,
+        "interpretation": "High risk inflation"
+      },
+      "CCC": {
+        "train_snapshots": 6737,
+        "test_snapshots": 10277,
+        "train_failure_rate_pct": 17.87,
+        "test_failure_rate_pct": 13.49,
+        "failure_rate_shift_pct": -4.39,
+        "relative_risk_ratio": 0.75,
+        "interpretation": "Risk reduction"
+      },
+      "DDD": {
+        "train_snapshots": 22814,
+        "test_snapshots": 7051,
+        "train_failure_rate_pct": 17.1,
+        "test_failure_rate_pct": 11.76,
+        "failure_rate_shift_pct": -5.34,
+        "relative_risk_ratio": 0.69,
+        "interpretation": "Risk reduction"
+      },
+      "EEE": {
+        "train_snapshots": 4659,
+        "test_snapshots": 3227,
+        "train_failure_rate_pct": 4.85,
+        "test_failure_rate_pct": 3.9,
+        "failure_rate_shift_pct": -0.95,
+        "relative_risk_ratio": 0.8,
+        "interpretation": "Stable"
+      },
+      "FFF": {
+        "train_snapshots": 38594,
+        "test_snapshots": 16175,
+        "train_failure_rate_pct": 5.16,
+        "test_failure_rate_pct": 3.99,
+        "failure_rate_shift_pct": -1.16,
+        "relative_risk_ratio": 0.77,
+        "interpretation": "Stable"
+      },
+      "GGG": {
+        "train_snapshots": 10844,
+        "test_snapshots": 4371,
+        "train_failure_rate_pct": 5.78,
+        "test_failure_rate_pct": 6.52,
+        "failure_rate_shift_pct": 0.74,
+        "relative_risk_ratio": 1.13,
+        "interpretation": "Stable"
+      }
+    },
+    "cold_start_conditional_failure_rates": {
+      "missing_prior_grade": {
+        "train_snapshots": 19071,
+        "test_snapshots": 10407,
+        "train_failure_rate_pct": 8.79,
+        "test_failure_rate_pct": 13.6,
+        "failure_rate_shift_pct": 4.8,
+        "interpretation": "Cold-start risk jumped by +4.81% (from 8.79% to 13.60%)"
+      },
+      "observed_prior_grade": {
+        "train_snapshots": 101789,
+        "test_snapshots": 39607,
+        "train_failure_rate_pct": 8.16,
+        "test_failure_rate_pct": 8.13,
+        "failure_rate_shift_pct": -0.03,
+        "interpretation": "Observed prior grade failure rate is virtually identical (8.16% vs 8.13%)"
+      }
+    }
+  },
+  "prediction_and_calibration_shift": {
+    "predicted_probability_psi": 0.0669,
+    "train_mean_predicted_prob": 0.0818,
+    "test_2014j_mean_predicted_prob": 0.113,
+    "actual_2014j_prevalence": 0.0927,
+    "expected_calibration_error_ece": 0.042,
+    "maximum_calibration_error_mce": 0.3295,
+    "brier_score_loss": 0.0812,
+    "calibration_curve_bins": [
+      {
+        "mean_predicted_prob": 0.0278,
+        "empirical_positive_rate": 0.0431,
+        "overprediction_gap": -0.0153
+      },
+      {
+        "mean_predicted_prob": 0.1435,
+        "empirical_positive_rate": 0.1334,
+        "overprediction_gap": 0.0101
+      },
+      {
+        "mean_predicted_prob": 0.245,
+        "empirical_positive_rate": 0.1823,
+        "overprediction_gap": 0.0627
+      },
+      {
+        "mean_predicted_prob": 0.3468,
+        "empirical_positive_rate": 0.2267,
+        "overprediction_gap": 0.1201
+      },
+      {
+        "mean_predicted_prob": 0.4458,
+        "empirical_positive_rate": 0.2622,
+        "overprediction_gap": 0.1836
+      },
+      {
+        "mean_predicted_prob": 0.5515,
+        "empirical_positive_rate": 0.2819,
+        "overprediction_gap": 0.2696
+      },
+      {
+        "mean_predicted_prob": 0.6485,
+        "empirical_positive_rate": 0.319,
+        "overprediction_gap": 0.3295
+      },
+      {
+        "mean_predicted_prob": 0.7444,
+        "empirical_positive_rate": 0.4544,
+        "overprediction_gap": 0.29
+      },
+      {
+        "mean_predicted_prob": 0.8325,
+        "empirical_positive_rate": 0.7288,
+        "overprediction_gap": 0.1037
+      }
+    ],
+    "calibration_diagnosis": "Systematic over-prediction in medium-to-high risk bins (predicted 0.55 vs actual 0.28; gap +0.27)."
+  },
+  "pipeline_preprocessing_audit": {
+    "feature_allowlist_count": 23,
+    "categorical_features": [
+      "code_module",
+      "code_presentation",
+      "target_assessment_type"
+    ],
+    "unseen_categories_handling": {
+      "code_presentation": {
+        "training_classes": [
+          "2013B",
+          "2013J",
+          "2014B"
+        ],
+        "test_class": "2014J",
+        "encoded_test_value": -1.0,
+        "finding": "code_presentation in 2014J maps to -1.0 across all 50,014 records due to OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)."
+      },
+      "target_assessment_type": {
+        "training_classes": [
+          "CMA",
+          "Exam",
+          "TMA"
+        ],
+        "test_classes_present": [
+          "CMA",
+          "TMA"
+        ],
+        "missing_class": "Exam",
+        "finding": "2014J contains 0 Exam snapshots; CMA and TMA map normally to classes 0 and 2."
+      }
+    }
+  },
+  "total_execution_time_seconds": 2.66
+}
