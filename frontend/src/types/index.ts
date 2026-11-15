@@ -154,8 +154,8 @@ export interface ExplainabilityResponse {
 
 export interface GovernanceAuditResponse {
   operational_mode: string;
-  allow_student_outreach: bool;
-  cma_telemetry_suppressed: bool;
+  allow_student_outreach: boolean;
+  cma_telemetry_suppressed: boolean;
   threshold_policy: Record<string, any>;
   pseudonymization_method: string;
   prohibited_features_enforced: string[];
@@ -188,4 +188,71 @@ export interface MonitoringResponse {
   calibration_metrics: Record<string, number>;
   ingestion_and_telemetry_limitations: string[];
 }
+
+export interface PredictionItemInput {
+  id_student: number | string;
+  code_module: string;
+  code_presentation: string;
+  id_assessment: number;
+  target_assessment_type: string;
+  scheduled_date: number;
+  target_assessment_weight?: number;
+  num_previous_scheduled_assessments?: number;
+  registration_timing_days?: number | null;
+  vle_total_clicks_to_date?: number;
+  vle_active_days_to_date?: number;
+  vle_core_clicks_to_date?: number;
+  vle_forum_clicks_to_date?: number;
+  vle_quiz_clicks_to_date?: number;
+  vle_days_since_last_activity?: number | null;
+  vle_clicks_last_7d?: number;
+  vle_clicks_last_14d?: number;
+  vle_activity_trend_ratio?: number | null;
+  num_prior_submissions?: number;
+  prior_submission_lateness_mean?: number | null;
+  num_prior_scored_assessments?: number;
+  mean_prior_score?: number | null;
+  std_prior_score?: number | null;
+  prior_at_risk_rate?: number | null;
+  recent_prior_score?: number | null;
+  [key: string]: any;
+}
+
+export interface SinglePredictionData {
+  prediction_id: string;
+  timestamp_utc: string;
+  pseudonymized_student_id: string;
+  code_module: string;
+  code_presentation: string;
+  id_assessment: number;
+  assessment_type: string;
+  scheduled_date: number;
+  raw_risk_probability: number;
+  risk_tier: string;
+  operational_threshold_applied: number | null;
+  predicted_at_risk: boolean;
+  governance_action: string;
+  suppress_automated_outreach: boolean;
+  student_outreach_enabled: boolean;
+  advising_recommendation: string;
+  model_name: string;
+  model_version: string;
+  feature_pipeline_version: string;
+  evaluation_status: string;
+}
+
+export interface BatchItemResult {
+  item_index: number;
+  success: boolean;
+  data: SinglePredictionData | null;
+  error: string | null;
+}
+
+export interface BatchPredictionResponse {
+  total_requested: number;
+  successful_count: number;
+  failed_count: number;
+  results: BatchItemResult[];
+}
+
 

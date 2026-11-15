@@ -9,11 +9,13 @@ import {
   Check, 
   AlertCircle,
   Eye,
-  Lock
+  Lock,
+  Upload
 } from 'lucide-react';
 import { analyticsApi } from '../services/api';
 import { StudentExplorerItem, StudentExplorerResponse } from '../types';
 import { DetailDrawer } from '../components/DetailDrawer';
+import { BatchUploadModal } from '../components/BatchUploadModal';
 
 export const StudentExplorerPage: React.FC = () => {
   const [data, setData] = useState<StudentExplorerResponse | null>(null);
@@ -30,9 +32,10 @@ export const StudentExplorerPage: React.FC = () => {
   const [sortBy, setSortBy] = useState<string>('predicted_risk_score');
   const [sortDir, setSortDir] = useState<string>('desc');
 
-  // Drawer state
+  // Drawer & Modal state
   const [selectedStudent, setSelectedStudent] = useState<StudentExplorerItem | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState<boolean>(false);
 
   const fetchRecords = async () => {
     try {
@@ -86,6 +89,26 @@ export const StudentExplorerPage: React.FC = () => {
 
   return (
     <div className="p-8 space-y-6">
+      {/* Top Header & Batch Inference Action Bar */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-bold text-text-primary tracking-tight">Student Risk Explorer</h2>
+          <p className="text-xs text-text-muted mt-0.5">
+            Audit prospective risk predictions, module calibrations, and governance decisions across 2014J holdout cohorts.
+          </p>
+        </div>
+        <div className="flex items-center space-x-3">
+          <button
+            type="button"
+            onClick={() => setIsUploadModalOpen(true)}
+            className="px-3.5 py-2 bg-primary-blue hover:bg-blue-800 text-white rounded-md text-xs font-semibold flex items-center space-x-2 shadow-sm transition-colors"
+          >
+            <Upload size={14} />
+            <span>Upload Assessment CSV for Scoring</span>
+          </button>
+        </div>
+      </div>
+
       {/* Top Filter and Search Bar */}
       <div className="enterprise-card p-5 space-y-4">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
@@ -365,6 +388,12 @@ export const StudentExplorerPage: React.FC = () => {
       <DetailDrawer
         student={selectedStudent}
         onClose={() => setSelectedStudent(null)}
+      />
+
+      {/* Batch CSV Upload & Scoring Modal */}
+      <BatchUploadModal
+        isOpen={isUploadModalOpen}
+        onClose={() => setIsUploadModalOpen(false)}
       />
     </div>
   );

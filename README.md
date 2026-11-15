@@ -65,8 +65,7 @@ student-performance-risk-prediction/
 ├── .env.example              # Template environment configuration (includes HMAC secret template)
 ├── .gitignore                 # GitHub-ready ignore patterns (excludes raw datasets, node_modules, temp files)
 ├── README.md                  # Comprehensive project documentation
-├── requirements.txt           # Production and testing Python dependencies
-├── pytest.ini                 # Pytest configuration
+├── requirements.txt           # Production Python dependencies
 ├── data/
 │   ├── raw/                   # Raw OULAD tables (excluded from Git; preserved locally)
 │   ├── processed/             # Cleaned, feature-engineered datasets (excluded from Git; preserved locally)
@@ -89,7 +88,6 @@ student-performance-risk-prediction/
 │   ├── shadow_mode.py         # Read-only shadow mode manager (ALLOW_STUDENT_OUTREACH = False)
 │   ├── decision_audit.py      # Append-only DecisionAuditLogger and HMAC pseudonymization
 │   └── ...                    # Preprocessing, featurization, and audit engines
-├── tests/                     # 16 test modules covering full regression suite (115 passed tests)
 └── reports/                   # 62 certified Markdown research reports and machine-readable JSON summaries
 ```
 
@@ -130,14 +128,7 @@ npm run build
 cd ..
 ```
 
-### 4. Run the Full Test Suite
-
-```bash
-pytest tests/ -v
-# Verified baseline: 115 passed tests in ~9.3s
-```
-
-### 5. Launch the FastAPI Application & Dashboard
+### 4. Launch the FastAPI Application & Dashboard
 
 ```bash
 # Start backend server with uvicorn

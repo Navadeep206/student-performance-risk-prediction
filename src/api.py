@@ -330,6 +330,7 @@ def _process_single_prediction(item: PredictionItem) -> PredictionResponse:
 
 
 @app.post("/predict", response_model=PredictionResponse, status_code=status.HTTP_200_OK)
+@app.post("/api/v1/predict", response_model=PredictionResponse, status_code=status.HTTP_200_OK)
 def predict_single(item: PredictionItem):
     """
     Generates a prospective risk prediction for an individual student assessment snapshot.
@@ -344,6 +345,7 @@ def predict_single(item: PredictionItem):
 
 
 @app.post("/predict/batch", response_model=BatchPredictionResponse, status_code=status.HTTP_200_OK)
+@app.post("/api/v1/predict/batch", response_model=BatchPredictionResponse, status_code=status.HTTP_200_OK)
 def predict_batch(payload: BatchPredictionRequest):
     """
     Processes a batch of student prediction items with isolated record validation.

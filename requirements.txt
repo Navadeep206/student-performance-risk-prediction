@@ -22,7 +22,4 @@ seaborn>=0.11.0
 # Configuration & Environment Management
 python-dotenv>=1.0.0
 
-# Testing & Quality Assurance
-pytest>=7.0.0
-httpx>=0.24.0
 

@@ -115,7 +115,7 @@ export const ExplainabilityPage: React.FC = () => {
         </div>
 
         <div className="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between text-xs text-text-muted">
-          <span>Scale: Mean Absolute SHAP Value ($\mathbb{E}[|\phi_i|]$ on log-odds of risk)</span>
+          <span>Scale: Mean Absolute SHAP Value (E[|&phi;<sub>i</sub>|] on log-odds of risk)</span>
           <span>Evaluated on 23 Permitted Predictive Features</span>
         </div>
       </div>

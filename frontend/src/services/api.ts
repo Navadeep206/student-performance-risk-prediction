@@ -6,6 +6,8 @@ import {
   ExplainabilityResponse,
   GovernanceAuditResponse,
   MonitoringResponse,
+  PredictionItemInput,
+  BatchPredictionResponse,
 } from '../types';
 
 const API_BASE = '/api/v1';
@@ -14,6 +16,21 @@ async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url);
   if (!res.ok) {
     throw new Error(`API Request to ${url} failed with HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+async function postJson<T>(url: string, body: any): Promise<T> {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`API Request to ${url} failed with HTTP ${res.status}: ${errorText}`);
   }
   return res.json();
 }
@@ -65,5 +82,10 @@ export const analyticsApi = {
   getMonitoringDrift: (): Promise<MonitoringResponse> => {
     return fetchJson<MonitoringResponse>(`${API_BASE}/monitoring/psi-feature-drift`);
   },
+
+  predictBatch: (predictions: PredictionItemInput[]): Promise<BatchPredictionResponse> => {
+    return postJson<BatchPredictionResponse>(`${API_BASE}/predict/batch`, { predictions });
+  },
 };
+
 
