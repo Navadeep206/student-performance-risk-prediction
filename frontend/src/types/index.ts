@@ -2,7 +2,6 @@ export type NavTab =
   | 'overview'
   | 'student-explorer'
   | 'modules'
-  | 'assessments'
   | 'explainability'
   | 'governance'
   | 'monitoring';

@@ -19,10 +19,6 @@ const TAB_TITLES: Record<NavTab, { title: string; subtitle: string }> = {
     title: 'Course Module Analytics',
     subtitle: '7-Module comparative failure prevalence, alert density, and GGG governance audit',
   },
-  assessments: {
-    title: 'Assessment & Milestone Dynamics',
-    subtitle: 'TMA coursework tracking, CMA outreach suppression, and cold-start lateness analysis',
-  },
   explainability: {
     title: 'Model Explainability (TreeSHAP)',
     subtitle: 'Certified global feature attribution and advisory interpretation guidance',

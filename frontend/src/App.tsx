@@ -6,7 +6,6 @@ import { TopNav } from './components/TopNav';
 import { OverviewPage } from './pages/OverviewPage';
 import { StudentExplorerPage } from './pages/StudentExplorerPage';
 import { ModuleAnalyticsPage } from './pages/ModuleAnalyticsPage';
-import { AssessmentAnalyticsPage } from './pages/AssessmentAnalyticsPage';
 import { ExplainabilityPage } from './pages/ExplainabilityPage';
 import { GovernanceAuditPage } from './pages/GovernanceAuditPage';
 import { ModelMonitoringPage } from './pages/ModelMonitoringPage';
@@ -22,8 +21,6 @@ export const App: React.FC = () => {
         return <StudentExplorerPage />;
       case 'modules':
         return <ModuleAnalyticsPage />;
-      case 'assessments':
-        return <AssessmentAnalyticsPage />;
       case 'explainability':
         return <ExplainabilityPage />;
       case 'governance':
