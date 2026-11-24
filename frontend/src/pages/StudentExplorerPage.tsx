@@ -116,6 +116,8 @@ export const StudentExplorerPage: React.FC = () => {
           <form onSubmit={handleSearchSubmit} className="flex-1 max-w-md relative">
             <Search size={16} className="absolute left-3 top-3 text-slate-400" />
             <input
+              id="student-search-input"
+              name="search"
               type="text"
               placeholder="Search assessment ID or student pseudonym..."
               value={search}
@@ -128,8 +130,10 @@ export const StudentExplorerPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 text-xs">
             {/* Module Filter */}
             <div className="flex items-center space-x-1.5">
-              <span className="text-text-muted font-medium">Module:</span>
+              <label htmlFor="module-filter-select" className="text-text-muted font-medium">Module:</label>
               <select
+                id="module-filter-select"
+                name="module"
                 value={selectedModule}
                 onChange={(e) => {
                   setSelectedModule(e.target.value);
@@ -146,8 +150,10 @@ export const StudentExplorerPage: React.FC = () => {
 
             {/* Risk Tier Filter */}
             <div className="flex items-center space-x-1.5">
-              <span className="text-text-muted font-medium">Risk Tier:</span>
+              <label htmlFor="risk-tier-select" className="text-text-muted font-medium">Risk Tier:</label>
               <select
+                id="risk-tier-select"
+                name="risk_tier"
                 value={selectedTier}
                 onChange={(e) => {
                   setSelectedTier(e.target.value);
@@ -165,8 +171,10 @@ export const StudentExplorerPage: React.FC = () => {
 
             {/* Assessment Type Filter */}
             <div className="flex items-center space-x-1.5">
-              <span className="text-text-muted font-medium">Type:</span>
+              <label htmlFor="assessment-type-select" className="text-text-muted font-medium">Type:</label>
               <select
+                id="assessment-type-select"
+                name="assessment_type"
                 value={selectedType}
                 onChange={(e) => {
                   setSelectedType(e.target.value);

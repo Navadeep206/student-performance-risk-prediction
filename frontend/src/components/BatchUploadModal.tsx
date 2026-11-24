@@ -341,7 +341,7 @@ export const BatchUploadModal: React.FC<BatchUploadModalProps> = ({ isOpen, onCl
   };
 
   const highRiskCount = batchResults?.results.filter(r => r.data?.risk_tier === 'HIGH_RISK').length || 0;
-  const suppressedCount = batchResults?.results.filter(r => r.data?.suppress_automated_outreach).length || 0;
+  const cmaSuppressedCount = batchResults?.results.filter(r => r.data?.assessment_type === 'CMA').length || 0;
   const gggCalibratedCount = batchResults?.results.filter(r => r.data?.code_module === 'GGG' && r.data.operational_threshold_applied === 0.10).length || 0;
 
   return (
@@ -562,8 +562,8 @@ export const BatchUploadModal: React.FC<BatchUploadModalProps> = ({ isOpen, onCl
 
                 <div className="p-3.5 bg-slate-100 border border-slate-300 rounded-lg">
                   <div className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">Suppressed (CMA)</div>
-                  <div className="text-xl font-bold text-slate-800 mt-1">{suppressedCount}</div>
-                  <div className="text-[10px] text-slate-500 font-medium mt-0.5">Zero Outreach Telemetry</div>
+                  <div className="text-xl font-bold text-slate-800 mt-1">{cmaSuppressedCount}</div>
+                  <div className="text-[10px] text-slate-500 font-medium mt-0.5">Formative Quizzes (Outreach Prohibited)</div>
                 </div>
               </div>
 
@@ -677,9 +677,9 @@ export const BatchUploadModal: React.FC<BatchUploadModalProps> = ({ isOpen, onCl
                             )}
                           </td>
                           <td className="p-2.5 font-sans">
-                            {isSuppressed ? (
+                            {d.assessment_type === 'CMA' ? (
                               <span className="bg-slate-100 text-slate-700 border border-slate-200 px-1.5 py-0.5 rounded text-[10px] font-medium">
-                                Suppressed (Telemtry Only)
+                                Suppressed (Telemetry Only)
                               </span>
                             ) : (
                               <span className="bg-blue-50 text-blue-700 border border-blue-200 px-1.5 py-0.5 rounded text-[10px] font-medium">

@@ -45,8 +45,14 @@ export const ExplainabilityPage: React.FC = () => {
   if (error || !data) {
     return (
       <div className="p-8">
-        <div className="p-6 bg-risk-high-surface border border-risk-high-border text-risk-high-text rounded-lg text-xs">
-          Failed to load explainability data: {error}
+        <div className="p-6 bg-risk-high-surface border border-risk-high-border text-risk-high-text rounded-lg text-xs flex items-center justify-between">
+          <span>Failed to load explainability data: {error}</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-3 py-1 bg-white border border-red-300 text-red-800 rounded font-semibold text-xs hover:bg-red-50"
+          >
+            Retry
+          </button>
         </div>
       </div>
     );

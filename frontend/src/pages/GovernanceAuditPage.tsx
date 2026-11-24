@@ -43,6 +43,22 @@ export const GovernanceAuditPage: React.FC = () => {
     );
   }
 
+  if (error || !data) {
+    return (
+      <div className="p-8">
+        <div className="p-6 bg-red-50 border border-red-200 text-red-800 rounded-lg text-xs flex items-center justify-between">
+          <span>Failed to load governance audit records: {error || 'Service Unavailable'}</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-3 py-1 bg-white border border-red-300 text-red-800 rounded font-semibold text-xs hover:bg-red-50"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="p-8 space-y-8">
       {/* Governance & Safeguard Control Matrix */}
@@ -133,7 +149,7 @@ export const GovernanceAuditPage: React.FC = () => {
               <CheckCircle2 size={16} className="text-emerald-600" />
             </div>
             <p className="text-text-secondary leading-relaxed text-[11px]">
-              Enforces $\tau = 0.10$ for Module GGG TMAs (remediating 75.9% FNR to 54.3%) and standard $\tau = 0.20$ for AAA–FFF.
+              Enforces &tau; = 0.10 for Module GGG TMAs (remediating 75.9% FNR to 54.3%) and standard &tau; = 0.20 for AAA–FFF.
             </p>
           </div>
 
@@ -185,7 +201,7 @@ export const GovernanceAuditPage: React.FC = () => {
                   TMA (Tutor-Marked Coursework)
                 </td>
                 <td className="text-xs font-mono font-bold tabular-nums text-text-primary">
-                  $\tau = 0.20$
+                  &tau; = 0.20
                 </td>
                 <td>
                   <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700">
@@ -207,7 +223,7 @@ export const GovernanceAuditPage: React.FC = () => {
                   TMA (Tutor-Marked Coursework)
                 </td>
                 <td className="text-xs font-mono font-bold tabular-nums text-[#5A67D8]">
-                  $\tau = 0.10$ (Calibrated)
+                  &tau; = 0.10 (Calibrated)
                 </td>
                 <td>
                   <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700">

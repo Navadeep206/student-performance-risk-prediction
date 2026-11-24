@@ -116,7 +116,7 @@ export const AssessmentAnalyticsPage: React.FC = () => {
                   All Milestones Combined (2014J)
                 </td>
                 <td className="text-xs text-text-secondary">
-                  Full prospective cohort ($N=50,014$)
+                  Full prospective cohort (N = 50,014)
                 </td>
                 <td className="text-xs font-mono text-right tabular-nums">
                   0.4606

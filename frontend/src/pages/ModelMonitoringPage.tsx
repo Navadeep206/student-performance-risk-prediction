@@ -116,9 +116,9 @@ export const ModelMonitoringPage: React.FC = () => {
             <thead>
               <tr>
                 <th>Performance Metric Dimension</th>
-                <th className="text-right">Grouped 5-Fold CV ($N=170,874$)</th>
-                <th className="text-right">Chronological 2014J Holdout ($N=50,014$)</th>
-                <th className="text-right">Observed Drift Delta ($\Delta$)</th>
+                <th className="text-right">Grouped 5-Fold CV (N = 170,874)</th>
+                <th className="text-right">Chronological 2014J Holdout (N = 50,014)</th>
+                <th className="text-right">Observed Drift Delta (&Delta;)</th>
                 <th className="text-right">Relative Shift %</th>
                 <th>Monitoring Evaluation Status</th>
               </tr>
@@ -163,7 +163,7 @@ export const ModelMonitoringPage: React.FC = () => {
               Feature Population Stability Index (PSI) Drift Analysis
             </h2>
             <p className="text-xs text-text-muted mt-0.5">
-              Comparing feature distribution shift between Historical Training ($N=120,860$) and Prospective 2014J ($N=50,014$)
+              Comparing feature distribution shift between Historical Training (N = 120,860) and Prospective 2014J (N = 50,014)
             </p>
           </div>
           <div className="flex items-center space-x-3 text-xs text-text-muted">

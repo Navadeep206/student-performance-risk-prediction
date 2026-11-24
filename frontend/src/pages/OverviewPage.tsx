@@ -166,9 +166,9 @@ export const OverviewPage: React.FC = () => {
           <div className="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between text-[11px] text-text-muted">
             <span className="flex items-center space-x-1.5">
               <span className="w-2 h-2 rounded-full bg-[#5A67D8]"></span>
-              <span>Calibrated $\tau=0.10$ (GGG TMA)</span>
+              <span>Calibrated &tau; = 0.10 (GGG TMA)</span>
               <span className="w-2 h-2 rounded-full bg-[#C53030] ml-3"></span>
-              <span>Standard $\tau=0.20$ (AAA–FFF TMA)</span>
+              <span>Standard &tau; = 0.20 (AAA–FFF TMA)</span>
             </span>
             <span className="italic">CMAs 100% research telemetry</span>
           </div>

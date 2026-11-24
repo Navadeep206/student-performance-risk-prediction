@@ -83,12 +83,12 @@ export const ModuleAnalyticsPage: React.FC = () => {
               <tr>
                 <th>Module</th>
                 <th>Domain</th>
-                <th className="text-right">Benchmark Snapshots ($N=170,874$)</th>
+                <th className="text-right">Benchmark Snapshots (N = 170,874)</th>
                 <th className="text-right">Benchmark Failure %</th>
-                <th className="text-right">2014J Snapshots ($N=50,014$)</th>
+                <th className="text-right">2014J Snapshots (N = 50,014)</th>
                 <th className="text-right">2014J Failure %</th>
-                <th className="text-right">2014J Actionable TMAs ($N=32,506$)</th>
-                <th className="text-right">Governed Alerts ($N=7,130$)</th>
+                <th className="text-right">2014J Actionable TMAs (N = 32,506)</th>
+                <th className="text-right">Governed Alerts (N = 7,130)</th>
                 <th className="text-right">TMA Alert Rate %</th>
                 <th>Dominant Milestone</th>
               </tr>
@@ -107,7 +107,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
                         </span>
                         {isGGG && (
                           <span className="text-[10px] bg-indigo-100 text-indigo-800 px-1.5 py-0.2 rounded font-semibold border border-indigo-200">
-                            Calibrated $\tau=0.10$
+                            Calibrated &tau; = 0.10
                           </span>
                         )}
                       </div>
@@ -304,11 +304,11 @@ export const ModuleAnalyticsPage: React.FC = () => {
           <div className="bg-white p-3.5 rounded border border-indigo-100 space-y-1">
             <span className="text-text-muted block text-[11px]">Discrimination (PR-AUC)</span>
             <span className="text-lg font-bold text-primary-blue tabular-nums">0.2508 vs 0.2353</span>
-            <span className="text-[11px] text-slate-500 block">Baseline vs Remediated ($\Delta = -0.0155$)</span>
+            <span className="text-[11px] text-slate-500 block">Baseline vs Remediated (&Delta; = -0.0155)</span>
           </div>
 
           <div className="bg-white p-3.5 rounded border border-indigo-100 space-y-1">
-            <span className="text-text-muted block text-[11px]">Calibrated Recall ($\tau=0.10$)</span>
+            <span className="text-text-muted block text-[11px]">Calibrated Recall (&tau; = 0.10)</span>
             <span className="text-lg font-bold text-emerald-700 tabular-nums">45.01% – 45.74%</span>
             <span className="text-[11px] text-emerald-600 block">Baseline: +86 snapshots | Remediated: +107 snapshots</span>
           </div>
@@ -331,7 +331,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
             <tbody>
               <tr>
                 <td className="font-medium text-text-primary text-xs">
-                  Baseline Pipeline ($\tau=0.20$ Global)
+                  Baseline Pipeline (&tau; = 0.20 Global)
                 </td>
                 <td className="text-xs text-right tabular-nums">37.08%</td>
                 <td className="text-xs text-right tabular-nums text-risk-high-base font-bold">24.09%</td>
@@ -342,7 +342,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
               </tr>
               <tr>
                 <td className="font-medium text-text-primary text-xs">
-                  Remediated Pipeline ($\tau=0.20$ Global)
+                  Remediated Pipeline (&tau; = 0.20 Global)
                 </td>
                 <td className="text-xs text-right tabular-nums">36.65%</td>
                 <td className="text-xs text-right tabular-nums text-risk-high-base font-bold">19.71%</td>
@@ -353,7 +353,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
               </tr>
               <tr className="bg-indigo-50/50 font-medium">
                 <td className="text-primary-blue text-xs font-bold">
-                  Baseline Pipeline ($\tau=0.10$ Calibrated)
+                  Baseline Pipeline (&tau; = 0.10 Calibrated)
                 </td>
                 <td className="text-xs text-right tabular-nums">21.24%</td>
                 <td className="text-xs text-right tabular-nums text-emerald-700 font-bold">45.01%</td>
@@ -364,7 +364,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
               </tr>
               <tr className="bg-indigo-50/70 font-medium">
                 <td className="text-primary-blue text-xs font-bold">
-                  Remediated Pipeline ($\tau=0.10$ Calibrated)
+                  Remediated Pipeline (&tau; = 0.10 Calibrated)
                 </td>
                 <td className="text-xs text-right tabular-nums">18.63%</td>
                 <td className="text-xs text-right tabular-nums text-emerald-700 font-bold">45.74%</td>
@@ -391,7 +391,7 @@ export const ModuleAnalyticsPage: React.FC = () => {
           </p>
           <p className="text-text-secondary leading-relaxed">
             <strong>The operational solution is within-pipeline threshold calibration:</strong> Lowering the operational threshold to
-            $\tau = 0.10$ captures <strong>86 additional failure snapshots detected in Baseline</strong> (raising recall from 24.09% to 45.01%,
+            &tau; = 0.10 captures <strong>86 additional failure snapshots detected in Baseline</strong> (raising recall from 24.09% to 45.01%,
             reducing FN from 312 to 226) and <strong>107 additional failure snapshots detected in Remediated</strong> (raising recall from 19.71%
             to 45.74%, reducing FN from 330 to 223), while routing solely to non-punitive supportive reviews.
           </p>
